@@ -99,4 +99,4 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source /home/sqrtmz/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/MzDotFiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
