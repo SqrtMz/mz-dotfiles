@@ -1,3 +1,9 @@
+#    ____         __  __  ___  
+#   / __/__ _____/ /_/  |/  /__
+#  _\ \/ _ `/ __/ __/ /|_/ /_ /
+# /___/\_, /_/  \__/_/  /_//__/
+#       /_/                    
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
