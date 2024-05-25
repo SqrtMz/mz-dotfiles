@@ -142,7 +142,7 @@
     // Clock
     "clock": {
         "format": "{:%H:%M %a}",
-        // "timezone": "America/Bogota",
+        "timezone": "America/Bogota",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         // START CLOCK FORMAT
         "format-alt": "{:%Y-%m-%d}"
@@ -196,7 +196,7 @@
         "orientation": "horizontal",
         "modules": [
             "custom/browser",
-            "custom/filemanager",
+            "custom/filemanager"
          ]
     },
 
