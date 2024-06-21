@@ -28,7 +28,7 @@
 
     // Modules Center
     "modules-center": [
-	"hyprland/window"
+	"sway/window"
     ],
 
     // Modules Right    
