@@ -185,6 +185,8 @@ font pango:monospace 0.001
 titlebar_padding 1
 titlebar_border_thickness 0
 
+seat seat0 XCURSOR_THEME default 20
+
 include @sysconfdir@/sway/config.d/*
 include ~/.config/sway/outputs
 include ~/.config/sway/workspaces
