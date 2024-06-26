@@ -179,13 +179,15 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
-default_border none
-default_floating_border none
 font pango:monospace 0.001
 titlebar_padding 1
 titlebar_border_thickness 0
 
 seat seat0 XCURSOR_THEME default 20
+
+gaps inner 5
+
+client.focused #009090 #009090 #009090 #009090
 
 include @sysconfdir@/sway/config.d/*
 include ~/.config/sway/outputs
