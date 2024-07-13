@@ -1,3 +1,9 @@
+#    ____         __  __  ___  
+#   / __/__ _____/ /_/  |/  /__
+#  _\ \/ _ `/ __/ __/ /|_/ /_ /
+# /___/\_, /_/  \__/_/  /_//__/
+#       /_/                    
+
 export QT_STYLE_OVERRIDE=kvantum
 export XDG_CURRENT_DESKTOP=sway
 export QT_QPA_PLATFORM=wayland

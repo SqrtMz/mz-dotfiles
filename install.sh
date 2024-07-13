@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#! /usr/bin/env bash
 
 #stow -t ~/.config -S fastfetch
 #stow -t ~/.local/share -S fonts
