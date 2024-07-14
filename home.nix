@@ -48,10 +48,10 @@
 
   programs = {
     zsh = {
-      enable = true;
-      autosuggestions.enable = true;
-      syntaxHighlighting.enable = true;
       enableCompletion = true;
+      enable = true;
+      autosuggestion.enable = true;
+      syntaxHighlighting.enable = true;
 
       envExtra = {
         # .zshenv file
