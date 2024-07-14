@@ -53,9 +53,9 @@
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
 
-      envExtra = {
-        # .zshenv file
-      };
+      # envExtra = {
+      #   # .zshenv file
+      # };
     };
   };
 
