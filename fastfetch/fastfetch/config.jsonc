@@ -21,7 +21,7 @@
     "modules": [
         {
             "type": "custom", // HardwareStart
-            "format": "┌─────────── \u001b[1mHardware Information\u001b[0m ───────────┐" // `\u001b` is `\033`, or `\e`
+            "format": "┌─────────── \u001b[1mHardware Information\u001b[0m ───────────┐"
         },
         {
             "type": "host",
