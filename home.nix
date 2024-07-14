@@ -6,7 +6,9 @@
   home.username = "mz";
   home.homeDirectory = "/home/mz";
 
-  home.stateVersion = "24.05";
+  imports = [
+    ./modules/user/hyprland/hyprland.nix
+  ];
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -62,4 +64,5 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  home.stateVersion = "24.05";
 }
