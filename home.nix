@@ -55,7 +55,8 @@
 
       oh-my-zsh = {
         enable = true;
-        theme = "robbyrussell";
+        # theme = "robbyrussell";
+        theme = "nicoulaj";
       };
     };
   };
