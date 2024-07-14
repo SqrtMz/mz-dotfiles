@@ -53,9 +53,10 @@
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
 
-      # envExtra = {
-      #   # .zshenv file
-      # };
+      oh-my-zsh = {
+        enable = true;
+        theme = "robbyrussell";
+      };
     };
   };
 
