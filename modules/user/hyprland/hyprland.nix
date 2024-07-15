@@ -16,7 +16,7 @@
             $fileManager = dolphin
             $menu = rofi -show drun
 
-            exec-once = ~/mz-dotfiles/scritps/autorun.sh
+            exec-once = ~/mz-dotfiles/scripts/autorun.sh
 
             env = HYPRCURSOR_SIZE,20
             env = QT_STYLE_OVERRIDE,kvantum
