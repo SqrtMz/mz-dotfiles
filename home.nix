@@ -6,7 +6,10 @@
   home.username = "mz";
   home.homeDirectory = "/home/mz";
 
-  imports = [ ./modules/user/zsh/zsh.nix ];
+  imports = [
+    ./modules/user/zsh/zsh.nix
+    ./modules/user/kitty/kitty.nix
+  ];
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
