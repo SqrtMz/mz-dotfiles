@@ -6,7 +6,7 @@
   home.username = "mz";
   home.homeDirectory = "/home/mz";
 
-  # imports = [ ./modules/user/hyprland/hyprland.nix ];
+  imports = [ ./modules/user/zsh/zsh.nix ];
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -44,20 +44,6 @@
   # shell provided by Home Manager.
   home.sessionVariables = {
     # EDITOR = "emacs";
-  };
-
-  programs = {
-    zsh = {
-      enableCompletion = true;
-      enable = true;
-      autosuggestion.enable = true;
-      syntaxHighlighting.enable = true;
-
-      oh-my-zsh = {
-        enable = true;
-        theme = "robbyrussell";
-      };
-    };
   };
 
   # Let Home Manager install and manage itself.
