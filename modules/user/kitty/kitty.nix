@@ -4,10 +4,10 @@
     programs.kitty = {
         enable = true;
         
-        shellIntegration = {
-            enableZshIntegration = true;
-            mode = "enable";
-        };
+        # shellIntegration = {
+            # enableZshIntegration = true;
+            # mode = "enable";
+        # };
 
         settings = {
             enable_audio_bell = false;
