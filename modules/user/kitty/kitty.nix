@@ -3,6 +3,7 @@
 {
     programs.kitty = {
         enable = true;
+        package = pkgs.kitty
         
         shellIntegration = {
             enableZshIntegration = true;
