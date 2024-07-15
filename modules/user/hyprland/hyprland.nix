@@ -3,6 +3,7 @@
 {
     wayland.windowManager.hyprland = {
         enable = true;
+        package = pkgs.hyprland.override {legacyRenderer = true;};
 
         extraConfig = ''
             monitor=,preferred,auto,auto
@@ -213,6 +214,5 @@
 
             xwayland.enable = true;
             systemd.enable = true;
-            # systemd.variables = ["--all"];
     };
 }

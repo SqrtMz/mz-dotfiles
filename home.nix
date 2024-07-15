@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -11,7 +11,7 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-
+    
     # # Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
     # (nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
