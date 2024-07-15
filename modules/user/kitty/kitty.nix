@@ -3,6 +3,11 @@
 {
     programs.kitty = {
         enable = true;
+        
+        shellIntegration = {
+            enableZshIntegration = true;
+            mode = "enable";
+        };
 
         settings = {
             enable_audio_bell = false;
@@ -11,7 +16,6 @@
 
         extraConfig = ''
             background_opacity 0.6
-            shell_integration enabled
 
             # Black
             color0 #45475A
