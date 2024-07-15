@@ -3,8 +3,6 @@
 {
     wayland.windowManager.hyprland = {
         enable = true;
-        
-        settings = {};
 
         extraConfig = ''
             monitor=,preferred,auto,auto
