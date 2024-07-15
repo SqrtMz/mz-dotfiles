@@ -74,7 +74,7 @@ shadowless_popup=false
 tooltip_blur_radius=0
 
 [GeneralColors]
-window.color=#111216
+window.color=#000000
 base.color=#111216
 alt.base.color=#11121615
 button.color=#111216
@@ -300,7 +300,7 @@ indicator.element=tree
 
 [HeaderSection]
 inherits=PanelButtonCommand
-interior.element=header
+interior.element=false
 frame.element=header
 frame.top=1
 frame.bottom=1
@@ -320,7 +320,7 @@ inherits=PanelButtonCommand
 indicator.element=toolbar
 indicator.size=5
 text.margin=0
-interior.element=menubar
+interior.element=false
 frame.element=menubar
 text.normal.color=#cfd8dc
 text.focus.color=white
