@@ -11,7 +11,7 @@
             background_opacity = 0.6;
         };
 
-        extraConfig = ""
+        extraConfig = ''
             # Black
             color0 #45475A;
             color8 #585B70;
@@ -43,7 +43,7 @@
             # White
             color7  #BAC2DE;
             color15 #A6ADC8;
-        "";
+        '';
 
     };
 }
