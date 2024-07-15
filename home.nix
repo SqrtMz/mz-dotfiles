@@ -6,7 +6,7 @@
   home.username = "mz";
   home.homeDirectory = "/home/mz";
 
-  imports = [ ./modules/user/hyprland/hyprland.nix ];
+  # imports = [ ./modules/user/hyprland/hyprland.nix ];
 
   # The home.packages option allows you to install Nix packages into your
   # environment.

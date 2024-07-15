@@ -3,7 +3,8 @@
 {
     wayland.windowManager.hyprland = {
         enable = true;
-        package = pkgs.hyprland.override {legacyRenderer = true;};
+        xwayland.enable = true;
+        systemd.enable = true;
 
         extraConfig = ''
             monitor=,preferred,auto,auto
@@ -211,8 +212,5 @@
             windowrulev2 = float, class:(kitty), title:(btop)
             windowrulev2 = center, class:(kitty), title:(btop)
             '';
-
-            xwayland.enable = true;
-            systemd.enable = true;
     };
 }
