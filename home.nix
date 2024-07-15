@@ -13,6 +13,8 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    wlogout
+    btop
     # # Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
     # (nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
