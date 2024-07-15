@@ -213,5 +213,6 @@
 
             xwayland.enable = true;
             systemd.enable = true;
+            # systemd.variables = ["--all"];
     };
 }
