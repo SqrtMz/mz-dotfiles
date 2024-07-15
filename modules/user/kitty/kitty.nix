@@ -11,6 +11,7 @@
 
         extraConfig = ''
             background_opacity 0.6
+            shell_integration enabled
 
             # Black
             color0 #45475A
