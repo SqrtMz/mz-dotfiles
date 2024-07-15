@@ -8,13 +8,11 @@
 
   imports = [
     ./modules/user/zsh/zsh.nix
-    ./modules/user/kitty/kitty.nix
   ];
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    kitty
     # # Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
     # (nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
