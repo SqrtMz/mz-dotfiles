@@ -215,7 +215,4 @@
     # };
 
     home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
-    home.file.".config/hypr/hyprland.conf".source = ./hyprpaper.conf;
-    home.file.".config/hypr/hyprland.conf".source = ./monitors.conf;
-    home.file.".config/hypr/hyprland.conf".source = ./workspaces.conf;
 }
