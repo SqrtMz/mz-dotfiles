@@ -1,6 +1,8 @@
 {config, lib, pkgs, ...}:
 
 {
+    home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
+    
     # wayland.windowManager.hyprland = {
     #     enable = true;
     #     xwayland.enable = true;
@@ -213,6 +215,4 @@
     #         windowrulev2 = center, class:(kitty), title:(btop)
     #         '';
     # };
-
-    home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
 }
