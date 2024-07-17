@@ -10,12 +10,12 @@
     ./modules/user/zsh/zsh.nix
     ./modules/user/kitty/kitty.nix
     ./modules/user/hyprland/hyprland.nix
+    ./modules/user/wlogout/wlogout.nix
   ];
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    wlogout
     btop
     # # Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
