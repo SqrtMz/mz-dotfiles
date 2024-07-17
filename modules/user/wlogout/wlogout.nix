@@ -33,7 +33,7 @@
                 label = "suspend";
                 action = "systemctl suspend";
                 text = "Suspend";
-                keybind = "u"
+                keybind = "u";
             }
             {
                 label = "reboot";
