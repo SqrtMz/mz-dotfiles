@@ -8,7 +8,7 @@
 
         nixpkgs-stable.url = "nixpkgs/nixos-24.05";
         home-manager-stable.url = "github:nix-community/home-manager/release-24.05";
-        home-manager.inputs.nixpkgs.follows = "nixpkgs-stable";
+        home-manager-stable.inputs.nixpkgs.follows = "nixpkgs-stable";
     };
 
     outputs = { self, nixpkgs, home-manager, ... } @ inputs:
