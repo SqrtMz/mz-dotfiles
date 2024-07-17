@@ -21,13 +21,13 @@
                 label = "logout";
                 action = "loginctl terminate-user $USER";
                 text = "Logout";
-                keybind = "e"
+                keybind = "e";
             }
             {
                 label = "shutdown";
                 action = "systemctl poweroff";
                 text = "Shutdown";
-                keybind = "s"
+                keybind = "s";
             }
             {
                 label = "suspend";
