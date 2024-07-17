@@ -28,7 +28,7 @@
         homeConfigurations = {
             mz = home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
-                specialArgs = { inherit inputs; };
+                extraSpecialArgs = { inherit inputs; };
                 modules = [ ./home.nix ];
             };
         };
