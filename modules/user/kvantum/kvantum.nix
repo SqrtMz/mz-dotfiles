@@ -1,8 +1,8 @@
 {config, lib, pkgs, ...}:
 
 {
-    home.file.".config/Kvantum/kvantum.kvconfig" = {
-        source = ./config;
+    home.file.".config/Kvantum/" = {
+        source = ./themes;
         recursive = true;
     };
 }
