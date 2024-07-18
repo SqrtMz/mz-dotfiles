@@ -18,7 +18,6 @@
   home.packages = with pkgs; [
     btop
     htop
-    nerdfonts
   ];
 
   # Let Home Manager install and manage itself.
