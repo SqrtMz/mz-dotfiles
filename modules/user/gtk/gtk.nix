@@ -5,8 +5,8 @@
         enable = true;
 
         theme = {
-            name = "Breeze Dark";
-            package = pkgs.kdePackages.breeze;
+            name = "Breeze-Dark";
+            package = pkgs.kdePackages.breeze-gtk;
         };
         
         font = {
@@ -21,7 +21,7 @@
         };
 
         iconTheme = {
-            name = "Breeze Dark";
+            name = "breeze-dark";
         };
     };
 }

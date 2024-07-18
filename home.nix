@@ -18,6 +18,7 @@
   home.packages = with pkgs; [
     btop
     htop
+    nwg-look
   ];
 
   # Let Home Manager install and manage itself.
