@@ -1,5 +1,5 @@
 {config, lib, pkgs, ...}:
 
 {
-    home.file.".config/Kvantum/kvantum.kvconfig".source = ./kvantum.kvconfig;
+    home.file.".config/Kvantum/kvantum.kvconfig".source = "./";
 }
