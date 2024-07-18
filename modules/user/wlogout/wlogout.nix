@@ -3,6 +3,7 @@
 {
     programs.wlogout = {
         enable = true;
+        style = ./style.css;
 
         layout = [
             # {
@@ -42,58 +43,5 @@
                 keybind = "r";
             }
         ];
-
-        style = ''
-            * {
-                background-image: none;
-                box-shadow: none;
-            }
-
-            window {
-                background-color: rgba(12, 12, 12, 0.9);
-            }
-
-            button {
-                border-radius: 0;
-                border-color: black;
-                text-decoration-color: #FFFFFF;
-                color: #FFFFFF;
-                background-color: #1E1E1E;
-                border-style: solid;
-                border-width: 1px;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 25%;
-            }
-
-            button:focus, button:active, button:hover {
-                background-color: #009090;
-                outline-style: none;
-            }
-
-            #lock {
-                background-image: image(url("/home/mz/.nix-profile/share/wlogout/icons/lock.png"));
-            }
-
-            #logout {
-                background-image: image(url("/home/mz/.nix-profile/share/wlogout/icons/logout.png"));
-            }
-
-            #suspend {
-                background-image: image(url("/home/mz/.nix-profile/share/wlogout/icons/suspend.png"));
-            }
-
-            #hibernate {
-                background-image: image(url("/home/mz/.nix-profile/share/wlogout/icons/hibernate.png"));
-            }
-
-            #shutdown {
-                background-image: image(url("/home/mz/.nix-profile/share/wlogout/icons/shutdown.png"));
-            }
-
-            #reboot {
-                background-image: image(url("/home/mz/.nix-profile/share/wlogout/icons/reboot.png"));
-            }
-        '';
     };
 }
