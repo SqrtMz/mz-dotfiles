@@ -25,8 +25,8 @@ set $menu rofi -show drun | xargs swaymsg exec --
 
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-include ~/mz-dotfiles/sway/sway/outputs
-include ~/mz-dotfiles/sway/sway/workspaces
+include ~/mz-dotfiles/modules/user/sway/outputs
+include ~/mz-dotfiles/modules/user/sway/workspaces
 
 exec ~/mz-dotfiles/scripts/autorun.sh
 
