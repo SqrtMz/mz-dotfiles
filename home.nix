@@ -7,9 +7,10 @@
   imports = [
     ./modules/user/hyprland/hyprland.nix
     ./modules/user/kitty/kitty.nix
+    ./modules/user/rofi/rofi.nix
+    ./modules/user/waybar/waybar.nix
     ./modules/user/wlogout/wlogout.nix
     ./modules/user/zsh/zsh.nix
-    ./modules/user/rofi/rofi.nix
   ];
 
   home.packages = with pkgs; [
