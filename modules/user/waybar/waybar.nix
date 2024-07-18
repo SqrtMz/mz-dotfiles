@@ -49,9 +49,9 @@
                         phone = " ";
                         portable = " ";
                         car = " ";
-                        default = [" " " " " "]
+                        default = [" " " " " "];
                     };
-                    on-click = "pavucontrol"
+                    on-click = "pavucontrol";
                 };
 
                 "bluetooth" = {
@@ -60,13 +60,13 @@
                     format-off = "";
                     interval = 30;
                     on-click = "blueman-manager";
-                    format-no-controller = ""
+                    format-no-controller = "";
                 };
 
                 "battery" = {
                     states = {
                         warning = 30;
-                        critical = 15
+                        critical = 15;
                     };
                     format = "{icon}   {capacity}%";
                     format-charging = "  {capacity}%";
