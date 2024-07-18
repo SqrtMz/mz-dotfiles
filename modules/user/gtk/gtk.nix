@@ -6,7 +6,7 @@
 
         theme = {
             name = "Breeze-Dark";
-            package = pkgs.kdePackages.breeze-gtk;
+            package = pkgs.breeze-gtk;
         };
         
         font = {
@@ -14,15 +14,16 @@
             size = 10;
         };
 
-        cursorTheme = {
-            name = "Bibata-Original-Classic";
-            size = 20;
-            package = pkgs.bibata-cursors;
-        };
-
         iconTheme = {
             name = "Whitesur-dark";
             package = pkgs.whitesur-icon-theme;
         };
+    };
+
+    home.pointerCursor = {
+        name = "Bibata-Original-Classic";
+        size = 20;
+        package = pkgs.bibata-cursors;
+        gtk.enable = true;
     };
 }
