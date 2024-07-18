@@ -80,6 +80,23 @@
                     tooltip = false;
                 };
 
+                "disk" = {
+                    interval = 30;
+                    format = "D {percentage_used}% ";
+                    path = "/";
+                    on-click = "kitty -e btop";
+                };
+
+                "cpu" = {
+                    format = "/ C {usage}% ";
+                    on-click = "kitty -e btop";
+                };
+
+                "memory" = {
+                    format = "/ M {}% ";
+                    on-click = "kitty -e btop";
+                };
+
                 "group/hardware" = {
                     orientation = "inherit";
                     drawer = {
