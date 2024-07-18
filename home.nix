@@ -5,6 +5,7 @@
   home.homeDirectory = "/home/mz";
 
   imports = [
+    ./modules/user/gtk/gtk.nix
     ./modules/user/hyprland/hyprland.nix
     ./modules/user/kitty/kitty.nix
     ./modules/user/kvantum/kvantum.nix
