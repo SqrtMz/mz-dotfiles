@@ -10,6 +10,7 @@ elif (($DESKTOP_SESSION == "sway")); then
 
 fi
 
+waybar &
 nm-applet &
 wl-paste --type text --watch cliphist store &
 wl-paste --type image --watch cliphist store &
