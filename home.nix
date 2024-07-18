@@ -16,6 +16,7 @@
 
   home.packages = with pkgs; [
     btop
+    htop
   ];
 
   # Let Home Manager install and manage itself.
