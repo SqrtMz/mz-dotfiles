@@ -15,15 +15,10 @@
             # /___/\_, /_/  \__/_/  /_//__/
             #       /_/                    
 
-            # You can split this configuration into multiple files
-            # Create your files separately and then link them to this file like this:
-            # source = ~/.config/hypr/myColors.conf
-
             ################
             ### MONITORS ###
             ################
 
-            # See https://wiki.hyprland.org/Configuring/Monitors/
             monitor=,preferred,auto,auto
 
             source = ~/mz-dotfiles/modules/user/hyprland/monitors.conf
