@@ -18,6 +18,7 @@
   home.packages = with pkgs; [
     btop
     htop
+    fastfetch
   ];
 
   # Let Home Manager install and manage itself.
