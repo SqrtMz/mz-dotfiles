@@ -7,6 +7,7 @@
 {
   imports = [
       ./hardware-configuration.nix
+      ./modules/system/fonts.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -74,7 +75,10 @@
     github-desktop
     home-manager
     kdePackages.dolphin
+    kdePackages.qt6ct
+    kdePackages.qtstyleplugin-kvantum
     neovim
+    networkmanagerapplet
     polkit_gnome
     vscode
     wget
