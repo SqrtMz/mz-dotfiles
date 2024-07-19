@@ -77,6 +77,7 @@
     kdePackages.dolphin
     kdePackages.qt6ct
     kdePackages.qtstyleplugin-kvantum
+    kdePackages.qtwayland
     neovim
     networkmanagerapplet
     polkit_gnome

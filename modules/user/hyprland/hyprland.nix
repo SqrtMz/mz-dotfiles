@@ -9,25 +9,49 @@
         systemd.enable = true;
 
         extraConfig = ''
+            #    ____         __  __  ___  
+            #   / __/__ _____/ /_/  |/  /__
+            #  _\ \/ _ `/ __/ __/ /|_/ /_ /
+            # /___/\_, /_/  \__/_/  /_//__/
+            #       /_/                    
+
+            # You can split this configuration into multiple files
+            # Create your files separately and then link them to this file like this:
+            # source = ~/.config/hypr/myColors.conf
+
+            ################
+            ### MONITORS ###
+            ################
+
+            # See https://wiki.hyprland.org/Configuring/Monitors/
             monitor=,preferred,auto,auto
 
-            source = ~/mz-dotfiles/hypr/hypr/monitors.conf
-            source = ~/mz-dotfiles/hypr/hypr/workspaces.conf
+            source = ~/mz-dotfiles/modules/user/hyprland/monitors.conf
+            source = ~/mz-dotfiles/modules/user/hyprland/workspaces.conf
+
+            ###################
+            ### MY PROGRAMS ###
+            ###################
 
             $terminal = kitty
             $fileManager = dolphin
             $menu = rofi -show drun
 
+            #################
+            ### AUTOSTART ###
+            #################
+
             exec-once = ~/mz-dotfiles/scripts/autorun.sh
 
+            #############################
+            ### ENVIRONMENT VARIABLES ###
+            #############################
+
             env = HYPRCURSOR_SIZE,20
-            env = QT_STYLE_OVERRIDE,kvantum
-            env = QT_QPA_PLATFORM,wayland
-            env = QT_QPA_PLATFORMTHEME,qt6ct
-            env = XDG_SESSION_TYPE,wayland
-            env = XCURSOR_SIZE,20
-            env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
-            env = QT_AUTO_SCREEN_SCALE_FACTOR,1
+
+            #####################
+            ### LOOK AND FEEL ###
+            #####################
 
             general { 
                 gaps_in = 5
