@@ -10,7 +10,14 @@
       ./modules/system/fonts.nix
     ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  documentation.nixos.enable = false;
+
+  nix.settings = {
+    experimental-features = [ "nix-command" "flakes" ];
+    warn-dirty = false;
+    auto-optimise-store = true;
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   # Use the systemd-boot EFI boot loader.
@@ -70,9 +77,12 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     cliphist
+    fastfetch
     firefox
     git
     github-desktop
+    gparted
+    grim
     home-manager
     kdePackages.dolphin
     kdePackages.qt6ct
@@ -80,7 +90,8 @@
     kdePackages.qtwayland
     neovim
     networkmanagerapplet
-    polkit_gnome
+    lxde.lxsession
+    slurp
     vscode
     wget
     wl-clipboard
@@ -90,25 +101,7 @@
   users.defaultUserShell = pkgs.zsh;
 
   programs.hyprland.enable = true;
-
-  security.polkit.enable = true;
-
-  systemd = {
-    user.services.polkit-gnome-authentication-agent-1 = {
-      description = "polkit-gnome-authentication-agent-1";
-      wantedBy = ["graphical-session.target"];
-      wants = ["graphical-session.target"];
-      after = ["graphical-session.target"];
-      serviceConfig = {
-        Type = "simple";
-        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-        Restart = "on-failure";
-        RestartSec = 1;
-        TimeoutStopSec = 10;
-      };
-    };
-  };
-
+  
   services = {
     displayManager.sddm = {
       enable = true;

@@ -17,7 +17,7 @@
                 modules-right = ["pulseaudio" "bluetooth" "battery" "group/hardware" "clock" "tray"];
 
                 "custom/appmenuicon" = {
-                    format = "";
+                    format = "";
                     on-click = "wlogout";
                     on-click-right = "rofi -show drun";
                     tooltip = false;
@@ -39,7 +39,7 @@
                     format = "{icon}   {volume}%";
                     format-bluetooth = "{volume}%  {icon} {format_source}";
                     format-bluetooth-muted = " {icon} {format_source}";
-                    format-muted = " {format_source}";
+                    format-muted = "󰝟 {format_source}";
                     format-source = "{volume}% ";
                     format-source-muted = "";
                     format-icons = {
@@ -49,7 +49,7 @@
                         phone = " ";
                         portable = " ";
                         car = " ";
-                        default = [" " " " " "];
+                        default = ["󰕿 " "󰖀 " "󰕾 "];
                     };
                     on-click = "pavucontrol";
                 };
@@ -76,7 +76,7 @@
                 };
 
                 "custom/system" = {
-                    format = "";
+                    format = " ";
                     tooltip = false;
                 };
 
