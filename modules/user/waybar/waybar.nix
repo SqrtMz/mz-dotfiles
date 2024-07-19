@@ -76,7 +76,7 @@
                 };
 
                 "custom/system" = {
-                    format = " ";
+                    format = "";
                     tooltip = false;
                 };
 
@@ -93,7 +93,7 @@
                 };
 
                 "memory" = {
-                    format = "/ M {}% ";
+                    format = "/ M {}%  ";
                     on-click = "kitty -e btop";
                 };
 
