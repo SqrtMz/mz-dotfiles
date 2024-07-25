@@ -5,7 +5,7 @@
   home.homeDirectory = "/home/debian";
 
   imports = [
-    ./modules/user/zsh/zsh.nix
+    ../../modules/user/zsh/zsh.nix
   ];
 
   home.packages = with pkgs; [
