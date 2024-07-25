@@ -17,8 +17,9 @@
 
   home.packages = with pkgs; [
     btop
-    htop
     fastfetch
+    htop
+    neovim
   ];
 
   # Let Home Manager install and manage itself.

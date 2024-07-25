@@ -1,57 +1,57 @@
 { config, lib, pkgs, ... }:
 
 {
-    # home.file.".config/kitty/kitty.conf".source = ./kitty.conf;
+    home.file.".config/kitty/kitty.conf".source = ./kitty.conf;
     
-    programs.kitty = {
-        enable = true;
+    # programs.kitty = {
+    #     enable = true;
         
-        shellIntegration = {
-            enableZshIntegration = true;
-            mode = "enable";
-        };
+    #     shellIntegration = {
+    #         enableZshIntegration = true;
+    #         mode = "enable";
+    #     };
 
-        settings = {
-            enable_audio_bell = false;
-            window_margin_width = 10;
-            cursor_shape = "beam";
-        };
+    #     settings = {
+    #         enable_audio_bell = false;
+    #         window_margin_width = 10;
+    #         cursor_shape = "beam";
+    #     };
 
-        extraConfig = ''
-            background_opacity 0.6
+    #     extraConfig = ''
+    #         background_opacity 0.6
 
-            # Black
-            color0 #45475A
-            color8 #585B70
+    #         # Black
+    #         color0 #45475A
+    #         color8 #585B70
             
-            # Red
-            color1 #F38BA8
-            color9 #F38BA8
+    #         # Red
+    #         color1 #F38BA8
+    #         color9 #F38BA8
 
-            # Green
-            color2  #A6E3A1
-            color10 #A6E3A1
+    #         # Green
+    #         color2  #A6E3A1
+    #         color10 #A6E3A1
             
-            # Yellow
-            color3  #F9E2AF
-            color11 #F9E2AF
+    #         # Yellow
+    #         color3  #F9E2AF
+    #         color11 #F9E2AF
             
-            # Blue
-            color4  #89B4FA
-            color12 #89B4FA
+    #         # Blue
+    #         color4  #89B4FA
+    #         color12 #89B4FA
 
-            # Magenta
-            color5  #F5C2E7
-            color13 #F5C2E7
+    #         # Magenta
+    #         color5  #F5C2E7
+    #         color13 #F5C2E7
 
-            # Cyan
-            color6  #94E2D5
-            color14 #94E2D5
+    #         # Cyan
+    #         color6  #94E2D5
+    #         color14 #94E2D5
 
-            # White
-            color7  #BAC2DE
-            color15 #A6ADC8
-        '';
+    #         # White
+    #         color7  #BAC2DE
+    #         color15 #A6ADC8
+    #     '';
 
-    };
+    # };
 }

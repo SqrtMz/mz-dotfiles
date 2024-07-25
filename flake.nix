@@ -28,8 +28,14 @@
         homeConfigurations = {
             mz = home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
-                extraSpecialArgs = { inherit inputs; };
-                modules = [ ./home.nix ];
+                extraSpecialArgs = {inherit inputs;};
+                modules = [./profiles/mz/home.nix];
+            };
+
+            debian = home-manager.lib.homeManagerConfiguration {
+                inherit pkgs;
+                extraSpecialArgs = {inherit inputs;};
+                modules = [./profiles/debian/home.nix];
             };
         };
     };
