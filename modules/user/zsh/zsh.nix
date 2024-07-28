@@ -15,6 +15,7 @@
       export XCURSOR_SIZE=20
       export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
       export QT_AUTO_SCREEN_SCALE_FACTOR=1
+      export XDG_CURRENT_DESKTOP=sway
     '';
 
     oh-my-zsh = {
