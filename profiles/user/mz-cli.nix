@@ -9,9 +9,6 @@
   ];
 
   home.packages = with pkgs; [
-    btop
-    fastfetch
-    openssh
   ];
 
   # Let Home Manager install and manage itself.

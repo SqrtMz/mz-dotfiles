@@ -2,23 +2,28 @@
 
 {
     environment.packages = with pkgs; [
-        neovim
-        procps
-        killall
+        btop
+        bzip2
         diffutils
+        fastfetch
         findutils
-        utillinux
-        tzdata
-        hostname
+        git
         gnugrep
         gnupg
         gnused
         gnutar
-        bzip2
         gzip
+        home-manager
+        hostname
+        killall
+        openssh
+        neovim
+        procps
+        tzdata
+        unzip
+        utillinux
         xz
         zip
-        unzip
     ];
 
     # Backup etc files instead of failing to activate generation if a file already exists in /etc
