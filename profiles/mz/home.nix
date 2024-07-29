@@ -17,15 +17,28 @@
 
     home.packages = with pkgs; [
         btop
-        cliphist
         fastfetch
-        flameshot
         grim
         htop
         neovim
         wl-clipboard
         xournalpp
     ];
+
+    services = {
+        flameshot = {
+            enable = true;
+            settings = {
+                General = {
+                    disabledTrayIcon = true;
+                };
+            };
+        };
+
+        cliphist = {
+            enable = true;
+        };
+    };
 
     # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
