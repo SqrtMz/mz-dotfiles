@@ -54,6 +54,11 @@
                 extraSpecialArgs = {inherit inputs;};
                 modules = [./profiles/user/server.nix];
             };
+
+            mz-cli = home-manager.lib.homeManagerConfiguration {
+                pkgs = import nixpkgs {system = "aarch64-linux";};
+                modules = [./profiles/user/mz-cli.nix];
+            };
         };
     };
 }
