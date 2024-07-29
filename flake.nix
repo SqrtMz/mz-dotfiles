@@ -34,8 +34,7 @@
 
         nixOnDroidConfigurations = {
             MzBrick = inputs.nix-on-droid.lib.nixOnDroidConfiguration {
-                system = "aarch64-linux";
-                inherit pkgs;
+                pkgs = import nixpkgs {system = "aarch64-linux";};
                 modules = [./profiles/system/MzBrick.nix];
                 extraSpecialArgs = {inherit inputs;};
             };
