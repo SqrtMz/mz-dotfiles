@@ -26,8 +26,6 @@
         zsh
     ];
 
-    defaultUserShell = pkgs.zsh;
-
     # Backup etc files instead of failing to activate generation if a file already exists in /etc
     environment.etcBackupExtension = ".bak";
 
@@ -41,4 +39,10 @@
 
     # Set your time zone
     time.timeZone = "America/Bogota";
+
+    home-manager = {
+        config = ../user/server.nix;
+        backupFileExtension = "hm-bak";
+        useGlobalPkgs = true;
+    };
 }
