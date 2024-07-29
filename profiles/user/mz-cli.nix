@@ -1,8 +1,8 @@
 { inputs, config, pkgs, ... }:
 
 {
-  home.username = "pan";
-  home.homeDirectory = "/home/pan";
+  home.username = "nix-on-droid";
+  home.homeDirectory = "/home/nix-on-droid";
 
   imports = [
     ../../modules/user/zsh/zsh.nix
