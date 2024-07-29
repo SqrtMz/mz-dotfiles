@@ -16,7 +16,6 @@
       export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
       export QT_AUTO_SCREEN_SCALE_FACTOR=1
       export XDG_CURRENT_DESKTOP=sway
-      export SHELL=~/.nix-profile/bin/zsh
     '';
 
     oh-my-zsh = {
