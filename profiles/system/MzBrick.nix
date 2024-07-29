@@ -13,7 +13,6 @@
         gnused
         gnutar
         gzip
-        home-manager
         hostname
         killall
         openssh
@@ -24,8 +23,10 @@
         utillinux
         xz
         zip
-        zsh
     ];
+
+    programs.zsh.enable = true;
+    users.defaultUserShell = pkgs.zsh;
 
     # Backup etc files instead of failing to activate generation if a file already exists in /etc
     environment.etcBackupExtension = ".bak";
