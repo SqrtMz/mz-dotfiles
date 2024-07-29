@@ -35,10 +35,7 @@
         nixOnDroidConfigurations = {
             MzBrick = inputs.nix-on-droid.lib.nixOnDroidConfiguration {
                 pkgs = import nixpkgs {system = "aarch64-linux";};
-                modules = [
-                    ./profiles/system/MzBrick.nix
-                    ./profiles/user/mz-cli.nix
-                ];
+                modules = [./profiles/system/MzBrick.nix];
             };
         };
 
@@ -53,11 +50,6 @@
                 inherit pkgs;
                 extraSpecialArgs = {inherit inputs;};
                 modules = [./profiles/user/server.nix];
-            };
-
-            mz-cli = home-manager.lib.homeManagerConfiguration {
-                pkgs = import nixpkgs {system = "aarch64-linux";};
-                modules = [./profiles/user/mz-cli.nix];
             };
         };
     };
