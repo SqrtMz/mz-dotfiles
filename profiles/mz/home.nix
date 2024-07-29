@@ -17,11 +17,13 @@
 
     home.packages = with pkgs; [
         btop
+        cliphist
         fastfetch
         flameshot
+        grim
         htop
         neovim
-        ventoy
+        wl-clipboard
         xournalpp
     ];
 

@@ -160,7 +160,7 @@
     #         bind = $mainMod, F, fullscreen,
     #         bind = $mainMod SHIFT, F, togglefloating
 
-    #         bind = , Print, exec, flameshot gui - | wl-copy
+    #         bind = , Print, exec, flameshot gui | wl-copy
 
     #         bindl = , XF86AudioPlay, exec, playerctl play-pause
 
