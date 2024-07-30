@@ -1,8 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-    # home.file.".config/kitty/kitty.conf".source = ./kitty.conf;
-    
     programs.kitty = {
         enable = true;
         

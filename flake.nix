@@ -12,6 +12,7 @@
 
         nix-on-droid.url = "github:nix-community/nix-on-droid/master";
         nix-on-droid.inputs.nixpkgs.follows = "nixpkgs";
+        nix-on-droid.inputs.home-manager.follows = "home-manager";
     };
 
     outputs = { self, nixpkgs, home-manager, nix-on-droid, ... } @ inputs:
