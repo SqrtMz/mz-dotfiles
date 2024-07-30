@@ -2,8 +2,8 @@
 
 {
     imports = [
-        ./hardware-configuration.nix
-        ./modules/system/fonts.nix
+        ../../hardware-configuration.nix
+        ../../modules/system/fonts.nix
     ];
 
     documentation.nixos.enable = false;
