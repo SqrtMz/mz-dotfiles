@@ -86,6 +86,7 @@
         networkmanagerapplet
         lxde.lxsession
         vscode
+        waydroid
         wget
         wl-clipboard
     ];
