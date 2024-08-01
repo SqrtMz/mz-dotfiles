@@ -16,7 +16,7 @@
 
         iconTheme = {
             name = "Whitesur-dark";
-            package = pkgs.Whitesur-icon-theme;
+            package = pkgs.whitesur-icon-theme;
         };
     };
 
