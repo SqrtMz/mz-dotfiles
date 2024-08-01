@@ -1,6 +1,12 @@
-{config, lib, pkgs, ...}:
+{config, lib, pkgs, inputs, ...}:
 
 {
+    qt = {
+        enable = true;
+        platformTheme.name = "gtk";
+        style.name = "kvantum";
+    };
+
     gtk = {
         enable = true;
 
