@@ -25,7 +25,10 @@
             Mz = lib.nixosSystem {
                 inherit system;
                 specialArgs = { inherit inputs; };
-                modules = [./profiles/system/Mz.nix];
+                modules = [
+                    ./profiles/system/Mz.nix
+                    inputs.home-manager.nixosModules.default
+                ];
             };
         };
 
