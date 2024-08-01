@@ -30,7 +30,7 @@
             enable = true;
             settings = {
                 General = {
-                    disabledTrayIcon = true;
+                    disabledTrayIcon = false;
                 };
             };
         };

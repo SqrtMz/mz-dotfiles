@@ -72,23 +72,32 @@
     # List packages installed in system profile. To search, run:
     # $ nix search wget
         environment.systemPackages = with pkgs; [
+        android-tools
         fastfetch
         firefox
+        fzf
         git
         github-desktop
         gparted
+        heimdall-gui
         home-manager
+        kdePackages.ark
         kdePackages.dolphin
         kdePackages.qt6ct
         kdePackages.qtstyleplugin-kvantum
         kdePackages.qtwayland
+        lxde.lxsession
+        nemo
         neovim
         networkmanagerapplet
-        lxde.lxsession
+        rar
+        unrar
+        unzip
         vscode
         waydroid
         wget
         wl-clipboard
+        zip
     ];
 
     programs.zsh.enable = true;
@@ -120,7 +129,7 @@
     # networking.firewall.allowedTCPPorts = [ ... ];
     # networking.firewall.allowedUDPPorts = [ ... ];
     # Or disable the firewall altogether.
-    # networking.firewall.enable = false;
+    networking.firewall.enable = false;
 
     # Copy the NixOS configuration file and link it from the resulting system
     # (/run/current-system/configuration.nix). This is useful in case you
