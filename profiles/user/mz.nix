@@ -28,11 +28,6 @@
     services = {
         flameshot = {
             enable = true;
-            settings = {
-                General = {
-                    disabledTrayIcon = false;
-                };
-            };
         };
 
         cliphist = {

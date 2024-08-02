@@ -90,6 +90,7 @@
         lxde.lxsession # Polkit
         neovim
         networkmanagerapplet
+        obs-studio
         rar
         unrar
         unzip
@@ -97,6 +98,7 @@
         waydroid
         wget
         wl-clipboard
+        xdg-desktop-portal-gtk # Desktop portal needed for OBS and Flameshot on Hyprland
         zip
     ];
 
@@ -105,7 +107,7 @@
 
     programs.hyprland = {
         enable = true;
-        portalPackage = pkgs.xdg-desktop-portal-hyprland;
+        portalPackage = pkgs.xdg-desktop-portal-hyprland; # Desktop portal needed for OBS and Flameshot on Hyprland
     };
 
     services = {
