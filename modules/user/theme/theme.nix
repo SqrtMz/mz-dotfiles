@@ -21,7 +21,7 @@
         };
 
         iconTheme = {
-            name = "Whitesur-dark";
+            name = "WhiteSur-dark";
             package = pkgs.whitesur-icon-theme;
         };
     };

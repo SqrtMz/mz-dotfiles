@@ -73,19 +73,21 @@
         android-tools
         fastfetch
         firefox
+        flameshot
         fzf
         git
         github-desktop
         gparted
+        grim
         heimdall-gui
         home-manager
         kdePackages.ark
         kdePackages.dolphin
-        kdePackages.qt6ct
+        kdePackages.okular
         kdePackages.qtstyleplugin-kvantum
+        kdePackages.qtsvg # Dolphin icons
         kdePackages.qtwayland
-        lxde.lxsession
-        nemo
+        lxde.lxsession # Polkit
         neovim
         networkmanagerapplet
         rar
@@ -101,13 +103,18 @@
     programs.zsh.enable = true;
     users.defaultUserShell = pkgs.zsh;
 
-    programs.hyprland.enable = true;
+    programs.hyprland = {
+        enable = true;
+        portalPackage = pkgs.xdg-desktop-portal-hyprland;
+    };
 
     services = {
         displayManager.sddm = {
             enable = true;
             wayland.enable = true;
         };
+
+        gvfs.enable = true; # Partitions on Dolphin
     };
 
     # Some programs need SUID wrappers, can be configured further or are
