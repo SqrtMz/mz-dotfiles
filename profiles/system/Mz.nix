@@ -4,6 +4,7 @@
     imports = [
         ../../hardware-configuration.nix
         ../../modules/system/fonts.nix
+        ../../modules/system/steam.nix
         inputs.home-manager.nixosModules.default
     ];
 
@@ -83,7 +84,9 @@
         home-manager
         kdePackages.ark
         kdePackages.dolphin
+        # kdePackages.kservice
         kdePackages.okular
+        # kdePackages.plasma-workspace
         kdePackages.qtstyleplugin-kvantum
         kdePackages.qtsvg # Dolphin icons
         kdePackages.qtwayland
