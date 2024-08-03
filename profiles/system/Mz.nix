@@ -94,6 +94,7 @@
         neovim
         networkmanagerapplet
         obs-studio
+        prismlauncher
         rar
         unrar
         unzip

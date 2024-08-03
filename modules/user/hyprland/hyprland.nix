@@ -1,4 +1,4 @@
-{config, lib, pkgs, ...}:
+{config, lib, pkgs, inputs, ...}:
 
 {
     wayland.windowManager.hyprland = {
@@ -7,12 +7,6 @@
         systemd.enable = true;
 
         extraConfig = ''
-            #    ____         __  __  ___  
-            #   / __/__ _____/ /_/  |/  /__
-            #  _\ \/ _ `/ __/ __/ /|_/ /_ /
-            # /___/\_, /_/  \__/_/  /_//__/
-            #       /_/                    
-
             ################
             ### MONITORS ###
             ################
@@ -35,12 +29,6 @@
             #################
 
             exec-once = ~/mz-dotfiles/scripts/autorun.sh
-
-            #############################
-            ### ENVIRONMENT VARIABLES ###
-            #############################
-
-            env = HYPRCURSOR_SIZE,20
 
             #####################
             ### LOOK AND FEEL ###
@@ -224,7 +212,7 @@
             windowrulev2 = float, title:(Picture-in-Picture)
             windowrulev2 = float, class:(firefox), title:(Library)
 
-            windowrulev2 = float, class:(steam), title:.*
+            windowrulev2 = float, class:(SDL Application), title:.*
             windowrulev2 = float, class:(python3), title:.*
             windowrulev2 = float, class:(pavucontrol)
 
