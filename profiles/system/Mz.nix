@@ -72,6 +72,8 @@
 
     environment.systemPackages = with pkgs; [
         android-tools
+        btop
+        cubiomes-viewer
         fastfetch
         firefox
         flameshot
@@ -80,8 +82,10 @@
         github-desktop
         gparted
         grim
+        gthumb
         heimdall-gui
         home-manager
+        htop
         kdePackages.ark
         kdePackages.dolphin
         # kdePackages.kservice
@@ -91,18 +95,22 @@
         kdePackages.qtsvg # Dolphin icons
         kdePackages.qtwayland
         lxde.lxsession # Polkit
+        mcaselector
         neovim
         networkmanagerapplet
         obs-studio
         prismlauncher
         rar
+        unityhub
         unrar
         unzip
+        vlc
         vscode
         waydroid
         wget
         wl-clipboard
         xdg-desktop-portal-gtk # Desktop portal needed for OBS and Flameshot on Hyprland
+        xournalpp
         zip
     ];
 
