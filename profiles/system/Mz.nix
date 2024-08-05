@@ -31,26 +31,29 @@
     # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
     # Select internationalisation properties.
-    # i18n.defaultLocale = "en_US.UTF-8";
-    # console = {
-    #   font = "Lat2-Terminus16";
-    #   keyMap = "us";
-    #   useXkbConfig = true; # use xkb.options in tty.
-    # };
+    i18n.defaultLocale = "en_US.UTF-8";
+    console = {
+      keyMap = lib.mkForce "us";
+      useXkbConfig = true;
+    };
 
     # Enable the X11 windowing system.
     # services.xserver.enable = true;
 
     # Configure keymap in X11
-    # services.xserver.xkb.layout = "us";
-    # services.xserver.xkb.options = "eurosign:e,caps:escape";
+    services.xserver.xkb.layout = "us";
+    services.xserver.xkb.options = "eurosign:e,caps:escape";
 
     # Enable CUPS to print documents.
     # services.printing.enable = true;
 
+    security.rtkit.enable = true;
     services.pipewire = {
         enable = true;
+        alsa.enable = true;
+        alsa.support32Bit = true;
         pulse.enable = true;
+        jack.enable = true;
     };
 
     # Enable touchpad support (enabled default in most desktopManager).
@@ -72,8 +75,11 @@
 
     environment.systemPackages = with pkgs; [
         android-tools
+        blender
         btop
         cubiomes-viewer
+        discord
+        duckstation
         fastfetch
         firefox
         flameshot
@@ -99,11 +105,15 @@
         neovim
         networkmanagerapplet
         obs-studio
+        osu-lazer
+        pcsx2
         prismlauncher
+        pyenv
         rar
         unityhub
         unrar
         unzip
+        virtualenv
         vlc
         vscode
         waydroid
