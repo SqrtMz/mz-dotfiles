@@ -7,6 +7,11 @@
         style.name = "kvantum";
     };
 
+    home.file.".config/Kvantum/" = {
+        source = ./kvantum;
+        recursive = true;
+    };
+
     gtk = {
         enable = true;
 

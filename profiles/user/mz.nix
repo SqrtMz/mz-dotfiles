@@ -5,11 +5,10 @@
     home.homeDirectory = "/home/mz";
 
     imports = [
-        ../../modules/user/theme/theme.nix
         ../../modules/user/hyprland/hyprland.nix
         ../../modules/user/kitty/kitty.nix
-        ../../modules/user/kvantum/kvantum.nix
         ../../modules/user/rofi/rofi.nix
+        ../../modules/user/themes/themes.nix
         ../../modules/user/waybar/waybar.nix
         ../../modules/user/wlogout/wlogout.nix
         ../../modules/user/zsh/zsh.nix

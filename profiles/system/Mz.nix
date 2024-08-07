@@ -97,7 +97,6 @@
         # kdePackages.kservice
         kdePackages.okular
         # kdePackages.plasma-workspace
-        kdePackages.qtstyleplugin-kvantum
         kdePackages.qtsvg # Dolphin icons
         kdePackages.qtwayland
         lxde.lxsession # Polkit
