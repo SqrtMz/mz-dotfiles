@@ -81,7 +81,6 @@
         discord
         duckstation
         fastfetch
-        flameshot
         fzf
         git
         github-desktop
