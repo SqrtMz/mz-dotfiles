@@ -5,6 +5,7 @@
     home.homeDirectory = "/home/mz";
 
     imports = [
+        # ../../modules/user/firefox/firefox.nix
         ../../modules/user/hyprland/hyprland.nix
         ../../modules/user/kitty/kitty.nix
         ../../modules/user/rofi/rofi.nix

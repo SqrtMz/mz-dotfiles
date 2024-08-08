@@ -81,7 +81,6 @@
         discord
         duckstation
         fastfetch
-        firefox
         flameshot
         fzf
         git
