@@ -75,6 +75,7 @@
 
     environment.systemPackages = with pkgs; [
         android-tools
+        arch-install-scripts
         blender
         btop
         cubiomes-viewer
