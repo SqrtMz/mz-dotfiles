@@ -93,6 +93,7 @@
         htop
         kdePackages.ark
         kdePackages.dolphin
+        kdePackages.kdenlive
         # kdePackages.kservice
         kdePackages.okular
         # kdePackages.plasma-workspace
