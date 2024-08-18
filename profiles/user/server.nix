@@ -1,8 +1,8 @@
 { inputs, config, pkgs, ... }:
 
 {
-  home.username = "debian";
-  home.homeDirectory = "/home/debian";
+  home.username = "ubuntu";
+  home.homeDirectory = "/home/ubuntu";
 
   imports = [
   ];
