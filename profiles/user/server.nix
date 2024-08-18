@@ -1,8 +1,8 @@
 { inputs, config, pkgs, ... }:
 
 {
-  # home.username = "debian";
-  # home.homeDirectory = "/home/debian";
+  home.username = "debian";
+  home.homeDirectory = "/home/debian";
 
   imports = [
     ../../modules/user/zsh/zsh.nix
