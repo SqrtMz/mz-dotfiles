@@ -99,7 +99,6 @@
         # kdePackages.plasma-workspace
         kdePackages.qtsvg # Dolphin icons
         kdePackages.qtwayland
-        libgcc
         lxde.lxsession # Polkit
         mcaselector
         neovim
