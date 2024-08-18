@@ -10,6 +10,7 @@
 
   home.packages = with pkgs; [
     fastfetch
+    kitty
   ];
 
   # Let Home Manager install and manage itself.
