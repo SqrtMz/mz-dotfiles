@@ -1,8 +1,8 @@
 { inputs, config, pkgs, ... }:
 
 {
-  home.username = "ubuntu";
-  home.homeDirectory = "/home/ubuntu";
+  home.username = "debian";
+  home.homeDirectory = "/home/debian";
 
   imports = [
   ];
@@ -10,7 +10,6 @@
   home.packages = with pkgs; [
     btop
     fastfetch
-    neovim
     pyenv
     virtualenv
   ];
