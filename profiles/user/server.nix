@@ -5,12 +5,13 @@
   home.homeDirectory = "/home/debian";
 
   imports = [
-    ../../modules/user/zsh/zsh.nix
   ];
 
   home.packages = with pkgs; [
+    btop
     fastfetch
     kitty
+    neovim
   ];
 
   # Let Home Manager install and manage itself.
