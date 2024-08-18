@@ -9,15 +9,8 @@
 
   home.packages = with pkgs; [
     btop
-    bzip2
     fastfetch
-    libffi
-    ncurses
     neovim
-    openssl
-    pyenv
-    readline
-    virtualenv
   ];
 
   # Let Home Manager install and manage itself.
