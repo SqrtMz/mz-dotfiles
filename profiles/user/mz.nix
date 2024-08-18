@@ -26,13 +26,9 @@
     ];
 
     services = {
-        flameshot = {
-            enable = true;
-        };
-
-        cliphist = {
-            enable = true;
-        };
+        cliphist.enable = true;
+        flameshot.enable = true;
+        gnome-keyring.enable = true;
     };
 
     # Let Home Manager install and manage itself.
