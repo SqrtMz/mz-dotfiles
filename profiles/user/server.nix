@@ -11,6 +11,8 @@
     btop
     fastfetch
     neovim
+    pyenv
+    virtualenv
   ];
 
   # Let Home Manager install and manage itself.
