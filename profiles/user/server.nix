@@ -9,9 +9,14 @@
 
   home.packages = with pkgs; [
     btop
+    bzip2
     fastfetch
+    libffi
+    ncurses
     neovim
+    openssl
     pyenv
+    readline
     virtualenv
   ];
 
