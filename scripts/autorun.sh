@@ -1,20 +1,19 @@
 #! /usr/bin/env bash
 
-if (($DESKTOP_SESSION == "hyprland")); then
+# if (($DESKTOP_SESSION == "hyprland")); then
 
-    hyprpaper &
+#     hyprpaper &
 
-elif (($DESKTOP_SESSION == "sway")); then
+# elif (($DESKTOP_SESSION == "sway")); then
 
-    swaybg -i ~/Pictures/"Images & Videos"/ZZ.png &
+#     swaybg -i ~/Pictures/"Images & Videos"/ZZ.png &
 
-fi
+# fi
 
 waybar &
 nm-applet &
-flameshot &
 wl-paste --type text --watch cliphist store &
 wl-paste --type image --watch cliphist store &
 systemctl --user enable opentabletdriver --now &
-lxpolkit &
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+lxpolkit
+# /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &

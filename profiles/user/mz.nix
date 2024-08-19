@@ -27,8 +27,32 @@
 
     services = {
         cliphist.enable = true;
-        flameshot.enable = true;
         gnome-keyring.enable = true;
+
+        flameshot = {
+            enable = true;
+
+            settings = {
+                
+                General = {
+                    disabledTrayIcon = true;
+                };
+            };
+        };
+    };
+
+    systemd.user.services.startup = {
+        Unit = {
+            Description = "Startup autorun script";
+        };
+
+        Service = {
+            ExecStart = "/home/mz/mz-dotfiles/scripts/autorun.sh";
+        };
+
+        Install = {
+            WantedBy = ["graphical-session.target"];
+        };
     };
 
     # Let Home Manager install and manage itself.

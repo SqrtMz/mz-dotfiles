@@ -83,6 +83,7 @@
         duckstation
         fastfetch
         fzf
+        gcc
         git
         github-desktop
         gparted
@@ -100,6 +101,7 @@
         kdePackages.qtsvg # Dolphin icons
         kdePackages.qtwayland
         lxde.lxsession # Polkit
+        gnumake
         mcaselector
         neovim
         networkmanagerapplet
@@ -133,8 +135,9 @@
 
     services = {
         displayManager.sddm = {
-            enable = true;
+    	    enable = true;
             wayland.enable = true;
+            package = pkgs.kdePackages.sddm;
         };
 
         gvfs.enable = true; # Partitions on Dolphin

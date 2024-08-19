@@ -24,12 +24,6 @@
             $fileManager = dolphin
             $menu = rofi -show drun
 
-            #################
-            ### AUTOSTART ###
-            #################
-
-            exec-once = ~/mz-dotfiles/scripts/autorun.sh
-
             #####################
             ### LOOK AND FEEL ###
             #####################
