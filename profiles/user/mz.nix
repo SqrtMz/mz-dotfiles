@@ -32,10 +32,10 @@
         flameshot = {
             enable = true;
 
-            settings = {
-                
+            settings = {  
                 General = {
                     disabledTrayIcon = true;
+                    uiColor = "#369B99";
                 };
             };
         };

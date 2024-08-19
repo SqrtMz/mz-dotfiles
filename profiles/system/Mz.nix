@@ -86,6 +86,7 @@
         gcc
         git
         github-desktop
+        gnumake
         gparted
         grim
         gthumb
@@ -101,13 +102,13 @@
         kdePackages.qtsvg # Dolphin icons
         kdePackages.qtwayland
         lxde.lxsession # Polkit
-        gnumake
         mcaselector
         neovim
         networkmanagerapplet
         obs-studio
         osu-lazer
         pcsx2
+        playerctl
         prismlauncher
         pyenv
         rar
