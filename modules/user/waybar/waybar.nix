@@ -110,7 +110,7 @@
                 };
 
                 "clock" = {
-                    format = "{:%H:%M %a}";
+                    format = "{:%I:%M %p}";
                     timezone = "America/Bogota";
                     tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
                     format-alt = "{:%Y-%m-%d}";
