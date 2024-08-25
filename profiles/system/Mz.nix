@@ -83,10 +83,8 @@
         duckstation
         fastfetch
         fzf
-        gcc
         git
         github-desktop
-        gnumake
         gparted
         grim
         gthumb
@@ -110,7 +108,6 @@
         pcsx2
         playerctl
         prismlauncher
-        pyenv
         rar
         unityhub
         unrar
