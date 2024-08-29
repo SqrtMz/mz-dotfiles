@@ -14,6 +14,7 @@
 
 		shellAliases = {
 			Mz = "sudo nixos-rebuild switch --flake ~/mz-dotfiles#Mz";
+			update = "nix flake update ./mz-dotfiles";
 		};
     };
 }

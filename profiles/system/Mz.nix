@@ -94,9 +94,8 @@
         kdePackages.ark
         kdePackages.dolphin
         kdePackages.kdenlive
-        # kdePackages.kservice
         kdePackages.okular
-        # kdePackages.plasma-workspace
+        kdePackages.plasma-workspace # plasma-applications generation for dolphin
         kdePackages.qtsvg # Dolphin icons
         kdePackages.qtwayland
         lxde.lxsession # Polkit
@@ -121,6 +120,7 @@
         xdg-desktop-portal-gtk # Desktop portal needed for OBS and Flameshot on Hyprland
         xournalpp
         zip
+        # inputs.nixpkgs-stable.legacyPackages."x86_64-linux".kdePackages.dolphin
     ];
 
     programs.zsh.enable = true;

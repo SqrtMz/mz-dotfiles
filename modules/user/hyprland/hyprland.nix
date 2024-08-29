@@ -16,6 +16,8 @@
             source = ~/mz-dotfiles/modules/user/hyprland/monitors.conf
             source = ~/mz-dotfiles/modules/user/hyprland/workspaces.conf
 
+            env = XDG_MENU_PREFIX,plasma-
+
             ###################
             ### MY PROGRAMS ###
             ###################

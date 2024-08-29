@@ -15,27 +15,21 @@
         nix-on-droid.inputs.home-manager.follows = "home-manager";
     };
 
-    outputs = { self, nixpkgs, home-manager, nix-on-droid, ... } @ inputs:
+    outputs = {self, nixpkgs, home-manager, nix-on-droid, ...} @ inputs:
     let
         lib = nixpkgs.lib;
         system = "x86_64-linux";
         pkgs = nixpkgs.legacyPackages.${system};
+
     in {
         nixosConfigurations = {
             Mz = lib.nixosSystem {
                 inherit system;
-                specialArgs = { inherit inputs; };
+                specialArgs = {inherit inputs;};
                 modules = [
                     ./profiles/system/Mz.nix
                     inputs.home-manager.nixosModules.default
                 ];
-            };
-        };
-
-        nixOnDroidConfigurations = {
-            MzBrick = inputs.nix-on-droid.lib.nixOnDroidConfiguration {
-                pkgs = import nixpkgs {system = "aarch64-linux";};
-                modules = [./profiles/system/MzBrick.nix];
             };
         };
 
@@ -50,6 +44,13 @@
                 inherit pkgs;
                 extraSpecialArgs = {inherit inputs;};
                 modules = [./profiles/user/server.nix];
+            };
+        };
+
+        nixOnDroidConfigurations = {
+            MzBrick = inputs.nix-on-droid.lib.nixOnDroidConfiguration {
+                pkgs = import nixpkgs {system = "aarch64-linux";};
+                modules = [./profiles/system/MzBrick.nix];
             };
         };
     };
