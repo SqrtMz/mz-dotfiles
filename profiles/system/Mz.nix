@@ -120,7 +120,6 @@
         xdg-desktop-portal-gtk # Desktop portal needed for OBS and Flameshot on Hyprland
         xournalpp
         zip
-        # inputs.nixpkgs-stable.legacyPackages."x86_64-linux".kdePackages.dolphin
     ];
 
     programs.zsh.enable = true;
