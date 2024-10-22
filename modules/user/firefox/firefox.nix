@@ -3,6 +3,7 @@
 {
     programs.firefox = {
         enable = true;
+        package = null;
 
         profiles."Mz" = {
             id = 0;

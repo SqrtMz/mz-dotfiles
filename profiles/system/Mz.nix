@@ -77,11 +77,14 @@
         android-tools
         arch-install-scripts
         blender
+        bottles
         btop
+	    chromium
         cubiomes-viewer
         discord
         duckstation
         fastfetch
+        firefox
         fzf
         git
         github-desktop
@@ -91,6 +94,7 @@
         heimdall-gui
         home-manager
         htop
+        hyprland
         kdePackages.ark
         kdePackages.dolphin
         kdePackages.kdenlive
@@ -98,20 +102,25 @@
         kdePackages.plasma-workspace # plasma-applications generation for dolphin
         kdePackages.qtsvg # Dolphin icons
         kdePackages.qtwayland
+        kicad-small
+        kitty
+        krita
         lxde.lxsession # Polkit
         mcaselector
         neovim
         networkmanagerapplet
         obs-studio
         osu-lazer
+        pavucontrol
         pcsx2
         playerctl
         prismlauncher
+        python310
+        python312
         rar
         unityhub
         unrar
         unzip
-        virtualenv
         vlc
         vscode
         waydroid

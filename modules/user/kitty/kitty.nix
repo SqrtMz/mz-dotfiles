@@ -3,6 +3,7 @@
 {
     programs.kitty = {
         enable = true;
+        package = pkgs.emptyDirectory;
         
         shellIntegration = {
             enableZshIntegration = true;
@@ -11,7 +12,7 @@
 
         settings = {
             enable_audio_bell = false;
-            window_margin_width = 10;
+            # window_padding_width = 10;
             cursor_shape = "beam";
         };
 

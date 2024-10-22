@@ -2,7 +2,8 @@
 
 {
     wayland.windowManager.hyprland = {
-        enable = true;
+    	enable = true;
+        
         xwayland.enable = true;
         systemd.enable = true;
 
@@ -142,7 +143,8 @@
             bind = $mainMod, F, fullscreen,
             bind = $mainMod SHIFT, F, togglefloating
 
-            bind = , Print, exec, flameshot gui --raw | wl-copy
+            bind = $mainMod, Print, exec, flameshot gui --raw | wl-copy
+            bind = , Print, exec, grim -g "$(slurp)" - | wl-copy
 
             bindl = , XF86AudioPlay, exec, playerctl play-pause
 

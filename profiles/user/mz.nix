@@ -21,6 +21,7 @@
         grim
         htop
         neovim
+        slurp
         wl-clipboard
         xournalpp
     ];
@@ -41,6 +42,15 @@
                     uiColor = "#369B99";
                 };
             };
+        };
+    };
+
+    xdg = {
+        enable = true;
+
+        userDirs = {
+            enable = true;
+            createDirectories = true;
         };
     };
 
