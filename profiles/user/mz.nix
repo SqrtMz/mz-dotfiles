@@ -54,9 +54,9 @@
         };
     };
 
-    systemd.user.services.startup = {
+    systemd.user.services."startup" = {
         Unit = {
-            Description = "Startup autorun script";
+            Description = "Startup autorun script for Mz Machine";
         };
 
         Service = {
