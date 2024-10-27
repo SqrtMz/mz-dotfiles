@@ -15,6 +15,7 @@
         ../../modules/user/firefox/firefox.nix
         ../../modules/user/hyprland/hyprland.nix
         ../../modules/user/kitty/kitty.nix
+        ../../modules/user/neovim/neovim.nix
         ../../modules/user/rofi/rofi.nix
         ../../modules/user/themes/themes.nix
         ../../modules/user/waybar/waybar.nix
@@ -25,21 +26,21 @@
     nixpkgs.config.allowUnfree = true;
 
     home.packages = with pkgs; [
+        ark
         bottles
         btop
         brightnessctl
-        # dxvk
         fastfetch
         github-desktop
         grim
         htop
-        kdePackages.ark
         lutris
         ncdu
         networkmanagerapplet
         ntfs3g
         nvtop
         nwg-displays
+        (config.lib.nixGL.wrap pkgs.obs-studio)
         okular
         pavucontrol
         playerctl
