@@ -10,6 +10,8 @@
     #     systemd.enable = true;
 
     #     extraConfig = ''
+    #         exec-once = ~/mz-dotfiles/scripts/autorun.sh            
+    
     #         ################
     #         ### MONITORS ###
     #         ################

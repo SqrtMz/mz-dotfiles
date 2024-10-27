@@ -10,6 +10,11 @@
         home-manager-stable.url = "github:nix-community/home-manager/release-24.05";
         home-manager-stable.inputs.nixpkgs.follows = "nixpkgs-stable";
 
+        nixgl = {
+            url = "github:nix-community/nixGL";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+
         nix-on-droid.url = "github:nix-community/nix-on-droid/master";
         nix-on-droid.inputs.nixpkgs.follows = "nixpkgs";
         nix-on-droid.inputs.home-manager.follows = "home-manager";
@@ -37,7 +42,9 @@
             mz = home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
                 extraSpecialArgs = {inherit inputs;};
-                modules = [./profiles/user/mz.nix];
+                modules = [
+                    ./profiles/user/mz.nix
+                ];
             };
 
             server = home-manager.lib.homeManagerConfiguration {

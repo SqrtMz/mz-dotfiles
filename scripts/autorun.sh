@@ -16,4 +16,3 @@ wl-paste --type text --watch cliphist store &
 wl-paste --type image --watch cliphist store &
 systemctl --user enable opentabletdriver --now &
 lxpolkit
-# /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &

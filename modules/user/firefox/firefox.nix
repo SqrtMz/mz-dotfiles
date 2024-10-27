@@ -3,7 +3,7 @@
 {
     programs.firefox = {
         enable = true;
-        package = null;
+        package = (config.lib.nixGL.wrap pkgs.firefox);
 
         profiles."Mz" = {
             id = 0;

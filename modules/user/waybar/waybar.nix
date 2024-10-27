@@ -17,7 +17,7 @@
                 modules-right = ["pulseaudio" "bluetooth" "battery" "group/hardware" "clock" "tray"];
 
                 "custom/appmenuicon" = {
-                    format = "";
+                    format = "󰞄";
                     on-click = "wlogout";
                     on-click-right = "rofi -show drun";
                     tooltip = false;

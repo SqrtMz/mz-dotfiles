@@ -4,6 +4,13 @@
     home.username = "mz";
     home.homeDirectory = "/home/mz";
 
+    targets.genericLinux.enable = true;
+
+    nixGL.packages = inputs.nixgl.packages;
+    nixGL.defaultWrapper = "mesa";
+    nixGL.installScripts = ["mesa"];
+    nixGL.vulkan.enable = true;
+
     imports = [
         ../../modules/user/firefox/firefox.nix
         ../../modules/user/hyprland/hyprland.nix
@@ -15,20 +22,41 @@
         ../../modules/user/zsh/zsh.nix
     ];
 
+    nixpkgs.config.allowUnfree = true;
+
     home.packages = with pkgs; [
+        bottles
         btop
+        brightnessctl
+        # dxvk
         fastfetch
+        github-desktop
         grim
         htop
-        neovim
+        kdePackages.ark
+        lutris
+        ncdu
+        networkmanagerapplet
+        ntfs3g
+        nvtop
+        nwg-displays
+        okular
+        pavucontrol
+        playerctl
+        pyenv
         slurp
+        unityhub
+	    vscode
+        wev
         wl-clipboard
         xournalpp
+
+        corefonts
+        google-fonts
     ];
 
     services = {
         cliphist.enable = true;
-        gnome-keyring.enable = true;
 
         flameshot = {
             enable = true;
@@ -54,20 +82,20 @@
         };
     };
 
-    systemd.user.services."startup" = {
-        Unit = {
-            Description = "Startup autorun script for Mz Machine";
-        };
+    # systemd.user.services."startup" = {
+    #     Unit = {
+    #         Description = "Startup autorun script for Mz Machine";
+    #     };
 
-        Service = {
-            ExecStart = "/home/mz/mz-dotfiles/scripts/autorun.sh";
-        };
+    #     Service = {
+    #         ExecStart = "/home/mz/mz-dotfiles/scripts/autorun.sh";
+    #     };
 
-        Install = {
-            WantedBy = ["graphical-session.target"];
-        };
-    };
-
+    #     Install = {
+    #         WantedBy = ["graphical-session.target"];
+    #     };
+    # };
+    
     # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
     home.stateVersion = "24.05";
