@@ -27,14 +27,19 @@
 
     home.packages = with pkgs; [
         ark
+        (config.lib.nixGL.wrap pkgs.blender)
         bottles
         btop
         brightnessctl
+        (config.lib.nixGL.wrap pkgs.discord)
+        dolphin
         fastfetch
         github-desktop
         grim
+        (config.lib.nixGL.wrap pkgs.gthumb)
         htop
-        lutris
+        (config.lib.nixGL.wrap pkgs.lutris)
+        (config.lib.nixGL.wrap pkgs.krita)
         ncdu
         networkmanagerapplet
         ntfs3g
@@ -46,7 +51,7 @@
         playerctl
         pyenv
         slurp
-        unityhub
+        (config.lib.nixGL.wrap pkgs.steam)
 	    vscode
         wev
         wl-clipboard
