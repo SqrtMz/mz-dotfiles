@@ -32,7 +32,7 @@
         btop
         brightnessctl
         (config.lib.nixGL.wrap pkgs.discord)
-        dolphin
+		dolphin
         fastfetch
         github-desktop
         grim
