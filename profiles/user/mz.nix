@@ -27,12 +27,13 @@
 
     home.packages = with pkgs; [
         ark
-        (config.lib.nixGL.wrap pkgs.blender)
+        # (config.lib.nixGL.wrap pkgs.blender)
         bottles
         btop
         brightnessctl
         (config.lib.nixGL.wrap pkgs.discord)
 		dolphin
+        (config.lib.nixGL.wrap pkgs.duckstation)
         fastfetch
         github-desktop
         grim
@@ -54,6 +55,7 @@
         (config.lib.nixGL.wrap pkgs.steam)
 	    vscode
         wev
+        (config.lib.nixGL.wrap pkgs.wine)
         wl-clipboard
         xournalpp
 
