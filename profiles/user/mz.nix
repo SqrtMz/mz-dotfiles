@@ -26,7 +26,7 @@
     nixpkgs.config.allowUnfree = true;
 
     home.packages = with pkgs; [
-        ark
+		ark
         # (config.lib.nixGL.wrap pkgs.blender)
         bottles
         btop
@@ -40,6 +40,7 @@
         (config.lib.nixGL.wrap pkgs.gthumb)
         htop
         (config.lib.nixGL.wrap pkgs.lutris)
+        (config.lib.nixGL.wrap pkgs.kicad)
         (config.lib.nixGL.wrap pkgs.krita)
         ncdu
         networkmanagerapplet
@@ -49,7 +50,9 @@
         (config.lib.nixGL.wrap pkgs.obs-studio)
         okular
         pavucontrol
+		(config.lib.nixGL.wrap pkgs.pcsx2)
         playerctl
+        (prismlauncher.override {jdks = [pkgs.emptyDirectory];})
         pyenv
         slurp
         (config.lib.nixGL.wrap pkgs.steam)

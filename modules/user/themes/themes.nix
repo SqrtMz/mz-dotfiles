@@ -34,7 +34,7 @@
     home.pointerCursor = {
         name = "Bibata-Original-Classic";
         size = 20;
-        package = pkgs.bibata-cursors;
+        package = inputs.nixpkgs-stable.legacyPackages."x86_64-linux".bibata-cursors;
         gtk.enable = true;
     };
 }
