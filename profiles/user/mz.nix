@@ -27,27 +27,29 @@
 
     home.packages = with pkgs; [
 		ark
-        # (config.lib.nixGL.wrap pkgs.blender)
+        (config.lib.nixGL.wrap pkgs.blender)
         bottles
         btop
         brightnessctl
         (config.lib.nixGL.wrap pkgs.discord)
-		dolphin
+        dolphin
         (config.lib.nixGL.wrap pkgs.duckstation)
         fastfetch
         github-desktop
+        (config.lib.nixGL.wrap pkgs.goverlay)
         grim
         (config.lib.nixGL.wrap pkgs.gthumb)
         htop
         (config.lib.nixGL.wrap pkgs.lutris)
         (config.lib.nixGL.wrap pkgs.kicad)
         (config.lib.nixGL.wrap pkgs.krita)
+        (config.lib.nixGL.wrap pkgs.mangohud)
         ncdu
         networkmanagerapplet
         ntfs3g
         nvtop
         nwg-displays
-        (config.lib.nixGL.wrap pkgs.obs-studio)
+    	(config.lib.nixGL.wrap pkgs.obs-studio)
         okular
         pavucontrol
 		(config.lib.nixGL.wrap pkgs.pcsx2)
@@ -58,10 +60,10 @@
         (config.lib.nixGL.wrap pkgs.steam)
 	    vscode
         wev
-        (config.lib.nixGL.wrap pkgs.wine)
         wl-clipboard
+        xdg-desktop-portal-hyprland
         xournalpp
-
+        
         corefonts
         google-fonts
     ];
