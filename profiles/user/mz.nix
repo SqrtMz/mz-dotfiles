@@ -35,6 +35,7 @@
         dolphin
         (config.lib.nixGL.wrap pkgs.duckstation)
         fastfetch
+		(config.lib.nixGL.wrap pkgs.gimp)
         github-desktop
         (config.lib.nixGL.wrap pkgs.goverlay)
         grim
@@ -43,7 +44,7 @@
         (config.lib.nixGL.wrap pkgs.lutris)
         (config.lib.nixGL.wrap pkgs.kicad)
         (config.lib.nixGL.wrap pkgs.krita)
-        (config.lib.nixGL.wrap pkgs.mangohud)
+        mangohud
         ncdu
         networkmanagerapplet
         ntfs3g
@@ -56,8 +57,10 @@
         playerctl
         (prismlauncher.override {jdks = [pkgs.emptyDirectory];})
         pyenv
+		qbittorrent
         slurp
         (config.lib.nixGL.wrap pkgs.steam)
+        vlc
 	    vscode
         wev
         wl-clipboard
