@@ -41,6 +41,7 @@
         grim
         (config.lib.nixGL.wrap pkgs.gthumb)
         htop
+		hyprsome
         (config.lib.nixGL.wrap pkgs.lutris)
         (config.lib.nixGL.wrap pkgs.kicad)
         (config.lib.nixGL.wrap pkgs.krita)

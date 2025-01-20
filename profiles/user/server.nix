@@ -1,20 +1,27 @@
 { inputs, config, pkgs, ... }:
 
 {
-  home.username = "debian";
-  home.homeDirectory = "/home/debian";
+	home.username = "debian";
+	home.homeDirectory = "/home/debian";
 
-  imports = [
-  ];
+	nixGL.packages = inputs.nixgl.packages;
+	nixGL.defaultWrapper = "mesa";
+	nixGL.installScripts = ["mesa"];
+	nixGL.vulkan.enable = true;
 
-  home.packages = with pkgs; [
-    btop
-    fastfetch
-    pyenv
-    virtualenv
-  ];
+	imports = [
+		../../modules/user/kitty/kitty.nix
+		../../modules/user/neovim/neovim.nix
+		../../modules/user/zsh/zsh.nix
+	];
 
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
-  home.stateVersion = "24.05";
-}
+	home.packages = with pkgs; [
+		btop
+		fastfetch
+		pyenv
+	];
+
+	# Let Home Manager install and manage itself.
+	programs.home-manager.enable = true;
+	home.stateVersion = "24.05";
+	}
