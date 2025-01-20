@@ -12,7 +12,6 @@
 	imports = [
 		../../modules/user/kitty/kitty.nix
 		../../modules/user/neovim/neovim.nix
-		../../modules/user/zsh/zsh.nix
 	];
 
 	home.packages = with pkgs; [
