@@ -54,6 +54,7 @@
         nwg-displays
     	(config.lib.nixGL.wrap pkgs.obs-studio)
         okular
+        opentabletdriver
         pavucontrol
 		(config.lib.nixGL.wrap pkgs.pcsx2)
         playerctl

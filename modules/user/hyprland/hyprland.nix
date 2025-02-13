@@ -54,12 +54,6 @@
                 };
             };
 
-            device = {
-                name = "huion-huion-tablet_hs611";
-                transform = 2;
-                output = "DP-4";
-            };
-
             bind = [
                 # Hyprsome binds
                 "$mainMod, 1, exec, hyprsome workspace 1"

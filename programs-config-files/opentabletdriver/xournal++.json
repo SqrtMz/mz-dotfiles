@@ -12,7 +12,7 @@
         "Display": {
           "Width": 1920.0,
           "Height": 1080.0,
-          "X": 960.0,
+          "X": 2880.0,
           "Y": 540.0,
           "Rotation": 0.0
         },
@@ -20,7 +20,7 @@
           "Width": 258.4,
           "Height": 161.5,
           "X": 129.2,
-          "Y": 80.75,
+          "Y": 80.74999,
           "Rotation": 180.0
         },
         "EnableClipping": true,
@@ -34,7 +34,7 @@
         "RelativeResetDelay": "00:00:00.1000000"
       },
       "Bindings": {
-        "TipActivationThreshold": 0.0,
+        "TipActivationThreshold": 1.0,
         "TipButton": {
           "Path": "OpenTabletDriver.Desktop.Binding.MouseBinding",
           "Settings": [
@@ -45,7 +45,7 @@
           ],
           "Enable": true
         },
-        "EraserActivationThreshold": 0.0,
+        "EraserActivationThreshold": 1.0,
         "EraserButton": null,
         "PenButtons": [
           {

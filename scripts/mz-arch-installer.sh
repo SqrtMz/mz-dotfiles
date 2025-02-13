@@ -1,11 +1,16 @@
-#! /bin/bash
+#! /usr/bin/env bash
 
 # Time and date sync
 timedatectl set-ntp true
 
 clear
 
-echo "Mz's Arch Installer"
+echo "   ____         __  __  ___  "
+echo "  / __/__  ____/ /_/  |/  /__"
+echo " _\ \/ _ \/ __/ __/ /|_/ /_ /"
+echo "/___/\_, /_/  \__/_/  /_//__/"
+echo "      /_/                    "
+
 echo "This installer works once connected to internet and created the partition table"
 echo
 
@@ -151,15 +156,17 @@ arch-chroot /mnt /bin/bash -e <<EOF
     sed -i "s/^root ALL=(ALL:ALL) ALL/root ALL=(ALL:ALL) ALL\n$user ALL=(ALL:ALL) ALL/" /etc/sudoers
 
     # Pacman Config File
-    # sed -i "s/^#color/color" /etc/pacman.conf
-    # sed -i "s/^#VerbosePkgLists/VerbosePkgLists" /etc/pacman.conf
-    # sed -i "s/^#ParallelDownloads = 5/ParallelDownloads = 5\nILoveCandy" /etc/pacman.conf
-    sed -i "s/^#\\[multilib\\]/\\[multilib\\]/" /etc/pacman.conf
-    sed -i "s|^#Include = /etc/pacman.d/mirrorlist|Include = /etc/pacman.d/mirrorlist|" /etc/pacman.conf
+    sed -i "s|^#Color|Color|" ./temp.conf
+    sed -i "s|^#VerbosePkgLists|VerbosePkgLists|" ./temp.conf
+    sed -i "s|^#ParallelDownloads = 5|ParallelDownloads = 5\nILoveCandy|" ./temp.conf
+
+    sed -i "s|^#\\[multilib\\]|\\[multilib\\]|" ./temp.conf
+    sed -i "/^\\[multilib\\]/,/#Include = \\/etc\\/pacman.d\\/mirrorlist/ s|#Include = /etc/pacman.d/mirrorlist|Include = /etc/pacman.d/mirrorlist|" ./temp.conf
+
     pacman -Syu --noconfirm --needed
 
     # Install Fundamentals
-    pacman -S networkmanager wireless_tools grub efibootmgr os-prober xdg-user-dirs --noconfirm --needed
+    pacman -S networkmanager wireless_tools refind efibootmgr os-prober xdg-user-dirs --noconfirm --needed
 
     # Enable Services
     systemctl enable NetworkManager
@@ -168,17 +175,11 @@ arch-chroot /mnt /bin/bash -e <<EOF
     xdg-user-dirs-update
     su $user -c "xdg-user-dirs-update"
 
-    # Grub config
-    grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=$user
-    grub-install --target=x86_64-efi --efi-directory=/boot --removable
+    # Refind config
+    refind-install --usedefault $efi --alldrivers
+    mkrlconf
 
-    echo "" >> /etc/default/grub
-    echo "# Last selected OS" >> /etc/default/grub
-    echo "GRUB_SAVEDEFAULT=true" >> /etc/default/grub
-
-    sed -i "s/^#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/" /etc/default/grub
-
-    grub-mkconfig -o /boot/grub/grub.cfg
+    echo '"Boot with minimal options"   "ro root=$main"' > /boot/refind_linux.conf
 
 EOF
 

@@ -3,7 +3,7 @@
 {
     programs.kitty = {
         enable = true;
-        package = (config.lib.nixGL.wrap pkgs.kitty);
+        package = pkgs.emptyDirectory;
         
         shellIntegration = {
             enableZshIntegration = true;
