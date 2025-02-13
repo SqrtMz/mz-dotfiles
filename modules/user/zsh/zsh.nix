@@ -13,8 +13,9 @@
         };
 
 		shellAliases = {
-			Mz = "sudo nixos-rebuild switch --flake ~/mz-dotfiles#Mz";
-			update = "nix flake update ~/mz-dotfiles";
+			"mz-update" = "cd ~/mz-dotfiles && nix flake update && home-manager switch --flake .#mz && sudo paru -Syu && cd";
+			"mz-switch" = "cd ~/mz-dotfiles && home-manager switch --flake .#mz && cd";
+			"mz-news" = "cd ~/mz-dotfiles && home-manager news --flake .#mz && cd";
 		};
     };
 }

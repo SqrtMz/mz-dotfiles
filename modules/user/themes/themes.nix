@@ -27,7 +27,7 @@
 
         iconTheme = {
             name = "WhiteSur-dark";
-            package = pkgs.whitesur-icon-theme;
+            package = inputs.nixpkgs-stable.legacyPackages."x86_64-linux".whitesur-icon-theme;
         };
     };
 

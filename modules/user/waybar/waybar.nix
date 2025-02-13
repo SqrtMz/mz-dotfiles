@@ -84,26 +84,28 @@
                     interval = 30;
                     format = "D {percentage_used}% ";
                     path = "/";
-                    on-click = "kitty -e btop";
+                    on-click = "kitty -e btop & kitty -e nvtop";
                 };
 
                 "cpu" = {
                     format = "/ C {usage}% ";
-                    on-click = "kitty -e btop";
+                    on-click = "kitty -e btop & kitty -e nvtop";
                 };
 
                 "memory" = {
                     format = "/ M {}%  ";
-                    on-click = "kitty -e btop";
+                    on-click = "kitty -e btop & kitty -e nvtop";
                 };
 
                 "group/hardware" = {
                     orientation = "inherit";
+
                     drawer = {
                         transition-duration = 300;
                         children-class = "not-memory";
                         transition-left-to-right = false;
                     };
+
                     modules = [
                     "custom/system" "disk" "cpu" "memory"
                     ];

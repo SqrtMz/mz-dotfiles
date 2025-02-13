@@ -12,7 +12,6 @@
 
         settings = {
             enable_audio_bell = false;
-            # window_padding_width = 10;
             cursor_shape = "beam";
         };
 

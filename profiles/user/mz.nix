@@ -27,6 +27,7 @@
 
     home.packages = with pkgs; [
 		ark
+		android-tools
         (config.lib.nixGL.wrap pkgs.blender)
         bottles
         btop
@@ -43,13 +44,13 @@
         htop
 		hyprsome
         (config.lib.nixGL.wrap pkgs.lutris)
-        (config.lib.nixGL.wrap pkgs.kicad)
         (config.lib.nixGL.wrap pkgs.krita)
+        linux-wallpaperengine
         mangohud
         ncdu
         networkmanagerapplet
         ntfs3g
-        nvtop
+        nvtopPackages.full
         nwg-displays
     	(config.lib.nixGL.wrap pkgs.obs-studio)
         okular
@@ -61,11 +62,11 @@
 		qbittorrent
         slurp
         (config.lib.nixGL.wrap pkgs.steam)
+		ventoy
         vlc
 	    vscode
         wev
         wl-clipboard
-        xdg-desktop-portal-hyprland
         xournalpp
         
         corefonts
@@ -97,6 +98,8 @@
             enable = true;
             createDirectories = true;
         };
+
+        portal.config.common.default = "hyprland";
     };
 
     # systemd.user.services."startup" = {
