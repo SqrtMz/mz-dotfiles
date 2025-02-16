@@ -41,6 +41,7 @@
         (config.lib.nixGL.wrap pkgs.goverlay)
         grim
         (config.lib.nixGL.wrap pkgs.gthumb)
+        (config.lib.nixGL.wrap pkgs.heroic)
         htop
 		hyprsome
         (config.lib.nixGL.wrap pkgs.lutris)

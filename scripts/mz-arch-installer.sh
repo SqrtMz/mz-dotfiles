@@ -125,7 +125,7 @@ do
     esac
 done
 
-pacstrap -i /mnt base base-devel neovim linux-firmware $kernel $kernel-headers mkinitcpio fastfetch curl wget git --noconfirm --needed
+pacstrap -i /mnt base base-devel linux-firmware $kernel $kernel-headers mkinitcpio fastfetch curl wget git --noconfirm --needed
 
 # Fstab file generation and chroot
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -156,17 +156,17 @@ arch-chroot /mnt /bin/bash -e <<EOF
     sed -i "s/^root ALL=(ALL:ALL) ALL/root ALL=(ALL:ALL) ALL\n$user ALL=(ALL:ALL) ALL/" /etc/sudoers
 
     # Pacman Config File
-    sed -i "s|^#Color|Color|" ./temp.conf
-    sed -i "s|^#VerbosePkgLists|VerbosePkgLists|" ./temp.conf
-    sed -i "s|^#ParallelDownloads = 5|ParallelDownloads = 5\nILoveCandy|" ./temp.conf
+    sed -i "s|^#Color|Color|" /etc/pacman.conf
+    sed -i "s|^#VerbosePkgLists|VerbosePkgLists|" /etc/pacman.conf
+    sed -i "s|^#ParallelDownloads = 5|ParallelDownloads = 5\nILoveCandy|" /etc/pacman.conf
 
-    sed -i "s|^#\\[multilib\\]|\\[multilib\\]|" ./temp.conf
-    sed -i "/^\\[multilib\\]/,/#Include = \\/etc\\/pacman.d\\/mirrorlist/ s|#Include = /etc/pacman.d/mirrorlist|Include = /etc/pacman.d/mirrorlist|" ./temp.conf
+    sed -i "s|^#\\[multilib\\]|\\[multilib\\]|" /etc/pacman.conf
+    sed -i "/^\\[multilib\\]/,/#Include = \\/etc\\/pacman.d\\/mirrorlist/ s|#Include = /etc/pacman.d/mirrorlist|Include = /etc/pacman.d/mirrorlist|" /etc/pacman.conf
 
     pacman -Syu --noconfirm --needed
 
     # Install Fundamentals
-    pacman -S networkmanager wireless_tools refind efibootmgr os-prober xdg-user-dirs --noconfirm --needed
+    pacman -S neovim networkmanager wireless_tools refind efibootmgr os-prober xdg-user-dirs --noconfirm --needed
 
     # Enable Services
     systemctl enable NetworkManager
@@ -176,7 +176,7 @@ arch-chroot /mnt /bin/bash -e <<EOF
     su $user -c "xdg-user-dirs-update"
 
     # Refind config
-    refind-install --usedefault $efi --alldrivers
+    refind-install --usedefault "$efi" --alldrivers
     mkrlconf
 
     echo '"Boot with minimal options"   "ro root=$main"' > /boot/refind_linux.conf
