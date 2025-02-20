@@ -64,7 +64,6 @@
 		qbittorrent
         slurp
         (config.lib.nixGL.wrap pkgs.steam)
-		ventoy
         vlc
 	    vscode
         wev
