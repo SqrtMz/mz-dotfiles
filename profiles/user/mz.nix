@@ -101,7 +101,7 @@
             createDirectories = true;
         };
 
-        portal.config.common.default = "hyprland";
+        portal.config.common.default = [ "hyprland" ];
     };
 
     # systemd.user.services."startup" = {
