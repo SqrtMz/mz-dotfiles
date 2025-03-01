@@ -5,6 +5,7 @@
         enable = true;
         platformTheme.name = "gtk";
         style.name = "kvantum";
+        style.package = pkgs.libsForQt5.qtstyleplugin-kvantum;
     };
 
     home.file.".config/Kvantum/" = {
@@ -17,7 +18,7 @@
 
         theme = {
             name = "Breeze-Dark";
-            package = pkgs.breeze-gtk;
+            package = pkgs.kdePackages.breeze-gtk;
         };
         
         font = {
@@ -27,14 +28,14 @@
 
         iconTheme = {
             name = "WhiteSur-dark";
-            package = inputs.nixpkgs-stable.legacyPackages."x86_64-linux".whitesur-icon-theme;
+            package = pkgs.whitesur-icon-theme;
         };
     };
 
     home.pointerCursor = {
         name = "Bibata-Original-Classic";
         size = 20;
-        package = inputs.nixpkgs-stable.legacyPackages."x86_64-linux".bibata-cursors;
+        package = pkgs.bibata-cursors;
         gtk.enable = true;
     };
 }

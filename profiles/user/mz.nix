@@ -26,14 +26,14 @@
     nixpkgs.config.allowUnfree = true;
 
     home.packages = with pkgs; [
-		ark
+		libsForQt5.ark
 		android-tools
         (config.lib.nixGL.wrap pkgs.blender)
         bottles
         btop
         brightnessctl
         (config.lib.nixGL.wrap pkgs.discord)
-        dolphin
+        libsForQt5.dolphin
         (config.lib.nixGL.wrap pkgs.duckstation)
         fastfetch
 		(config.lib.nixGL.wrap pkgs.gimp)
@@ -54,7 +54,7 @@
         nvtopPackages.full
         nwg-displays
     	(config.lib.nixGL.wrap pkgs.obs-studio)
-        okular
+        libsForQt5.okular
         opentabletdriver
         pavucontrol
 		(config.lib.nixGL.wrap pkgs.pcsx2)
@@ -62,6 +62,7 @@
         (prismlauncher.override {jdks = [pkgs.emptyDirectory];})
         pyenv
 		qbittorrent
+		(config.lib.nixGL.wrap pkgs.rpcs3)
         slurp
         (config.lib.nixGL.wrap pkgs.steam)
         vlc
