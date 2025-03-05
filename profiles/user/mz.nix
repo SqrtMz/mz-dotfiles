@@ -44,9 +44,11 @@
         (config.lib.nixGL.wrap pkgs.heroic)
         htop
 		hyprsome
+		inkscape
         (config.lib.nixGL.wrap pkgs.lutris)
         (config.lib.nixGL.wrap pkgs.krita)
         linux-wallpaperengine
+		(config.lib.nixGL.wrap pkgs.logisim-evolution)
         mangohud
         ncdu
         networkmanagerapplet
@@ -55,6 +57,7 @@
         nwg-displays
     	(config.lib.nixGL.wrap pkgs.obs-studio)
         libsForQt5.okular
+		(config.lib.nixGL.wrap pkgs.looking-glass-client)
         opentabletdriver
         pavucontrol
 		(config.lib.nixGL.wrap pkgs.pcsx2)

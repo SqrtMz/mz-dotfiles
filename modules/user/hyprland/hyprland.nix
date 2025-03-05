@@ -98,7 +98,6 @@
             env = QT_PLUGIN_PATH,/usr/lib/qt6/plugins
             env = QML2_IMPORT_PATH,/usr/lib/qt6/qml
 
-            env = AQ_DRM_DEVICES,/dev/dri/card2
             env = MANGOHUD,1
 
             #####################
