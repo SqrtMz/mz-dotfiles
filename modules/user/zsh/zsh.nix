@@ -6,6 +6,7 @@
         enable = true;
         autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
+		package = pkgs.emptyDirectory;
 
         oh-my-zsh = {
         	enable = true;
