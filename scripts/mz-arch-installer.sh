@@ -166,14 +166,10 @@ arch-chroot /mnt /bin/bash -e <<EOF
     pacman -Syu --noconfirm --needed
 
     # Install Fundamentals
-    pacman -S neovim networkmanager wireless_tools refind efibootmgr os-prober xdg-user-dirs --noconfirm --needed
+    pacman -S neovim networkmanager wireless_tools refind efibootmgr os-prober --noconfirm --needed
 
     # Enable Services
     systemctl enable NetworkManager
-
-    # Create File tree on root and user
-    xdg-user-dirs-update
-    su $user -c "xdg-user-dirs-update"
 
     # Refind config
     refind-install --usedefault "$efi" --alldrivers
