@@ -85,7 +85,16 @@
           null,
           null,
           null,
-          null,
+          {
+            "Path": "OpenTabletDriver.Desktop.Binding.KeyBinding",
+            "Settings": [
+              {
+                "Property": "Key",
+                "Value": "LeftAlt"
+              }
+            ],
+            "Enable": true
+          },
           {
             "Path": "OpenTabletDriver.Desktop.Binding.MultiKeyBinding",
             "Settings": [

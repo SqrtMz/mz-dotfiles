@@ -48,6 +48,7 @@
         (config.lib.nixGL.wrap pkgs.lutris)
         (config.lib.nixGL.wrap pkgs.krita)
         linux-wallpaperengine
+		libreoffice
 		(config.lib.nixGL.wrap pkgs.logisim-evolution)
         mangohud
         ncdu

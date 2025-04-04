@@ -177,8 +177,8 @@
 
             bindel = , XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
             bindel = , XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-            bindel = , XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-            bindel = , XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+            # bindel = , XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+            # bindel = , XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
             bindel = , XF86MonBrightnessUp, exec, brightnessctl s 10%+
             bindel = , XF86MonBrightnessDown, exec, brightnessctl s 10%-
 
@@ -215,9 +215,8 @@
             ### WINDOWS AND WORKSPACES ###
             ##############################
 
-            windowrule = float, ^(unityhub)$
-            windowrule = float, ^(nm-connection-editor)$
-            windowrule = float, ^(org.kde.ark)$
+            windowrulev2 = float, class:(nm-connection-editor)
+            windowrulev2 = float, class:(org.kde.ark)
 
             # Firefox
             windowrulev2 = float, title:(Picture-in-Picture)

@@ -14,7 +14,7 @@
         };
 
 		shellAliases = {
-			"mzup" = "cd ~/mz-dotfiles && nix flake update && home-manager switch --flake .#mz && paru -Syu && cd";
+			"mzup" = "cd ~/mz-dotfiles && sudo pacman -Syu --noconfirm && nix flake update && home-manager switch --flake .#mz && cd";
 			"mzsw" = "cd ~/mz-dotfiles && home-manager switch --flake .#mz && cd";
 			"mz-news" = "cd ~/mz-dotfiles && home-manager news --flake .#mz && cd";
 		};
