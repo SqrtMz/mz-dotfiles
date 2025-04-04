@@ -51,6 +51,14 @@
                 ];
             };
 
+            lab = home-manager.lib.homeManagerConfiguration {
+                inherit pkgs;
+                extraSpecialArgs = {inherit inputs;};
+                modules = [
+                    ./profiles/user/lab.nix
+                ];
+            };
+
             server = home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
                 extraSpecialArgs = {inherit inputs;};
