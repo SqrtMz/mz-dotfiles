@@ -29,22 +29,18 @@
 		libsForQt5.ark
 		android-tools
         (config.lib.nixGL.wrap pkgs.blender)
-        bottles
         btop
         brightnessctl
         (config.lib.nixGL.wrap pkgs.discord)
         libsForQt5.dolphin
         fastfetch
 		(config.lib.nixGL.wrap pkgs.gimp)
-        github-desktop
         grim
         (config.lib.nixGL.wrap pkgs.gthumb)
         htop
 		hyprsome
-		inkscape
 		libreoffice
 		(config.lib.nixGL.wrap pkgs.logisim-evolution)
-        mangohud
         ncdu
         networkmanagerapplet
         ntfs3g

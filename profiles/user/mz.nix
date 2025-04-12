@@ -37,7 +37,6 @@
         (config.lib.nixGL.wrap pkgs.duckstation)
         fastfetch
 		(config.lib.nixGL.wrap pkgs.gimp)
-        github-desktop
         (config.lib.nixGL.wrap pkgs.goverlay)
         grim
         (config.lib.nixGL.wrap pkgs.gthumb)
