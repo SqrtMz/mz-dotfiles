@@ -29,9 +29,9 @@
 		libsForQt5.ark
 		android-tools
         (config.lib.nixGL.wrap pkgs.blender)
-        bottles
         btop
         brightnessctl
+		cubiomes-viewer
         (config.lib.nixGL.wrap pkgs.discord)
         libsForQt5.dolphin
         (config.lib.nixGL.wrap pkgs.duckstation)
@@ -41,14 +41,12 @@
         grim
         (config.lib.nixGL.wrap pkgs.gthumb)
         (config.lib.nixGL.wrap pkgs.heroic)
-        htop
 		hyprsome
 		inkscape
         (config.lib.nixGL.wrap pkgs.lutris)
         (config.lib.nixGL.wrap pkgs.krita)
-        linux-wallpaperengine
 		libreoffice
-		(config.lib.nixGL.wrap pkgs.logisim-evolution)
+        usbutils
         mangohud
         ncdu
         networkmanagerapplet
