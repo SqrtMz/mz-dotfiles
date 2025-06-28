@@ -28,19 +28,15 @@
     home.packages = with pkgs; [
 		libsForQt5.ark
 		android-tools
-        (config.lib.nixGL.wrap pkgs.blender)
         btop
         brightnessctl
-        (config.lib.nixGL.wrap pkgs.discord)
         libsForQt5.dolphin
         fastfetch
 		(config.lib.nixGL.wrap pkgs.gimp)
         grim
         (config.lib.nixGL.wrap pkgs.gthumb)
-        htop
 		hyprsome
 		libreoffice
-		(config.lib.nixGL.wrap pkgs.logisim-evolution)
         ncdu
         networkmanagerapplet
         ntfs3g

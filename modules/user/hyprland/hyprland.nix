@@ -230,6 +230,8 @@
 
             windowrulev2 = suppressevent maximize, class:.*
 
+            # windowrulev2 = keepaspectratio, title:(Touhou Scarlet Devil Land ~ The Embodiment of Scarlet Devil v1.02h)
+
             # Fix some dragging issues with XWayland
             windowrulev2 = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
            '';

@@ -55,8 +55,8 @@
         nwg-displays
     	(config.lib.nixGL.wrap pkgs.obs-studio)
         libsForQt5.okular
-		(config.lib.nixGL.wrap pkgs.looking-glass-client)
         opentabletdriver
+        parabolic
         pavucontrol
 		(config.lib.nixGL.wrap pkgs.pcsx2)
         playerctl
@@ -66,6 +66,8 @@
 		(config.lib.nixGL.wrap pkgs.rpcs3)
         slurp
         (config.lib.nixGL.wrap pkgs.steam)
+        upscaler
+        unrar
         vlc
 	    vscode
         wev
@@ -104,20 +106,6 @@
 
         portal.config.common.default = [ "hyprland" ];
     };
-
-    # systemd.user.services."startup" = {
-    #     Unit = {
-    #         Description = "Startup autorun script for Mz Machine";
-    #     };
-
-    #     Service = {
-    #         ExecStart = "/home/mz/mz-dotfiles/scripts/autorun.sh";
-    #     };
-
-    #     Install = {
-    #         WantedBy = ["graphical-session.target"];
-    #     };
-    # };
     
     # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
