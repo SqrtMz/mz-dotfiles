@@ -22,7 +22,6 @@ jre8-openjdk-headless
 kitty
 lib32-mesa
 lib32-vulkan-radeon
-libguestfs
 linux-firmware
 linux-zen
 linux-zen-headers
@@ -47,9 +46,6 @@ pipewire-audio
 pipewire-jack
 pipewire-pulse
 pipewire-roc
-qemu-base
-qemu-full
-qemu-hw-usb-host
 qt6-webengine
 realtime-privileges
 refind
