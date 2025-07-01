@@ -31,6 +31,7 @@
         (config.lib.nixGL.wrap pkgs.blender)
         btop
         brightnessctl
+        (config.lib.nixGL.wrap pkgs.chromium)
 		cubiomes-viewer
         (config.lib.nixGL.wrap pkgs.discord)
         libsForQt5.dolphin

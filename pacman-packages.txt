@@ -4,7 +4,6 @@ archlinux-xdg-menu
 base
 base-devel
 bridge-utils
-chromium
 clinfo
 curl
 dolphin
