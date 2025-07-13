@@ -37,7 +37,7 @@
         libsForQt5.dolphin
         (config.lib.nixGL.wrap pkgs.duckstation)
         fastfetch
-		(config.lib.nixGL.wrap pkgs.gimp)
+		(config.lib.nixGL.wrap pkgs.gimp3)
         (config.lib.nixGL.wrap pkgs.goverlay)
         grim
         (config.lib.nixGL.wrap pkgs.gthumb)
@@ -67,7 +67,7 @@
 		(config.lib.nixGL.wrap pkgs.rpcs3)
         slurp
         (config.lib.nixGL.wrap pkgs.steam)
-        upscaler
+        (config.lib.nixGL.wrap pkgs.upscaler)
         unrar
         vlc
 	    vscode
@@ -93,6 +93,25 @@
                     disabledTrayIcon = true;
                     uiColor = "#369B99";
                 };
+            };
+        };
+
+        hyprpaper = {
+            enable = true;
+            package = pkgs.hyprpaper;
+
+            settings = {
+                splash = true;
+
+                preload = [
+                    "~/Pictures/Images & Videos/BG/THE.jpg"
+                    "~/Pictures/Images & Videos/BG/TH6.png"
+                ];
+
+                wallpaper = [
+                    "DP-4, contain:~/Pictures/Images & Videos/BG/THE.jpg"
+                    "HDMI-A-2, ~/Pictures/Images & Videos/BG/TH6.png"
+                ];
             };
         };
     };

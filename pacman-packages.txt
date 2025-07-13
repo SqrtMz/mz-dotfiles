@@ -15,6 +15,7 @@ gnome-keyring
 gparted
 gst-plugin-pipewire
 hyprland
+jre-openjdk-headless
 jre17-openjdk-headless
 jre21-openjdk-headless
 jre8-openjdk-headless
@@ -167,3 +168,4 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 zsh
+zsh-completions
