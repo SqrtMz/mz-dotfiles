@@ -3,14 +3,8 @@
 {
     qt = {
         enable = true;
-        platformTheme.name = "gtk";
-        style.name = "kvantum";
-        style.package = pkgs.libsForQt5.qtstyleplugin-kvantum;
-    };
-
-    home.file.".config/Kvantum/" = {
-        source = ./kvantum;
-        recursive = true;
+        # platformTheme.name = "kde6"; # QT_QPA_PLATFORMTHEME
+        # style.name = "qt6ct"; # QT_STYLE_OVERRIDE
     };
 
     gtk = {

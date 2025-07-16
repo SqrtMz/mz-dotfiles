@@ -1,6 +1,7 @@
 7zip
 arch-install-scripts
 archlinux-xdg-menu
+ark
 base
 base-devel
 bridge-utils
@@ -15,6 +16,7 @@ gnome-keyring
 gparted
 gst-plugin-pipewire
 hyprland
+hyprpolkitagent
 jre-openjdk-headless
 jre17-openjdk-headless
 jre21-openjdk-headless
@@ -25,9 +27,9 @@ lib32-vulkan-radeon
 linux-firmware
 linux-zen
 linux-zen-headers
-lxsession-gtk3
 mkinitcpio
 networkmanager
+okular
 otf-aurulent-nerd
 otf-codenewroman-nerd
 otf-comicshanns-nerd
@@ -46,11 +48,14 @@ pipewire-audio
 pipewire-jack
 pipewire-pulse
 pipewire-roc
+plasma-workspace
 qt6-webengine
 realtime-privileges
 refind
 sddm
+sddm-kcm
 swtpm
+systemsettings
 tk
 traceroute
 ttf-0xproto-nerd

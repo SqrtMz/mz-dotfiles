@@ -26,15 +26,12 @@
     nixpkgs.config.allowUnfree = true;
 
     home.packages = with pkgs; [
-		libsForQt5.ark
 		android-tools
         (config.lib.nixGL.wrap pkgs.blender)
         btop
         brightnessctl
-        (config.lib.nixGL.wrap pkgs.chromium)
 		cubiomes-viewer
         (config.lib.nixGL.wrap pkgs.discord)
-        libsForQt5.dolphin
         (config.lib.nixGL.wrap pkgs.duckstation)
         fastfetch
 		(config.lib.nixGL.wrap pkgs.gimp3)
@@ -47,7 +44,6 @@
         (config.lib.nixGL.wrap pkgs.lutris)
         (config.lib.nixGL.wrap pkgs.krita)
 		libreoffice
-        usbutils
         mangohud
         ncdu
         networkmanagerapplet
@@ -55,7 +51,6 @@
         nvtopPackages.full
         nwg-displays
     	(config.lib.nixGL.wrap pkgs.obs-studio)
-        libsForQt5.okular
         opentabletdriver
         parabolic
         pavucontrol
@@ -69,12 +64,13 @@
         (config.lib.nixGL.wrap pkgs.steam)
         (config.lib.nixGL.wrap pkgs.upscaler)
         unrar
+        usbutils
         vlc
 	    vscode
         wev
         wl-clipboard
         xournalpp
-        
+
         corefonts
         google-fonts
     ];

@@ -1,8 +1,6 @@
 {config, lib, pkgs, inputs, ...}:
 
-{
-    # home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
-    
+{   
     wayland.windowManager.hyprland = {
    	    enable = true;
         package = null;
@@ -93,10 +91,10 @@
             # Fix dolphin open with
             env = XDG_MENU_PREFIX,plasma-
             env = QT_QPA_PLATFORM,wayland
-
-            # Use Arch QT packages instead of Nix ones
-            env = QT_PLUGIN_PATH,/usr/lib/qt6/plugins
-            env = QML2_IMPORT_PATH,/usr/lib/qt6/qml
+            env = QT_QPA_PLATFORMTHEME,kde
+            
+            # Make electron programs use wayland instead of xwayland
+            env = ELECTRON_OZONE_PLATFORM_HINT,auto
 
             env = MANGOHUD,1
 
@@ -227,10 +225,9 @@
             windowrulev2 = float, class:(steam), title:(Friends List)
 
             windowrulev2 = float, class:(org.pulseaudio.pavucontrol), title:.*
+            windowrulev2 = float, class:(xdg-desktop-portal-gtk), title:.*
 
-            windowrulev2 = suppressevent maximize, class:.*
-
-            # windowrulev2 = keepaspectratio, title:(Touhou Scarlet Devil Land ~ The Embodiment of Scarlet Devil v1.02h)
+            # windowrulev2 = suppressevent maximize, class:.*
 
             # Fix some dragging issues with XWayland
             windowrulev2 = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
