@@ -13,8 +13,7 @@
 
     imports = [
         ../../modules/user/firefox/firefox.nix
-        ../../modules/user/hyprland/hyprland.nix
-        ../../modules/user/kitty/kitty.nix
+        ../../modules/user/sway/sway.nix
         ../../modules/user/neovim/neovim.nix
         ../../modules/user/rofi/rofi.nix
         ../../modules/user/themes/themes.nix
@@ -26,7 +25,8 @@
     nixpkgs.config.allowUnfree = true;
 
     home.packages = with pkgs; [
-		libsForQt5.ark
+		(config.lib.nixGL.wrap pkgs.alacritty)
+        libsForQt5.ark
 		android-tools
         btop
         brightnessctl
