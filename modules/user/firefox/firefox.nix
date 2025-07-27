@@ -1,9 +1,9 @@
-{config, lib, pkgs, inputs, ...}:
+{config, lib, pkgs, pkgs-stable, pkgs-prior-stable, inputs, ...}:
 
 {
     programs.firefox = {
         enable = true;
-        package = (config.lib.nixGL.wrap pkgs.firefox);
+        package = (config.lib.nixGL.wrap pkgs-prior-stable.firefox);
 
         profiles."Mz" = {
             id = 0;

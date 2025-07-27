@@ -3,7 +3,7 @@
 {
     qt = {
         enable = true;
-        # platformTheme.name = "kde6"; # QT_QPA_PLATFORMTHEME
+        platformTheme.name = "qtct"; # QT_QPA_PLATFORMTHEME
         # style.name = "qt6ct"; # QT_STYLE_OVERRIDE
     };
 

@@ -6,9 +6,9 @@
         home-manager.url = "github:nix-community/home-manager/master";
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    	nixpkgs-2411.url = "nixpkgs/nixos-24.11";
-    	home-manager-2411.url = "github:nix-community/home-manager/release-24.11";
-    	home-manager-2411.inputs.nixpkgs.follows = "nixpkgs-2411";
+    	nixpkgs-prior-stable.url = "nixpkgs/nixos-24.11";
+    	home-manager-prior-stable.url = "github:nix-community/home-manager/release-24.11";
+    	home-manager-prior-stable.inputs.nixpkgs.follows = "nixpkgs-prior-stable";
 
         nixpkgs-stable.url = "nixpkgs/nixos-25.05";
     	home-manager-stable.url = "github:nix-community/home-manager/release-25.05";
@@ -24,11 +24,13 @@
         nix-on-droid.inputs.home-manager.follows = "home-manager";
     };
 
-    outputs = {self, nixpkgs, home-manager, nix-on-droid, ...} @ inputs:
+    outputs = {self, nixpkgs, nixpkgs-stable, nixpkgs-prior-stable, home-manager, nix-on-droid, ...} @ inputs:
     let
         lib = nixpkgs.lib;
         system = "x86_64-linux";
         pkgs = nixpkgs.legacyPackages.${system};
+        pkgs-stable = nixpkgs-stable.legacyPackages.${system};
+        pkgs-prior-stable = nixpkgs-prior-stable.legacyPackages.${system};
 
     in {
         nixosConfigurations = {
@@ -45,7 +47,7 @@
         homeConfigurations = {
             mz = home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
-                extraSpecialArgs = {inherit inputs;};
+                extraSpecialArgs = {inherit inputs pkgs-stable pkgs-prior-stable;};
                 modules = [
                     ./profiles/user/mz.nix
                 ];
@@ -53,7 +55,7 @@
 
             lab = home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
-                extraSpecialArgs = {inherit inputs;};
+                extraSpecialArgs = {inherit inputs pkgs-stable pkgs-prior-stable;};
                 modules = [
                     ./profiles/user/lab.nix
                 ];
@@ -61,7 +63,7 @@
 
             server = home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
-                extraSpecialArgs = {inherit inputs;};
+                extraSpecialArgs = {inherit inputs pkgs-stable pkgs-prior-stable;};
                 modules = [./profiles/user/server.nix];
             };
         };

@@ -91,10 +91,14 @@
             # Fix dolphin open with
             env = XDG_MENU_PREFIX,plasma-
             env = QT_QPA_PLATFORM,wayland
-            env = QT_QPA_PLATFORMTHEME,kde
+            # env = QT_QPA_PLATFORMTHEME,qt6ct
             
             # Make electron programs use wayland instead of xwayland
             env = ELECTRON_OZONE_PLATFORM_HINT,auto
+
+            # Use Arch QT packages instead of Nix ones
+            # env = QT_PLUGIN_PATH,/usr/lib/qt6/plugins
+            # env = QML2_IMPORT_PATH,/usr/lib/qt6/qml
 
             env = MANGOHUD,1
 
@@ -171,7 +175,7 @@
             bind = $mainMod SHIFT, F, togglefloating
 
             bind = , Print, exec, flameshot gui --raw | wl-copy
-            bind = SHIFT, Print, exec, grim -g "$(slurp)" - | wl-copy
+            bind = SHIFT, Print, exec, grim -g "$(slurp)" - | swappy -f - | wl-copy
 
             bindel = , XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
             bindel = , XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-

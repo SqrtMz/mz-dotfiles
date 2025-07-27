@@ -25,7 +25,7 @@
 
                 "wlr/taskbar" = {
                     format = "{icon}";
-                    icon-size = 18;
+                    icon-size = 17;
                     tooltip-format = "{title}";
                     on-click = "activate";
                     on-click-middle = "close";
@@ -37,15 +37,15 @@
                 "pulseaudio" = {
                     scroll-step = 1;
                     format = "{icon}   {volume}%";
-                    format-bluetooth = "{volume}%  {icon} {format_source}";
-                    format-bluetooth-muted = " {icon} {format_source}";
+                    format-bluetooth = "{volume}%  {icon}󰂯 {format_source}";
+                    format-bluetooth-muted = "󰝟 {icon}󰂯 {format_source}";
                     format-muted = "󰝟 {format_source}";
                     format-source = "{volume}% ";
                     format-source-muted = "";
                     format-icons = {
-                        headphone = " ";
-                        hands-free = " ";
-                        headset = " ";
+                        headphone = "󰋋 ";
+                        hands-free = "󰥰 ";
+                        headset = "󰋎 ";
                         phone = " ";
                         portable = " ";
                         car = " ";
@@ -55,7 +55,7 @@
                 };
 
                 "bluetooth" = {
-                    format = " {status}";
+                    format = "󰂯 {status}";
                     format-disabled = "";
                     format-off = "";
                     interval = 30;
@@ -69,7 +69,7 @@
                         critical = 15;
                     };
                     format = "{icon}   {capacity}%";
-                    format-charging = "  {capacity}%";
+                    format-charging = "󱐋  {capacity}%";
                     format-plugged = "  {capacity}%";
                     format-alt = "{icon}  {time}";
                     format-icons = [" " " " " " " " " "];
@@ -119,7 +119,7 @@
                 };
 
                 "tray" = {
-                    icon-size = 21;
+                    icon-size = 20;
                     spacing = 10;
                 };
             };

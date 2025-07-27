@@ -17,7 +17,6 @@ gparted
 gst-plugin-pipewire
 hyprland
 hyprpolkitagent
-jre-openjdk-headless
 jre17-openjdk-headless
 jre21-openjdk-headless
 jre8-openjdk-headless
@@ -48,14 +47,12 @@ pipewire-audio
 pipewire-jack
 pipewire-pulse
 pipewire-roc
-plasma-workspace
 qt6-webengine
 realtime-privileges
 refind
 sddm
 sddm-kcm
 swtpm
-systemsettings
 tk
 traceroute
 ttf-0xproto-nerd
