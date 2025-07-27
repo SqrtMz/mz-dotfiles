@@ -19,6 +19,7 @@
         ../../modules/user/rofi/rofi.nix
         ../../modules/user/themes/themes.nix
         ../../modules/user/themes/qt.nix
+        ../../modules/user/swappy/swappy.nix
         ../../modules/user/waybar/waybar.nix
         ../../modules/user/wlogout/wlogout.nix
         ../../modules/user/zsh/zsh.nix
