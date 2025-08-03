@@ -26,7 +26,7 @@
     ];
 
     nixpkgs.config.allowUnfree = true;
-    
+
     disabledModules = ["${inputs.home-manager}/modules/misc/qt.nix"];
 
     # nixpkgs.overlays = [
@@ -63,10 +63,13 @@
         (config.lib.nixGL.wrap pkgs.heroic)
 		hyprsome
 		inkscape
+		jetbrains.idea-ultimate
+		jetbrains.pycharm-professional
         (config.lib.nixGL.wrap pkgs.lutris)
         (config.lib.nixGL.wrap pkgs.krita)
 		libreoffice
         mangohud
+		(config.lib.nixGL.wrap pkgs.mcaselector)
         ncdu
         networkmanagerapplet
         ntfs3g
