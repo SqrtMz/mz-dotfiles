@@ -26,23 +26,6 @@
 
     nixpkgs.config.allowUnfree = true;
 
-    # nixpkgs.overlays = [
-    #     (final: prev: {
-    #         qt6ct = prev.qt6ct.overrideAttrs (old: {
-
-    #             src = pkgs.fetchFromGitHub {
-    #                 owner = "ilya-fedin";
-    #                 repo = "qt6ct";
-    #                 rev = "26b539af69cf997c6878d41ba75ad7060b20e56e";
-    #                 sha256 = "sha256-ePY+BEpEcAq11+pUMjQ4XG358x3bXFQWwI1UAi+KmLo=";
-    #             };
-
-    #         });
-
-    #         qt6ct-kde = final.qt6ct;
-    #     })
-    # ];
-
     home.packages = with pkgs; [
 		android-tools
         (config.lib.nixGL.wrap pkgs.blender)
@@ -145,6 +128,23 @@
 
         portal.config.common.default = [ "hyprland" ];
     };
+
+    # nixpkgs.overlays = [
+    #     (final: prev: {
+    #         qt6ct = prev.qt6ct.overrideAttrs (old: {
+
+    #             src = pkgs.fetchFromGitHub {
+    #                 owner = "ilya-fedin";
+    #                 repo = "qt6ct";
+    #                 rev = "26b539af69cf997c6878d41ba75ad7060b20e56e";
+    #                 sha256 = "sha256-ePY+BEpEcAq11+pUMjQ4XG358x3bXFQWwI1UAi+KmLo=";
+    #             };
+
+    #         });
+
+    #         qt6ct-kde = final.qt6ct;
+    #     })
+    # ];
     
     # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
