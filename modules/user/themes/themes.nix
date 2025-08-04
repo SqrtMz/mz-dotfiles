@@ -37,6 +37,12 @@
 			};
 		};
 
+		icons = {
+			enable = true;
+			dark = "WhiteSur-dark";
+			package = pkgs.whitesur-icon-theme;
+		};
+
 		targets = {
 			firefox.profileNames = ["Mz"];
 			gtk.enable = true;
@@ -45,12 +51,6 @@
 			kitty.enable = false;
 			rofi.enable = false;
 			waybar.enable = false;
-		};
-
-		icons = {
-			enable = true;
-			dark = "WhiteSur-dark";
-			package = pkgs.whitesur-icon-theme;
 		};
 	};
 }
