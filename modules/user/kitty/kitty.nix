@@ -1,7 +1,7 @@
 {config, lib, pkgs, inputs, ...}:
 
 {
-    programs.kitty = {
+    programs.kitty = lib.mkForce {
         enable = true;
         package = pkgs.emptyDirectory;
         
@@ -16,6 +16,13 @@
         };
 
         extraConfig = ''
+            font_size 10.0
+
+            font_family      family="NotoSansM Nerd Font Mono"
+            bold_font        auto
+            italic_font      auto
+            bold_italic_font auto
+
             background_opacity 0.6
 
             # Black

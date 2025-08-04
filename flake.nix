@@ -15,16 +15,23 @@
     	home-manager-stable.inputs.nixpkgs.follows = "nixpkgs-stable";
 
         nixgl = {
-            url = "github:nix-community/nixGL";
+        	url = "github:nix-community/nixGL";
+        	inputs.nixpkgs.follows = "nixpkgs";
+        };
+
+        stylix = {
+            url = "github:SqrtMz/stylix";
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
-        nix-on-droid.url = "github:nix-community/nix-on-droid/master";
-        nix-on-droid.inputs.nixpkgs.follows = "nixpkgs";
-        nix-on-droid.inputs.home-manager.follows = "home-manager";
+        nix-on-droid = {
+            url = "github:nix-community/nix-on-droid/master";
+            inputs.nixpkgs.follows = "nixpkgs";
+            inputs.home-manager.follows = "home-manager";
+        };
     };
 
-    outputs = {self, nixpkgs, nixpkgs-stable, nixpkgs-prior-stable, home-manager, nix-on-droid, ...} @ inputs:
+    outputs = {self, nixpkgs, nixpkgs-stable, nixpkgs-prior-stable, home-manager, nix-on-droid, stylix, ...} @ inputs:
     let
         lib = nixpkgs.lib;
         system = "x86_64-linux";
@@ -50,6 +57,7 @@
                 extraSpecialArgs = {inherit inputs pkgs-stable pkgs-prior-stable;};
                 modules = [
                     ./profiles/user/mz.nix
+					stylix.homeModules.stylix
                 ];
             };
 

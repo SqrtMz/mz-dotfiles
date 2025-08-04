@@ -18,7 +18,6 @@
         ../../modules/user/neovim/neovim.nix
         ../../modules/user/rofi/rofi.nix
         ../../modules/user/themes/themes.nix
-        ../../modules/user/themes/qt.nix
         ../../modules/user/swappy/swappy.nix
         ../../modules/user/waybar/waybar.nix
         ../../modules/user/wlogout/wlogout.nix
@@ -26,8 +25,6 @@
     ];
 
     nixpkgs.config.allowUnfree = true;
-
-    disabledModules = ["${inputs.home-manager}/modules/misc/qt.nix"];
 
     # nixpkgs.overlays = [
     #     (final: prev: {
