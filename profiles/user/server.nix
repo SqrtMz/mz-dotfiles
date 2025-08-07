@@ -10,7 +10,6 @@
 	nixGL.vulkan.enable = true;
 
 	imports = [
-		../../modules/user/kitty/kitty.nix
 		../../modules/user/neovim/neovim.nix
 	];
 
@@ -23,5 +22,5 @@
 
 	# Let Home Manager install and manage itself.
 	programs.home-manager.enable = true;
-	home.stateVersion = "24.05";
+	home.stateVersion = "25.05";
 }

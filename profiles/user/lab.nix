@@ -26,11 +26,11 @@
 
     home.packages = with pkgs; [
 		(config.lib.nixGL.wrap pkgs.alacritty)
-        libsForQt5.ark
+        kdePackages.ark
 		android-tools
         btop
         brightnessctl
-        libsForQt5.dolphin
+        kdePackages.dolphin
         fastfetch
 		(config.lib.nixGL.wrap pkgs.gimp)
         grim
@@ -43,7 +43,7 @@
         nvtopPackages.full
         nwg-displays
     	(config.lib.nixGL.wrap pkgs.obs-studio)
-        libsForQt5.okular
+        kdePackages.okular
         opentabletdriver
         pavucontrol
         playerctl
