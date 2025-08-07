@@ -24,6 +24,10 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
+        mz-dotfiles = {
+            url = "github:SqrtMz/mz-dotfiles";
+        };
+
         nix-on-droid = {
             url = "github:nix-community/nix-on-droid/master";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -38,7 +42,6 @@
         pkgs = nixpkgs.legacyPackages.${system};
         pkgs-stable = nixpkgs-stable.legacyPackages.${system};
         pkgs-prior-stable = nixpkgs-prior-stable.legacyPackages.${system};
-
     in {
         nixosConfigurations = {
             Mz = lib.nixosSystem {
@@ -66,20 +69,25 @@
                 extraSpecialArgs = {inherit inputs pkgs-stable pkgs-prior-stable;};
                 modules = [
                     ./profiles/user/lab.nix
+                    stylix.homeModules.stylix
                 ];
             };
 
             server = home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
                 extraSpecialArgs = {inherit inputs pkgs-stable pkgs-prior-stable;};
-                modules = [./profiles/user/server.nix];
+                modules = [
+                    ./profiles/user/server.nix
+                ];
             };
         };
 
         nixOnDroidConfigurations = {
             MzBrick = inputs.nix-on-droid.lib.nixOnDroidConfiguration {
                 pkgs = import nixpkgs {system = "aarch64-linux";};
-                modules = [./profiles/system/MzBrick.nix];
+                modules = [
+                    ./profiles/system/MzBrick.nix
+                ];
             };
         };
     };

@@ -76,6 +76,7 @@
         wev
         wl-clipboard
         xournalpp
+		(config.lib.nixGL.wrap pkgs.youtube-music)
 
         corefonts
         google-fonts

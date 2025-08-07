@@ -11,7 +11,7 @@
     stylix = {
 		enable = true;
 		polarity = "dark";
-		base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+		base16Scheme = ./catppuccin-mocha.yaml;
 
 		fonts = {
 			serif = {
@@ -48,9 +48,13 @@
 			gtk.enable = true;
 			qt.enable = true;
 			hyprland.enable = false;
-			kitty.enable = false;
 			rofi.enable = false;
 			waybar.enable = false;
+
+			kitty = {
+				enable = false;
+				variant256Colors = true;
+			};
 		};
 	};
 }

@@ -1,7 +1,7 @@
 {config, lib, pkgs, inputs, ...}:
 
 {
-    programs.kitty = lib.mkForce {
+    programs.kitty = {
         enable = true;
         package = pkgs.emptyDirectory;
         
@@ -56,6 +56,9 @@
             # White
             color7  #BAC2DE
             color15 #A6ADC8
+
+            selection_foreground #FFFFFF
+            selection_background #89B4FA
         '';
 
     };
