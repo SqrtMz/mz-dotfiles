@@ -174,8 +174,8 @@
             bind = $mainMod, F, fullscreen,
             bind = $mainMod SHIFT, F, togglefloating
 
-            bind = , Print, exec, flameshot gui --raw | wl-copy
-            bind = SHIFT, Print, exec, grim -g "$(slurp)" - | swappy -f - | wl-copy
+            bind = , Print, exec, flameshot gui | wl-copy
+            bind = SHIFT, Print, exec, grim -g "$(slurp)" - | satty -f -
 
             bindel = , XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
             bindel = , XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-

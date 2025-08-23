@@ -18,7 +18,7 @@
         ../../modules/user/neovim/neovim.nix
         ../../modules/user/rofi/rofi.nix
         ../../modules/user/themes/themes.nix
-        ../../modules/user/swappy/swappy.nix
+        ../../modules/user/satty/satty.nix
         ../../modules/user/waybar/waybar.nix
         ../../modules/user/wlogout/wlogout.nix
         ../../modules/user/zsh/zsh.nix
@@ -34,7 +34,6 @@
         (config.lib.nixGL.wrap pkgs.chromium)
 		cubiomes-viewer
         (config.lib.nixGL.wrap pkgs.discord)
-        (config.lib.nixGL.wrap pkgs.duckstation)
         fastfetch
 		(config.lib.nixGL.wrap pkgs.gimp3)
         (config.lib.nixGL.wrap pkgs.goverlay)
@@ -67,7 +66,7 @@
 		(config.lib.nixGL.wrap pkgs.rpcs3)
         slurp
         (config.lib.nixGL.wrap pkgs.steam)
-        swappy
+		(config.lib.nixGL.wrap pkgs.telegram-desktop)
         (config.lib.nixGL.wrap pkgs.upscaler)
         unrar
         usbutils
@@ -77,6 +76,8 @@
         wl-clipboard
         xournalpp
 		(config.lib.nixGL.wrap pkgs.youtube-music)
+
+		(config.lib.nixGL.wrap pkgs.mcpelauncher-ui-qt)
 
         corefonts
         google-fonts
@@ -95,6 +96,7 @@
                 General = {
                     disabledTrayIcon = true;
                     uiColor = "#369B99";
+                    allowMultipleGuiInstances = true;
                 };
             };
         };

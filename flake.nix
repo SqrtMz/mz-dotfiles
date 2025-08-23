@@ -20,7 +20,7 @@
         };
 
         stylix = {
-            url = "github:SqrtMz/stylix";
+            url = "github:nix-community/stylix";
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
