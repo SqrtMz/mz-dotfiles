@@ -43,7 +43,6 @@
 		hyprsome
 		inkscape
 		jetbrains.idea-ultimate
-		jetbrains.pycharm-professional
         (config.lib.nixGL.wrap pkgs.lutris)
         (config.lib.nixGL.wrap pkgs.krita)
 		libreoffice
@@ -53,8 +52,8 @@
         networkmanagerapplet
         ntfs3g
         nvtopPackages.full
-        nwg-displays
     	(config.lib.nixGL.wrap pkgs.obs-studio)
+		(config.lib.nixGL.wrap pkgs.obsidian)
         opentabletdriver
         parabolic
         pavucontrol

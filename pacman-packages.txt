@@ -111,8 +111,6 @@ ttf-ubuntu-nerd
 ttf-victor-mono-nerd
 ttf-zed-mono-nerd
 vdpauinfo
-virt-manager
-virt-viewer
 vulkan-radeon
 vulkan-tools
 wget
