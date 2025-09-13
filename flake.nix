@@ -33,13 +33,28 @@
             inputs.nixpkgs.follows = "nixpkgs";
             inputs.home-manager.follows = "home-manager";
         };
+
+        sd-switch = {
+            url = "sourcehut:~rycee/sd-switch?ref=0.6.2";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
     outputs = {self, nixpkgs, nixpkgs-stable, nixpkgs-prior-stable, home-manager, nix-on-droid, stylix, ...} @ inputs:
     let
         lib = nixpkgs.lib;
         system = "x86_64-linux";
-        pkgs = nixpkgs.legacyPackages.${system};
+
+        pkgs = import nixpkgs {
+            inherit system;
+            
+            overlays = [
+                (final: prev: {
+                    sd-switch = inputs.sd-switch.packages.${system}.default;
+                })
+            ];
+        };
+
         pkgs-stable = nixpkgs-stable.legacyPackages.${system};
         pkgs-prior-stable = nixpkgs-prior-stable.legacyPackages.${system};
     in {

@@ -76,7 +76,7 @@
         xournalpp
 		(config.lib.nixGL.wrap pkgs.youtube-music)
 
-		(config.lib.nixGL.wrap pkgs.mcpelauncher-ui-qt)
+        sd-switch
 
         corefonts
         google-fonts

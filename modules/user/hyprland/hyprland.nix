@@ -97,8 +97,8 @@
             env = ELECTRON_OZONE_PLATFORM_HINT,auto
 
             # Use Arch QT packages instead of Nix ones
-            # env = QT_PLUGIN_PATH,/usr/lib/qt6/plugins
-            # env = QML2_IMPORT_PATH,/usr/lib/qt6/qml
+            env = QT_PLUGIN_PATH,/usr/lib/qt6/plugins
+            env = QML2_IMPORT_PATH,/usr/lib/qt6/qml
 
             env = MANGOHUD,1
 
@@ -154,10 +154,6 @@
                 touchpad {
                     natural_scroll = false
                 }
-            }
-
-            gestures {
-                workspace_swipe = false
             }
 
             ####################
