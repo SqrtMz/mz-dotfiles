@@ -76,8 +76,6 @@
         xournalpp
 		(config.lib.nixGL.wrap pkgs.youtube-music)
 
-        sd-switch
-
         corefonts
         google-fonts
     ];
