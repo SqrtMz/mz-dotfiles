@@ -23,40 +23,15 @@
             url = "github:nix-community/stylix";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-
-        mz-dotfiles = {
-            url = "github:SqrtMz/mz-dotfiles";
-        };
-
-        nix-on-droid = {
-            url = "github:nix-community/nix-on-droid/master";
-            inputs.nixpkgs.follows = "nixpkgs";
-            inputs.home-manager.follows = "home-manager";
-        };
-
-        sd-switch = {
-            url = "sourcehut:~rycee/sd-switch?ref=0.6.2";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
     };
 
-    outputs = {self, nixpkgs, nixpkgs-stable, nixpkgs-prior-stable, home-manager, nix-on-droid, stylix, ...} @ inputs:
+    outputs = {self, nixpkgs, nixpkgs-stable, nixpkgs-prior-stable, home-manager, stylix, ...} @ inputs:
     let
         lib = nixpkgs.lib;
         system = "x86_64-linux";
-
-        pkgs = import nixpkgs {
-            inherit system;
-            
-            overlays = [
-                (final: prev: {
-                    sd-switch = inputs.sd-switch.packages.${system}.default;
-                })
-            ];
-        };
-
-        pkgs-stable = nixpkgs-stable.legacyPackages.${system};
-        pkgs-prior-stable = nixpkgs-prior-stable.legacyPackages.${system};
+        pkgs = import nixpkgs {inherit system;};
+        pkgs-stable = import nixpkgs-stable {inherit system;};
+        pkgs-prior-stable = import nixpkgs-prior-stable {inherit system;};
     in {
         nixosConfigurations = {
             Mz = lib.nixosSystem {
@@ -93,15 +68,6 @@
                 extraSpecialArgs = {inherit inputs pkgs-stable pkgs-prior-stable;};
                 modules = [
                     ./profiles/user/server.nix
-                ];
-            };
-        };
-
-        nixOnDroidConfigurations = {
-            MzBrick = inputs.nix-on-droid.lib.nixOnDroidConfiguration {
-                pkgs = import nixpkgs {system = "aarch64-linux";};
-                modules = [
-                    ./profiles/system/MzBrick.nix
                 ];
             };
         };
