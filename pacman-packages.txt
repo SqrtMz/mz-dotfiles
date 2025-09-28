@@ -23,6 +23,7 @@ gst-plugin-pipewire
 hyprland
 hyprpolkitagent
 imagemagick
+input-remapper-bin
 jre17-openjdk-headless
 jre21-openjdk-headless
 jre8-openjdk-headless
@@ -37,6 +38,7 @@ lzop
 mkinitcpio
 networkmanager
 okular
+opentabletdriver
 otf-aurulent-nerd
 otf-codenewroman-nerd
 otf-comicshanns-nerd
@@ -49,6 +51,8 @@ otf-hermit-nerd
 otf-monaspace-nerd
 otf-opendyslexic-nerd
 otf-overpass-nerd
+paru
+paru-debug
 pipewire
 pipewire-alsa
 pipewire-audio
@@ -124,6 +128,7 @@ ttf-zed-mono-nerd
 vdpauinfo
 vulkan-radeon
 vulkan-tools
+waydroid
 wget
 wireless_tools
 wxwidgets-gtk3
