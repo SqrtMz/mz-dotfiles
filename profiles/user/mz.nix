@@ -54,7 +54,6 @@
         nvtopPackages.full
     	(config.lib.nixGL.wrap pkgs.obs-studio)
 		(config.lib.nixGL.wrap pkgs.obsidian)
-        opentabletdriver
         parabolic
         pavucontrol
 		(config.lib.nixGL.wrap pkgs.pcsx2)
@@ -68,6 +67,7 @@
 		(config.lib.nixGL.wrap pkgs.telegram-desktop)
         (config.lib.nixGL.wrap pkgs.upscaler)
         unrar
+        unzip
         usbutils
         vlc
 	    vscode
