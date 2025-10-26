@@ -97,8 +97,8 @@
             env = ELECTRON_OZONE_PLATFORM_HINT,auto
 
             # Use Arch QT packages instead of Nix ones
-            env = QT_PLUGIN_PATH,/usr/lib/qt6/plugins
-            env = QML2_IMPORT_PATH,/usr/lib/qt6/qml
+            #env = QT_PLUGIN_PATH,/usr/lib/qt6/plugins
+            #env = QML2_IMPORT_PATH,/usr/lib/qt6/qml
 
             env = MANGOHUD,1
 
@@ -227,7 +227,8 @@
             windowrulev2 = float, class:(org.pulseaudio.pavucontrol), title:.*
             windowrulev2 = float, class:(xdg-desktop-portal-gtk), title:.*
 
-            # windowrulev2 = suppressevent maximize, class:.*
+			# Avoid some windowed programs taking over all the workspace even when there's another windows
+            windowrulev2 = suppressevent maximize, class:.*
 
             # Fix some dragging issues with XWayland
             windowrulev2 = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0

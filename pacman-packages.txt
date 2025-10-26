@@ -10,9 +10,12 @@ bridge-utils
 ccache
 clinfo
 curl
+docker
+docker-compose
 dolphin
 efibootmgr
 fastfetch
+freerdp
 fuse2
 git
 git-lfs

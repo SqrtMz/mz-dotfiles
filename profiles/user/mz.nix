@@ -28,7 +28,6 @@
 
     home.packages = with pkgs; [
 		android-tools
-        (config.lib.nixGL.wrap pkgs.blender)
         btop
         brightnessctl
         (config.lib.nixGL.wrap pkgs.chromium)
@@ -39,13 +38,11 @@
         (config.lib.nixGL.wrap pkgs.goverlay)
         grim
         (config.lib.nixGL.wrap pkgs.gthumb)
-        (config.lib.nixGL.wrap pkgs.heroic)
 		hyprsome
 		inkscape
 		jetbrains.idea-ultimate
-        (config.lib.nixGL.wrap pkgs.lutris)
         (config.lib.nixGL.wrap pkgs.krita)
-		libreoffice
+		(config.lib.nixGL.wrap pkgs.libreoffice)
         mangohud
 		(config.lib.nixGL.wrap pkgs.mcaselector)
         ncdu
@@ -56,12 +53,10 @@
 		(config.lib.nixGL.wrap pkgs.obsidian)
         parabolic
         pavucontrol
-		(config.lib.nixGL.wrap pkgs.pcsx2)
         playerctl
         (prismlauncher.override {jdks = [pkgs.emptyDirectory];})
         pyenv
 		qbittorrent
-		(config.lib.nixGL.wrap pkgs.rpcs3)
         slurp
         (config.lib.nixGL.wrap pkgs.steam)
 		(config.lib.nixGL.wrap pkgs.telegram-desktop)
