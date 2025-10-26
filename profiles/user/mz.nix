@@ -34,6 +34,7 @@
 		cubiomes-viewer
         (config.lib.nixGL.wrap pkgs.discord)
         fastfetch
+        (config.lib.nixGL.wrap pkgs.freecad)
 		(config.lib.nixGL.wrap pkgs.gimp3)
         (config.lib.nixGL.wrap pkgs.goverlay)
         grim
@@ -45,6 +46,7 @@
 		(config.lib.nixGL.wrap pkgs.libreoffice)
         mangohud
 		(config.lib.nixGL.wrap pkgs.mcaselector)
+        miktex
         ncdu
         networkmanagerapplet
         ntfs3g
@@ -60,6 +62,7 @@
         slurp
         (config.lib.nixGL.wrap pkgs.steam)
 		(config.lib.nixGL.wrap pkgs.telegram-desktop)
+        (config.lib.nixGL.wrap pkgs.texstudio)
         (config.lib.nixGL.wrap pkgs.upscaler)
         unrar
         unzip
