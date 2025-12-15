@@ -6,10 +6,12 @@
 
     targets.genericLinux.enable = true;
 
-    nixGL.packages = inputs.nixgl.packages;
-    nixGL.defaultWrapper = "mesa";
-    nixGL.installScripts = ["mesa"];
-    nixGL.vulkan.enable = true;
+    targets.genericLinux.nixGL = {
+        packages = inputs.nixgl.packages;
+        defaultWrapper = "mesa";
+        installScripts = ["mesa"];
+        vulkan.enable = true;
+    };
 
     imports = [
         ../../modules/user/firefox/firefox.nix
@@ -41,7 +43,7 @@
         (config.lib.nixGL.wrap pkgs.gthumb)
 		hyprsome
 		inkscape
-		jetbrains.idea-ultimate
+		(config.lib.nixGL.wrap (pkgs.jetbrains.idea-ultimate.override { forceWayland = true; }))
         (config.lib.nixGL.wrap pkgs.krita)
 		(config.lib.nixGL.wrap pkgs.libreoffice)
         mangohud
@@ -53,6 +55,7 @@
         nvtopPackages.full
     	(config.lib.nixGL.wrap pkgs.obs-studio)
 		(config.lib.nixGL.wrap pkgs.obsidian)
+		opentabletdriver
         parabolic
         pavucontrol
         playerctl
@@ -77,6 +80,10 @@
         corefonts
         google-fonts
     ];
+
+	nixpkgs.config.permittedInsecurePackages = [
+		"gradle-7.6.6"
+	];
 
     services = {
         cliphist.enable = true;
@@ -104,13 +111,13 @@
                 splash = true;
 
                 preload = [
-                    "~/Pictures/Images & Videos/BG/THE.jpg"
                     "~/Pictures/Images & Videos/BG/TH6.png"
+                    # "~/Pictures/Images & Videos/BG/TH6.png"
                 ];
 
                 wallpaper = [
-                    "DP-4, contain:~/Pictures/Images & Videos/BG/THE.jpg"
-                    "HDMI-A-2, ~/Pictures/Images & Videos/BG/TH6.png"
+                    "DP-4, ~/Pictures/Images & Videos/BG/TH6.png"
+                    # "HDMI-A-2, ~/Pictures/Images & Videos/BG/TH6.png"
                 ];
             };
         };
@@ -127,23 +134,6 @@
         portal.config.common.default = [ "hyprland" ];
     };
 
-    # nixpkgs.overlays = [
-    #     (final: prev: {
-    #         qt6ct = prev.qt6ct.overrideAttrs (old: {
-
-    #             src = pkgs.fetchFromGitHub {
-    #                 owner = "ilya-fedin";
-    #                 repo = "qt6ct";
-    #                 rev = "26b539af69cf997c6878d41ba75ad7060b20e56e";
-    #                 sha256 = "sha256-ePY+BEpEcAq11+pUMjQ4XG358x3bXFQWwI1UAi+KmLo=";
-    #             };
-
-    #         });
-
-    #         qt6ct-kde = final.qt6ct;
-    #     })
-    # ];
-    
     # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
     home.stateVersion = "25.05";

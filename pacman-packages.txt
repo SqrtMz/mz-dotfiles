@@ -13,6 +13,7 @@ curl
 docker
 docker-compose
 dolphin
+edk2-ovmf
 efibootmgr
 fastfetch
 freerdp
@@ -27,21 +28,20 @@ hyprland
 hyprpolkitagent
 imagemagick
 input-remapper-bin
-jre17-openjdk-headless
-jre21-openjdk-headless
-jre8-openjdk-headless
 kitty
 lib32-mesa
 lib32-readline
 lib32-vulkan-radeon
+libappimage
+libvirt
 linux-firmware
 linux-zen
 linux-zen-headers
+looking-glass
 lzop
 mkinitcpio
 networkmanager
 okular
-opentabletdriver
 otf-aurulent-nerd
 otf-codenewroman-nerd
 otf-comicshanns-nerd
@@ -54,7 +54,6 @@ otf-hermit-nerd
 otf-monaspace-nerd
 otf-opendyslexic-nerd
 otf-overpass-nerd
-paru
 paru-debug
 pipewire
 pipewire-alsa
@@ -63,6 +62,7 @@ pipewire-jack
 pipewire-pulse
 pipewire-roc
 pngcrush
+qemu-desktop
 qt6-webengine
 realtime-privileges
 refind
@@ -129,6 +129,7 @@ ttf-ubuntu-nerd
 ttf-victor-mono-nerd
 ttf-zed-mono-nerd
 vdpauinfo
+virt-manager
 vulkan-radeon
 vulkan-tools
 waydroid

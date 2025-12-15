@@ -18,9 +18,33 @@
             "$menu" = "rofi -show drun";
             "$mainMod" = "SUPER";
 
+            exec-once = [
+                "~/mz-dotfiles/scripts/autorun.sh"
+            ];
+
+            source = [
+                "~/mz-dotfiles/modules/user/hyprland/monitors.conf"
+                "~/mz-dotfiles/modules/user/hyprland/workspaces.conf"
+            ];
+
+            env = [
+                # Fix dolphin open with
+                "XDG_MENU_PREFIX,plasma-"
+                "QT_QPA_PLATFORM,wayland"
+
+                # Make electron programs use wayland instead of xwayland
+                "ELECTRON_OZONE_PLATFORM_HINT,auto"
+
+                # Use Arch QT packages instead of Nix ones
+                #"QT_PLUGIN_PATH,/usr/lib/qt6/plugins"
+                #"QML2_IMPORT_PATH,/usr/lib/qt6/qml"
+
+                "MANGOHUD,1"
+            ];
+
             general = {
                 gaps_in = 5;
-                gaps_out = 10;
+                gaps_out = 5;
                 border_size = 2;
 
                 "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
@@ -52,7 +76,31 @@
                 };
             };
 
+            input = {
+                kb_layout = "us";
+                kb_variant = "altgr-intl";
+
+                follow_mouse = 1;
+                sensitivity = 0;
+                accel_profile = "flat";
+
+                touchpad = {
+                    natural_scroll = false;
+                };
+            };
+
             bind = [
+                # General keybinds
+                "$mainMod, Q, exec, $terminal"
+                "$mainMod, Escape, killactive,"
+                "$mainMod, M, exit,"
+                "$mainMod, E, exec, $fileManager"
+                "$mainMod, W, exec, $menu"
+                "$mainMod, P, pseudo"
+                "$mainMod, J, togglesplit"
+                "$mainMod, F, fullscreen,"
+                "$mainMod SHIFT, F, togglefloating"
+
                 # Hyprsome binds
                 "$mainMod, 1, exec, hyprsome workspace 1"
                 "$mainMod, 2, exec, hyprsome workspace 2"
@@ -75,33 +123,59 @@
                 "$mainMod SHIFT, 8, exec, hyprsome movefocus 8"
                 "$mainMod SHIFT, 9, exec, hyprsome movefocus 9"
                 "$mainMod SHIFT, 0, exec, hyprsome movefocus 10"
+
+                # Screenshots
+                ", Print, exec, flameshot gui | wl-copy"
+                "SHIFT, Print, exec, grim -g \"$(slurp)\" - | satty -f -"
+
+                # Move focus with mainMod + arrow keys
+                "$mainMod, left, movefocus, l"
+                "$mainMod, right, movefocus, r"
+                "$mainMod, up, movefocus, u"
+                "$mainMod, down, movefocus, d"
+
+                # Alt Tab workspace switching
+                "ALT, Tab, workspace, e+1"
+                "SHIFT ALT, Tab, workspace, e-1"
+
+                # Mouse scroll workspace switching
+                "$mainMod, mouse_down, workspace, e+1"
+                "$mainMod, mouse_up, workspace, e-1"
+
+                # Special workspace
+                "$mainMod, S, togglespecialworkspace, magic"
+                "$mainMod SHIFT, S, movetoworkspace, special:magic"
+
+                # Cliphist clipboard
+                "SUPER, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+            ];
+
+            bindl = [
+                # Media keys - Nonrepeatable
+                ", XF86AudioNext, exec, playerctl next"
+                ", XF86AudioPause, exec, playerctl play-pause"
+                ", XF86AudioPlay, exec, playerctl play-pause"
+                ", XF86AudioPrev, exec, playerctl previous"
+            ];
+
+            bindel = [
+                # Media keys - Repeatable
+                ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
+                ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+                #", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+                #", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+                ", XF86MonBrightnessUp, exec, brightnessctl s 10%+"
+                ", XF86MonBrightnessDown, exec, brightnessctl s 10%-"
+            ];
+
+            bindm = [
+                # Move/resize windows with mainMod + LMB/RMB and dragging
+                "$mainMod, mouse:272, movewindow"
+                "$mainMod, mouse:273, resizewindow"
             ];
         };
 
         extraConfig = ''
-            exec-once = ~/mz-dotfiles/scripts/autorun.sh
-
-            ################
-            ### MONITORS ###
-            ################
-
-            source = ~/mz-dotfiles/modules/user/hyprland/monitors.conf
-            source = ~/mz-dotfiles/modules/user/hyprland/workspaces.conf
-
-            # Fix dolphin open with
-            env = XDG_MENU_PREFIX,plasma-
-            env = QT_QPA_PLATFORM,wayland
-            # env = QT_QPA_PLATFORMTHEME,qt6ct
-            
-            # Make electron programs use wayland instead of xwayland
-            env = ELECTRON_OZONE_PLATFORM_HINT,auto
-
-            # Use Arch QT packages instead of Nix ones
-            #env = QT_PLUGIN_PATH,/usr/lib/qt6/plugins
-            #env = QML2_IMPORT_PATH,/usr/lib/qt6/qml
-
-            env = MANGOHUD,1
-
             #####################
             ### LOOK AND FEEL ###
             #####################
@@ -134,81 +208,6 @@
                 disable_hyprland_logo = false # If true disables the random hyprland logo / anime girl background. :(
             }
 
-
-            #############
-            ### INPUT ###
-            #############
-
-            input {
-                kb_layout = us
-                kb_variant = altgr-intl
-                kb_model =
-                kb_options =
-                kb_rules =
-
-                follow_mouse = 1
-
-                sensitivity = 0
-                accel_profile = flat
-
-                touchpad {
-                    natural_scroll = false
-                }
-            }
-
-            ####################
-            ### KEYBINDINGSS ###
-            ####################
-
-            bind = $mainMod, Q, exec, $terminal
-            bind = $mainMod, Escape, killactive,
-            bind = $mainMod, M, exit,
-            bind = $mainMod, E, exec, $fileManager
-            bind = $mainMod, W, exec, $menu
-            bind = $mainMod, P, pseudo
-            bind = $mainMod, J, togglesplit
-            bind = $mainMod, F, fullscreen,
-            bind = $mainMod SHIFT, F, togglefloating
-
-            bind = , Print, exec, flameshot gui | wl-copy
-            bind = SHIFT, Print, exec, grim -g "$(slurp)" - | satty -f -
-
-            bindel = , XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
-            bindel = , XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-            # bindel = , XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-            # bindel = , XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
-            bindel = , XF86MonBrightnessUp, exec, brightnessctl s 10%+
-            bindel = , XF86MonBrightnessDown, exec, brightnessctl s 10%-
-
-            bindl = , XF86AudioNext, exec, playerctl next
-            bindl = , XF86AudioPause, exec, playerctl play-pause
-            bindl = , XF86AudioPlay, exec, playerctl play-pause
-            bindl = , XF86AudioPrev, exec, playerctl previous
-
-            # Move focus with mainMod + arrow keys
-            bind = $mainMod, left, movefocus, l
-            bind = $mainMod, right, movefocus, r
-            bind = $mainMod, up, movefocus, u
-            bind = $mainMod, down, movefocus, d
-
-            bind = ALT, Tab, workspace, e+1
-            bind = SHIFT ALT, Tab, workspace, e-1
-
-            # Example special workspace (scratchpad)
-            bind = $mainMod, S, togglespecialworkspace, magic
-            bind = $mainMod SHIFT, S, movetoworkspace, special:magic
-
-            # Scroll through existing workspaces with mainMod + scroll
-            bind = $mainMod, mouse_down, workspace, e+1
-            bind = $mainMod, mouse_up, workspace, e-1
-
-            # Move/resize windows with mainMod + LMB/RMB and dragging
-            bindm = $mainMod, mouse:272, movewindow
-            bindm = $mainMod, mouse:273, resizewindow
-
-            # Cliphist Binds
-            bind = SUPER, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
-
             ##############################
             ### WINDOWS AND WORKSPACES ###
             ##############################
@@ -216,18 +215,22 @@
             windowrulev2 = float, class:(nm-connection-editor)
             windowrulev2 = float, class:(org.kde.ark)
 
-            # Firefox
+            # Firefox - Make floating windows
             windowrulev2 = float, title:(Picture-in-Picture)
             windowrulev2 = float, class:(firefox), title:(Library)
 
-            # Steam
+            # Steam - Make floating windows
             windowrulev2 = float, class:(steam), title:(Steam Settings)
             windowrulev2 = float, class:(steam), title:(Friends List)
+
+			# Intellij - tab dragging fix
+			windowrulev2 = float, class:^(jetbrains-.*),title:^(win.*)  
+			windowrulev2 = noinitialfocus, opacity 0.9 0.9, class:^(jetbrains-.*)
 
             windowrulev2 = float, class:(org.pulseaudio.pavucontrol), title:.*
             windowrulev2 = float, class:(xdg-desktop-portal-gtk), title:.*
 
-			# Avoid some windowed programs taking over all the workspace even when there's another windows
+			# Avoid some windowed programs taking over all the workspace (fullscreen like) even when there's another windows
             windowrulev2 = suppressevent maximize, class:.*
 
             # Fix some dragging issues with XWayland

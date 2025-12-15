@@ -27,7 +27,7 @@
 			};
 
 			emoji = {
-				package = pkgs.noto-fonts-emoji;
+				package = pkgs.noto-fonts-color-emoji;
 				name = "Noto Color Emoji";
 			};
 
@@ -44,12 +44,16 @@
 		};
 
 		targets = {
-			firefox.profileNames = ["Mz"];
 			gtk.enable = true;
 			qt.enable = true;
 			hyprland.enable = false;
 			rofi.enable = false;
 			waybar.enable = false;
+
+			firefox = {
+				profileNames = ["Mz"];
+				fonts.enable = false;
+			};
 
 			kitty = {
 				enable = false;

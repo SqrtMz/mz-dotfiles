@@ -84,17 +84,20 @@
                     interval = 30;
                     format = "D {percentage_used}% ";
                     path = "/";
-                    on-click = "kitty -e btop & kitty -e nvtop";
+                    on-click = "kitty -e btop";
+					on-click-right = "kitty -e nvtop";
                 };
 
                 "cpu" = {
                     format = "/ C {usage}% ";
-                    on-click = "kitty -e btop & kitty -e nvtop";
+                    on-click = "kitty -e btop";
+					on-click-right = "kitty -e nvtop";
                 };
 
                 "memory" = {
                     format = "/ M {}%  ";
-                    on-click = "kitty -e btop & kitty -e nvtop";
+                    on-click = "kitty -e btop";
+					on-click-right = "kitty -e nvtop";
                 };
 
                 "group/hardware" = {
