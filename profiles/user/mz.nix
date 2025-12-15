@@ -81,10 +81,6 @@
         google-fonts
     ];
 
-	nixpkgs.config.permittedInsecurePackages = [
-		"gradle-7.6.6"
-	];
-
     services = {
         cliphist.enable = true;
 
