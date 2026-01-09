@@ -43,12 +43,12 @@
         (config.lib.nixGL.wrap pkgs.gthumb)
 		hyprsome
 		inkscape
-		(config.lib.nixGL.wrap (pkgs.jetbrains.idea-ultimate.override { forceWayland = true; }))
+		(config.lib.nixGL.wrap (pkgs.jetbrains.idea.override { forceWayland = true; }))
         (config.lib.nixGL.wrap pkgs.krita)
 		(config.lib.nixGL.wrap pkgs.libreoffice)
         mangohud
 		(config.lib.nixGL.wrap pkgs.mcaselector)
-        miktex
+        (config.lib.nixGL.wrap pkgs-stable.miktex)
         ncdu
         networkmanagerapplet
         ntfs3g
@@ -68,6 +68,7 @@
         (config.lib.nixGL.wrap pkgs.texstudio)
         (config.lib.nixGL.wrap pkgs.upscaler)
         unrar
+        (config.lib.nixGL.wrap pkgs.unityhub)
         unzip
         usbutils
         vlc
@@ -75,7 +76,7 @@
         wev
         wl-clipboard
         xournalpp
-		(config.lib.nixGL.wrap pkgs.youtube-music)
+		(config.lib.nixGL.wrap pkgs.pear-desktop)
 
         corefonts
         google-fonts
@@ -132,5 +133,5 @@
 
     # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
-    home.stateVersion = "25.05";
+    home.stateVersion = "26.05";
 }

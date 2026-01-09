@@ -54,6 +54,7 @@ otf-hermit-nerd
 otf-monaspace-nerd
 otf-opendyslexic-nerd
 otf-overpass-nerd
+paru
 paru-debug
 pipewire
 pipewire-alsa

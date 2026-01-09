@@ -212,29 +212,82 @@
             ### WINDOWS AND WORKSPACES ###
             ##############################
 
-            windowrulev2 = float, class:(nm-connection-editor)
-            windowrulev2 = float, class:(org.kde.ark)
+            windowrule {
+                name = NetworkManager Connection Editor
+                match:class = nm-connection-editor
+                float = true
+            }
+
+            windowrule {
+                name = Ark
+                match:class = org.kde.ark
+                float = true
+            }
 
             # Firefox - Make floating windows
-            windowrulev2 = float, title:(Picture-in-Picture)
-            windowrulev2 = float, class:(firefox), title:(Library)
+            windowrule {
+                name = Firefox Picture-in-Picture
+                match:title = Picture-in-Picture
+                float = true
+            }
+            
+            windowrule {
+                name = Firefox Library
+                match:class = firefox
+                match:title = Library
+                float = true
+            }
 
             # Steam - Make floating windows
-            windowrulev2 = float, class:(steam), title:(Steam Settings)
-            windowrulev2 = float, class:(steam), title:(Friends List)
+            windowrule {
+                name = Steam Settings
+                match:class = steam
+                match:title = Steam Settings
+                float = true
+            }
 
-			# Intellij - tab dragging fix
-			windowrulev2 = float, class:^(jetbrains-.*),title:^(win.*)  
-			windowrulev2 = noinitialfocus, opacity 0.9 0.9, class:^(jetbrains-.*)
+            windowrule {
+                name = Steam Friends List
+                match:class = steam
+                match:title = Friends List
+                float = true
+            }
 
-            windowrulev2 = float, class:(org.pulseaudio.pavucontrol), title:.*
-            windowrulev2 = float, class:(xdg-desktop-portal-gtk), title:.*
+			# # Intellij - tab dragging fix
+			# windowrulev2 = float, class:^(jetbrains-.*),title:^(win.*)
+			# windowrulev2 = noinitialfocus, opacity 0.9 0.9, class:^(jetbrains-.*)
+
+            windowrule {
+                name = PulseAudio Volume Control
+                match:class = org.pulseaudio.pavucontrol
+                match:title = .*
+                float = true
+            }
+            
+            windowrule {
+                name = File Pickers
+                match:class = xdg-desktop-portal-gtk
+                match:title = .*
+                float = true
+            }
 
 			# Avoid some windowed programs taking over all the workspace (fullscreen like) even when there's another windows
-            windowrulev2 = suppressevent maximize, class:.*
+            windowrule {
+                name = Supress Maximize Events
+                match:class = .*
+                suppress_event = maximize
+            }
 
-            # Fix some dragging issues with XWayland
-            windowrulev2 = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
-           '';
+            windowrule {
+                name = XWayland Dragging Fix
+                match:class = ^$
+                match:title = ^$
+                match:xwayland = true
+                match:float = true
+                match:fullscreen = false
+                match:pin = false
+                no_focus = true
+            }
+        '';
    };
 }
