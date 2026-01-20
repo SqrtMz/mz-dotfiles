@@ -26,6 +26,7 @@ gperf
 gst-plugin-pipewire
 hyprland
 hyprpolkitagent
+hytale-launcher-bin
 imagemagick
 input-remapper-bin
 kitty
