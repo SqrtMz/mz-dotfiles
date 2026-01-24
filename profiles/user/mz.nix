@@ -36,7 +36,7 @@
 		cubiomes-viewer
         (config.lib.nixGL.wrap pkgs.discord)
         fastfetch
-        # (config.lib.nixGL.wrap pkgs.freecad)
+        (config.lib.nixGL.wrap pkgs.freecad)
 		(config.lib.nixGL.wrap pkgs.gimp3)
         (config.lib.nixGL.wrap pkgs.goverlay)
         grim
