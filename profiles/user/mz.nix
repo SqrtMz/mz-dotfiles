@@ -109,12 +109,12 @@
 
                 preload = [
                     "~/Pictures/Images & Videos/BG/TH6.png"
-                    # "~/Pictures/Images & Videos/BG/TH6.png"
+                    "~/Pictures/Images & Videos/BG/THE.jpg"
                 ];
 
                 wallpaper = [
-                    "DP-4, ~/Pictures/Images & Videos/BG/TH6.png"
-                    # "HDMI-A-2, ~/Pictures/Images & Videos/BG/TH6.png"
+                    "DP-1, ~/Pictures/Images & Videos/BG/THE.jpg"
+                    "DP-2, ~/Pictures/Images & Videos/BG/TH6.png"
                 ];
             };
         };
