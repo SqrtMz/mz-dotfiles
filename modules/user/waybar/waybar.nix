@@ -14,7 +14,7 @@
 
                 modules-left = ["custom/appmenuicon" "wlr/taskbar"];
                 modules-center = ["hyprland/window"];
-                modules-right = ["pulseaudio" "bluetooth" "battery" "group/hardware" "clock" "tray"];
+                modules-right = ["pulseaudio" "battery" "group/hardware" "clock" "tray"];
 
                 "custom/appmenuicon" = {
                     format = "󰞄";
@@ -36,31 +36,18 @@
 
                 "pulseaudio" = {
                     scroll-step = 1;
-                    format = "{icon}   {volume}%";
-                    format-bluetooth = "{volume}%  {icon}󰂯 {format_source}";
-                    format-bluetooth-muted = "󰝟 {icon}󰂯 {format_source}";
+                    format = "{icon}  {volume}%";
+                    format-bluetooth = "{volume}%  {icon}   {format_source}";
+                    format-bluetooth-muted = "{volume}%  󰝟   {format_source}";
                     format-muted = "󰝟 {format_source}";
                     format-source = "{volume}% ";
-                    format-source-muted = "";
+                    format-source-muted = "{volume}% ";
+
                     format-icons = {
-                        headphone = "󰋋 ";
-                        hands-free = "󰥰 ";
-                        headset = "󰋎 ";
-                        phone = " ";
-                        portable = " ";
-                        car = " ";
                         default = ["󰕿 " "󰖀 " "󰕾 "];
                     };
-                    on-click = "pavucontrol";
-                };
 
-                "bluetooth" = {
-                    format = "󰂯 {status}";
-                    format-disabled = "";
-                    format-off = "";
-                    interval = 30;
-                    on-click = "blueman-manager";
-                    format-no-controller = "";
+                    on-click = "pavucontrol";
                 };
 
                 "battery" = {
@@ -68,10 +55,11 @@
                         warning = 30;
                         critical = 15;
                     };
-                    format = "{icon}   {capacity}%";
+
+                    format = "{icon}  {capacity}%";
                     format-charging = "󱐋  {capacity}%";
                     format-plugged = "  {capacity}%";
-                    format-alt = "{icon}  {time}";
+                    format-alt = "{icon} {time}";
                     format-icons = [" " " " " " " " " "];
                 };
 

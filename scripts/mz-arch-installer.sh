@@ -170,6 +170,7 @@ arch-chroot /mnt /bin/bash -e <<EOF
 
     # Enable Services
     systemctl enable NetworkManager
+    systemctl enable bluetooth
 
     # Refind config
     refind-install --usedefault "$efi" --alldrivers

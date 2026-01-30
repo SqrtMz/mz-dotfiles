@@ -133,29 +133,13 @@ window#waybar.empty #window {
 }
 
 /* -----------------------------------------------------
- * Bluetooth
- * ----------------------------------------------------- */
-
- #bluetooth, #bluetooth.on, #bluetooth.connected {
-    font-size: 12px;
-    border-radius: 13px;
-    margin: 10px 13px 10px 0px;
-}
-
-#bluetooth.off {
-    background-color: transparent;
-    padding: 0px;
-    margin: 0px;
-}
-
-/* -----------------------------------------------------
  * Battery
  * ----------------------------------------------------- */
 
 #battery {
     font-size: 12px;
     border-radius: 13px;
-    margin: 10px 13px 10px 0px;
+    margin: 0px 13px 0px 0px;
 }
 
 #battery.critical:not(.charging) {

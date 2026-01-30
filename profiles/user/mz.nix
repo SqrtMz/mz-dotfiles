@@ -66,7 +66,7 @@
         (config.lib.nixGL.wrap pkgs.steam)
 		(config.lib.nixGL.wrap pkgs.telegram-desktop)
         (config.lib.nixGL.wrap pkgs.texstudio)
-        (config.lib.nixGL.wrap pkgs.upscaler)
+        (config.lib.nixGL.wrap pkgs-stable.upscaler)
         unrar
         (config.lib.nixGL.wrap pkgs.unityhub)
         unzip
@@ -117,6 +117,11 @@
                     "DP-2, ~/Pictures/Images & Videos/BG/TH6.png"
                 ];
             };
+        };
+
+        syncthing = {
+            enable = true;
+            package = pkgs.syncthing;
         };
     };
 

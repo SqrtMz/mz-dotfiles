@@ -3,9 +3,14 @@ aircrack-ng
 arch-install-scripts
 archlinux-xdg-menu
 ark
+baloo
+baloo-widgets
 base
 base-devel
 bc
+blueman
+bluez
+bluez-utils
 bridge-utils
 ccache
 clinfo
@@ -29,7 +34,13 @@ hyprpolkitagent
 hytale-launcher-bin
 imagemagick
 input-remapper-bin
+kaccounts-integration
+kcmutils
+kio
+kio-extras
 kitty
+kparts
+kwallet
 lib32-mesa
 lib32-readline
 lib32-vulkan-radeon
@@ -71,6 +82,7 @@ refind
 schedtool
 sddm
 sddm-kcm
+signon-kwallet-extension
 squashfs-tools
 swtpm
 tk
