@@ -30,13 +30,15 @@
 
     home.packages = with pkgs; [
 		android-tools
+        kdePackages.ark
         btop
         brightnessctl
         (config.lib.nixGL.wrap pkgs.chromium)
+		(config.lib.nixGL.wrap pkgs.google-chrome)
 		cubiomes-viewer
         (config.lib.nixGL.wrap pkgs.discord)
+        kdePackages.dolphin
         fastfetch
-        (config.lib.nixGL.wrap pkgs.freecad)
 		(config.lib.nixGL.wrap pkgs.gimp3)
         (config.lib.nixGL.wrap pkgs.goverlay)
         grim
@@ -44,6 +46,7 @@
 		hyprsome
 		inkscape
 		(config.lib.nixGL.wrap (pkgs.jetbrains.idea.override { forceWayland = true; }))
+        kdePackages.kdenlive
         (config.lib.nixGL.wrap pkgs.krita)
 		(config.lib.nixGL.wrap pkgs.libreoffice)
         mangohud
@@ -55,6 +58,7 @@
         nvtopPackages.full
     	(config.lib.nixGL.wrap pkgs.obs-studio)
 		(config.lib.nixGL.wrap pkgs.obsidian)
+        kdePackages.okular
 		opentabletdriver
         parabolic
         pavucontrol

@@ -45,10 +45,14 @@
 
 		targets = {
 			gtk.enable = true;
-			qt.enable = true;
 			hyprland.enable = false;
 			rofi.enable = false;
 			waybar.enable = false;
+
+			qt = {
+				enable = true;
+				standardDialogs = "gtk3";
+			};
 
 			firefox = {
 				profileNames = ["Mz"];

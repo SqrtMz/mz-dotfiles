@@ -25,13 +25,26 @@
         };
     };
 
-    outputs = {self, nixpkgs, nixpkgs-stable, nixpkgs-prior-stable, home-manager, stylix, ...} @ inputs:
+    outputs = {self, nixpkgs, nixpkgs-stable, nixpkgs-prior-stable, home-manager, stylix, nixgl, ...} @ inputs:
     let
         lib = nixpkgs.lib;
         system = "x86_64-linux";
-        pkgs = import nixpkgs {inherit system;};
-        pkgs-stable = import nixpkgs-stable {inherit system;};
-        pkgs-prior-stable = import nixpkgs-prior-stable {inherit system;};
+        
+        pkgs = import nixpkgs {
+            inherit system;
+            overlays = [nixgl.overlay];
+        };
+
+        pkgs-stable = import nixpkgs-stable {
+            inherit system;
+            overlays = [nixgl.overlay];
+        };
+
+        pkgs-prior-stable = import nixpkgs-prior-stable {
+            inherit system;
+            overlays = [nixgl.overlay];
+        };
+
     in {
         nixosConfigurations = {
             Mz = lib.nixosSystem {

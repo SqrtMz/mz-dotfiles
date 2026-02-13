@@ -132,6 +132,10 @@ window#waybar.empty #window {
     margin: 0px 13px 0px 0px;
 }
 
+#tray {
+    margin:0px 10px 0px 0px;
+}
+
 /* -----------------------------------------------------
  * Battery
  * ----------------------------------------------------- */
@@ -149,21 +153,4 @@ window#waybar.empty #window {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}
-
-/* -----------------------------------------------------
- * Tray
- * ----------------------------------------------------- */
-
-#tray {
-    margin:0px 10px 0px 0px;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
 }

@@ -29,15 +29,15 @@
 
             env = [
                 # Fix dolphin open with
-                "XDG_MENU_PREFIX,plasma-"
-                "QT_QPA_PLATFORM,wayland"
+                #"XDG_MENU_PREFIX,plasma-"
+                #"QT_QPA_PLATFORM,wayland"
 
                 # Make electron programs use wayland instead of xwayland
                 "ELECTRON_OZONE_PLATFORM_HINT,auto"
 
                 # Use Arch QT packages instead of Nix ones
-                #"QT_PLUGIN_PATH,/usr/lib/qt6/plugins"
-                #"QML2_IMPORT_PATH,/usr/lib/qt6/qml"
+                # "QT_PLUGIN_PATH,/usr/lib/qt6/plugins"
+                # "QML2_IMPORT_PATH,/usr/lib/qt6/qml"
 
                 "MANGOHUD,1"
             ];

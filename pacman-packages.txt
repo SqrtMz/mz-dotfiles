@@ -2,7 +2,6 @@
 aircrack-ng
 arch-install-scripts
 archlinux-xdg-menu
-ark
 baloo
 baloo-widgets
 base
@@ -17,7 +16,6 @@ clinfo
 curl
 docker
 docker-compose
-dolphin
 edk2-ovmf
 efibootmgr
 fastfetch
@@ -53,7 +51,6 @@ looking-glass
 lzop
 mkinitcpio
 networkmanager
-okular
 otf-aurulent-nerd
 otf-codenewroman-nerd
 otf-comicshanns-nerd
@@ -66,6 +63,7 @@ otf-hermit-nerd
 otf-monaspace-nerd
 otf-opendyslexic-nerd
 otf-overpass-nerd
+pacman-contrib
 paru
 paru-debug
 pipewire
