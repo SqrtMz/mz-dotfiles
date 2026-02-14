@@ -77,7 +77,8 @@
         (config.lib.nixGL.wrap pkgs.unityhub)
         unzip
         usbutils
-        vlc        
+        vlc
+		vscode
         wev
         wl-clipboard
         xournalpp

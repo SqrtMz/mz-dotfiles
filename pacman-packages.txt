@@ -74,7 +74,6 @@ schedtool
 sddm
 signon-kwallet-extension
 squashfs-tools
-steam
 swtpm
 tk
 traceroute
@@ -135,7 +134,6 @@ ttf-victor-mono-nerd
 ttf-zed-mono-nerd
 vdpauinfo
 virt-manager
-visual-studio-code-bin
 vulkan-radeon
 vulkan-tools
 waydroid
