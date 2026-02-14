@@ -4,13 +4,15 @@
     home.username = "mz";
     home.homeDirectory = "/home/mz";
 
-    targets.genericLinux.enable = true;
+    targets.genericLinux = {
+        enable = true;
 
-    targets.genericLinux.nixGL = {
-        packages = inputs.nixgl.packages;
-        defaultWrapper = "mesa";
-        installScripts = ["mesa"];
-        vulkan.enable = true;
+        nixGL = {
+            packages = inputs.nixgl.packages;
+            defaultWrapper = "mesa";
+            installScripts = ["mesa"];
+            vulkan.enable = true;
+        };
     };
 
     imports = [
@@ -75,12 +77,10 @@
         (config.lib.nixGL.wrap pkgs.unityhub)
         unzip
         usbutils
-        vlc
-	    vscode
+        vlc        
         wev
         wl-clipboard
         xournalpp
-		(config.lib.nixGL.wrap pkgs.pear-desktop)
 
         corefonts
         google-fonts

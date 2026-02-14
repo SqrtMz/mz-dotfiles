@@ -2,8 +2,6 @@
 aircrack-ng
 arch-install-scripts
 archlinux-xdg-menu
-baloo
-baloo-widgets
 base
 base-devel
 bc
@@ -32,12 +30,7 @@ hyprpolkitagent
 hytale-launcher-bin
 imagemagick
 input-remapper-bin
-kaccounts-integration
-kcmutils
-kio
-kio-extras
 kitty
-kparts
 kwallet
 lib32-mesa
 lib32-readline
@@ -79,9 +72,9 @@ realtime-privileges
 refind
 schedtool
 sddm
-sddm-kcm
 signon-kwallet-extension
 squashfs-tools
+steam
 swtpm
 tk
 traceroute
@@ -142,6 +135,7 @@ ttf-victor-mono-nerd
 ttf-zed-mono-nerd
 vdpauinfo
 virt-manager
+visual-studio-code-bin
 vulkan-radeon
 vulkan-tools
 waydroid

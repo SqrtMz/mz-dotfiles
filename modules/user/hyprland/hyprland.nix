@@ -1,6 +1,6 @@
 {config, lib, pkgs, inputs, ...}:
 
-{   
+{
     wayland.windowManager.hyprland = {
    	    enable = true;
         package = null;
@@ -180,32 +180,15 @@
             ### LOOK AND FEEL ###
             #####################
 
-            # https://wiki.hyprland.org/Configuring/Variables/#colors
             animations {
                 enabled = true
-
-                # Default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
-
                 bezier = myBezier, 0.05, 0.9, 0.1, 1.05
-
                 animation = windows, 1, 7, myBezier
                 animation = windowsOut, 1, 7, default, popin 80%
                 animation = border, 1, 10, default
                 animation = borderangle, 1, 8, default
                 animation = fade, 1, 7, default
                 animation = workspaces, 1, 6, default
-            }
-
-            # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
-            dwindle {
-                pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-                preserve_split = true # You probably want this
-            }
-
-            # https://wiki.hyprland.org/Configuring/Variables/#misc
-            misc { 
-                force_default_wallpaper = -1 # Set to 0 or 1 to disable the anime mascot wallpapers
-                disable_hyprland_logo = false # If true disables the random hyprland logo / anime girl background. :(
             }
 
             ##############################
