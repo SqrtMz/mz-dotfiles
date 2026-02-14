@@ -3,7 +3,7 @@
 {
     programs.rofi = {
         enable = true;
-        package = pkgs.rofi;
+        package = pkgs.emptyDirectory;
         theme = "Arc-Dark";
         location = "center";
 

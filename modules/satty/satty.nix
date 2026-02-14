@@ -3,7 +3,7 @@
 {
     programs.satty = {
         enable = true;
-        package = (config.lib.nixGL.wrap pkgs.satty);
+        package = pkgs.emptyDirectory;
 
         settings = {
             general = {

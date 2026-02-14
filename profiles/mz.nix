@@ -31,57 +31,23 @@
     nixpkgs.config.allowUnfree = true;
 
     home.packages = with pkgs; [
-		android-tools
         kdePackages.ark
-        btop
-        brightnessctl
-        (config.lib.nixGL.wrap pkgs.chromium)
 		(config.lib.nixGL.wrap pkgs.google-chrome)
 		cubiomes-viewer
-        (config.lib.nixGL.wrap pkgs.discord)
         kdePackages.dolphin
-        fastfetch
-		(config.lib.nixGL.wrap pkgs.gimp3)
-        (config.lib.nixGL.wrap pkgs.goverlay)
-        grim
-        (config.lib.nixGL.wrap pkgs.gthumb)
 		hyprsome
-		inkscape
 		(config.lib.nixGL.wrap (pkgs.jetbrains.idea.override { forceWayland = true; }))
         kdePackages.kdenlive
-        (config.lib.nixGL.wrap pkgs.krita)
 		(config.lib.nixGL.wrap pkgs.libreoffice)
-        mangohud
 		(config.lib.nixGL.wrap pkgs.mcaselector)
         (config.lib.nixGL.wrap pkgs-stable.miktex)
-        ncdu
-        networkmanagerapplet
-        ntfs3g
-        nvtopPackages.full
-    	(config.lib.nixGL.wrap pkgs.obs-studio)
-		(config.lib.nixGL.wrap pkgs.obsidian)
         kdePackages.okular
 		opentabletdriver
         parabolic
-        pavucontrol
-        playerctl
         (prismlauncher.override {jdks = [pkgs.emptyDirectory];})
-        pyenv
-		qbittorrent
-        slurp
-        (config.lib.nixGL.wrap pkgs.steam)
-		(config.lib.nixGL.wrap pkgs.telegram-desktop)
         (config.lib.nixGL.wrap pkgs.texstudio)
         (config.lib.nixGL.wrap pkgs-stable.upscaler)
-        unrar
         (config.lib.nixGL.wrap pkgs.unityhub)
-        unzip
-        usbutils
-        vlc
-		vscode
-        wev
-        wl-clipboard
-        xournalpp
 
         corefonts
         google-fonts

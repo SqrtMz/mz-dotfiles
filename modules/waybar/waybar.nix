@@ -3,6 +3,7 @@
 {
     programs.waybar = {
         enable = true;
+        package = pkgs.emptyDirectory;
 
         settings = {
             mainBar = { 
