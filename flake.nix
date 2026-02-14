@@ -46,23 +46,12 @@
         };
 
     in {
-        nixosConfigurations = {
-            Mz = lib.nixosSystem {
-                inherit system;
-                specialArgs = {inherit inputs;};
-                modules = [
-                    ./profiles/system/Mz.nix
-                    inputs.home-manager.nixosModules.default
-                ];
-            };
-        };
-
         homeConfigurations = {
             mz = home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
                 extraSpecialArgs = {inherit inputs pkgs-stable pkgs-prior-stable;};
                 modules = [
-                    ./profiles/user/mz.nix
+                    ./profiles/mz.nix
 					stylix.homeModules.stylix
                 ];
             };
@@ -71,7 +60,7 @@
                 inherit pkgs;
                 extraSpecialArgs = {inherit inputs pkgs-stable pkgs-prior-stable;};
                 modules = [
-                    ./profiles/user/lab.nix
+                    ./profiles/lab.nix
                     stylix.homeModules.stylix
                 ];
             };
@@ -80,7 +69,7 @@
                 inherit pkgs;
                 extraSpecialArgs = {inherit inputs pkgs-stable pkgs-prior-stable;};
                 modules = [
-                    ./profiles/user/server.nix
+                    ./profiles/server.nix
                 ];
             };
         };

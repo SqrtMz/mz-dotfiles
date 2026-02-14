@@ -10,7 +10,7 @@
 	nixGL.vulkan.enable = true;
 
 	imports = [
-		../../modules/user/neovim/neovim.nix
+		../modules/neovim/neovim.nix
 	];
 
 	home.packages = with pkgs; [

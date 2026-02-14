@@ -16,16 +16,16 @@
     };
 
     imports = [
-        ../../modules/user/firefox/firefox.nix
-        ../../modules/user/hyprland/hyprland.nix
-        ../../modules/user/kitty/kitty.nix
-        ../../modules/user/neovim/neovim.nix
-        ../../modules/user/rofi/rofi.nix
-        ../../modules/user/themes/themes.nix
-        ../../modules/user/satty/satty.nix
-        ../../modules/user/waybar/waybar.nix
-        ../../modules/user/wlogout/wlogout.nix
-        ../../modules/user/zsh/zsh.nix
+        ../modules/firefox/firefox.nix
+        ../modules/hyprland/hyprland.nix
+        ../modules/kitty/kitty.nix
+        ../modules/neovim/neovim.nix
+        ../modules/rofi/rofi.nix
+        ../modules/themes/themes.nix
+        ../modules/satty/satty.nix
+        ../modules/waybar/waybar.nix
+        ../modules/wlogout/wlogout.nix
+        ../modules/zsh/zsh.nix
     ];
 
     nixpkgs.config.allowUnfree = true;
