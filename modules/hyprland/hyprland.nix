@@ -29,12 +29,8 @@
 
             env = [
                 # Make electron programs use wayland instead of xwayland
+                "QT_QPA_PLATFORMTHEME,qt6ct"
                 "ELECTRON_OZONE_PLATFORM_HINT,auto"
-
-                # Use Arch QT packages instead of Nix ones
-                "QT_PLUGIN_PATH,/usr/lib/qt6/plugins"
-                "QML2_IMPORT_PATH,/usr/lib/qt6/qml"
-
                 "MANGOHUD,1"
             ];
 
@@ -83,6 +79,10 @@
                 touchpad = {
                     natural_scroll = false;
                 };
+            };
+
+            cursor = {
+                no_hardware_cursors = true;
             };
 
             bind = [
@@ -158,8 +158,8 @@
                 # Media keys - Repeatable
                 ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
                 ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-                #", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-                #", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+                ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+                ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
                 ", XF86MonBrightnessUp, exec, brightnessctl s 10%+"
                 ", XF86MonBrightnessDown, exec, brightnessctl s 10%-"
             ];

@@ -48,20 +48,12 @@
 			hyprland.enable = false;
 			rofi.enable = false;
 			waybar.enable = false;
-
-			qt = {
-				enable = true;
-				standardDialogs = "gtk3";
-			};
+			kitty.enable = false;
+			qt.enable = false;
 
 			firefox = {
 				profileNames = ["Mz"];
 				fonts.enable = false;
-			};
-
-			kitty = {
-				enable = false;
-				variant256Colors = true;
 			};
 		};
 	};

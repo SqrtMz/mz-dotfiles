@@ -31,21 +31,14 @@
     nixpkgs.config.allowUnfree = true;
 
     home.packages = with pkgs; [
-        kdePackages.ark
 		(config.lib.nixGL.wrap pkgs.google-chrome)
 		cubiomes-viewer
-        kdePackages.dolphin
 		hyprsome
 		(config.lib.nixGL.wrap (pkgs.jetbrains.idea.override { forceWayland = true; }))
-        kdePackages.kdenlive
-		(config.lib.nixGL.wrap pkgs.libreoffice)
 		(config.lib.nixGL.wrap pkgs.mcaselector)
         (config.lib.nixGL.wrap pkgs-stable.miktex)
-        kdePackages.okular
 		opentabletdriver
         parabolic
-        (prismlauncher.override {jdks = [pkgs.emptyDirectory];})
-        (config.lib.nixGL.wrap pkgs.texstudio)
         (config.lib.nixGL.wrap pkgs-stable.upscaler)
         (config.lib.nixGL.wrap pkgs.unityhub)
 
@@ -88,11 +81,6 @@
                     "DP-2, ~/Pictures/Images & Videos/BG/TH6.png"
                 ];
             };
-        };
-
-        syncthing = {
-            enable = true;
-            package = pkgs.syncthing;
         };
     };
 
