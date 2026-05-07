@@ -32,6 +32,8 @@
                 "QT_QPA_PLATFORMTHEME,qt6ct"
                 "ELECTRON_OZONE_PLATFORM_HINT,auto"
                 "MANGOHUD,1"
+                "ROCM_PATH,/opt/rocm"
+                "HSA_OVERRIDE_GFX_VERSION,10.3.0"
             ];
 
             general = {
@@ -249,6 +251,19 @@
                 match:title = .*
                 float = true
             }
+
+            windowrule {
+                name = IntelliJ Welcome
+                match:class = jetbrains-idea
+                match:title = Welcome to IntelliJ IDEA
+                float = true
+            }
+
+			windowrule {
+				name = Flameshot
+				match:title = flameshot
+				fullscreen = true
+			}
 
 			# Avoid some windowed programs taking over all the workspace (fullscreen like) even when there's another windows
             windowrule {

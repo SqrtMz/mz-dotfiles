@@ -31,16 +31,14 @@
     nixpkgs.config.allowUnfree = true;
 
     home.packages = with pkgs; [
+		(config.lib.nixGL.wrap pkgs.blender)
 		(config.lib.nixGL.wrap pkgs.google-chrome)
 		cubiomes-viewer
 		hyprsome
-		(config.lib.nixGL.wrap (pkgs.jetbrains.idea.override { forceWayland = true; }))
 		(config.lib.nixGL.wrap pkgs.mcaselector)
-        (config.lib.nixGL.wrap pkgs-stable.miktex)
 		opentabletdriver
         parabolic
         (config.lib.nixGL.wrap pkgs-stable.upscaler)
-        (config.lib.nixGL.wrap pkgs.unityhub)
 
         corefonts
         google-fonts
@@ -48,6 +46,7 @@
 
     services = {
         cliphist.enable = true;
+        cliphist.package = pkgs.emptyDirectory;
 
         flameshot = {
             enable = true;
