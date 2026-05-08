@@ -1,7 +1,19 @@
 #! /usr/bin/env bash
 
+function fatal_error() {
+    if (( $1 != 0 ))
+    then
+        echo -e "There was an error while $2. Killing the script... \n"
+        exit $1
+    fi
+}
+
 # Time and date sync
 timedatectl set-ntp true
+
+# To avoid dead keys errors at install time
+pacman -Sy
+pacman -S archlinux-keyring
 
 clear
 
@@ -11,7 +23,7 @@ echo " _\ \/ _ \/ __/ __/ /|_/ /_ /"
 echo "/___/\_, /_/  \__/_/  /_//__/"
 echo "      /_/                    "
 
-echo "This installer works once connected to internet and created the partition table"
+echo "This installer works once connected to internet and the partition table has been created"
 echo
 
 # User Configurations
@@ -27,22 +39,51 @@ read rPass
 echo -e "User password: \c"
 read uPass
 
+echo -e "Timezone (if don't know, stop the script and use "timedatectl list-timezones") [Continent/City]: \c"
+read tz
+
 # Partitions formatting and mounting
 while true
 do
-    echo -e "Path to main partition: \c"
-    read main
+    echo -e "Path to root partition: \c"
+    read root
 
-    mkfs.ext4 $main
-
-    if (($? == 1))
-    then
-        echo -e "Invalid partition, try again \n"
-        continue
+    if [ ! -e $root ]
+        then
+            echo -e "Invalid partition, try again \n"
+            continue
     fi
 
-    mount $main /mnt
-    mkdir /mnt/boot
+    echo -e "Format partition? [y/n]"
+    read rootf
+
+    case $rootf in
+        [Yy] )  echo
+                echo -e "The partition will be formatted and mounted \n"
+                format_root=1;;
+
+        [Nn] )  echo
+                echo -e "The partition will only be mounted \n";;
+
+        * )     echo
+                echo -e "Invalid option, try again \n"
+                continue;;
+    esac
+
+    if [[ $format_root == 1 ]]
+    then
+        mkfs.ext4 $root
+        fatal_error $? "formatting the partition"
+    fi
+
+    mount $root /mnt
+    fatal_error $? "mounting the partition"
+
+    if [ ! -d "/mnt/boot"]
+    then
+        mkdir /mnt/boot
+        fatal_error $? "creating the /mnt/boot folder"
+    fi
 
     break
 done
@@ -52,15 +93,39 @@ do
     echo -e "Path to EFI partition: \c"
     read efi
 
-    mkfs.fat -F32 $efi
+    if [ ! -e $efi ]
+        then
+            echo -e "Invalid partition, try again \n"
+            continue
+    fi
 
-    if (($? == 1))
+    echo -e "Format partition? [y/n]"
+    read efif
+
+    case $efif in
+        [Yy] )  echo
+                echo -e "The partition will be formatted and mounted \n"
+                format_efi=1;;
+
+        [Nn] )  echo
+                echo -e "The partition will only be mounted \n";;
+
+        * )     echo
+                echo -e "Invalid option, try again \n"
+                continue;;
+    esac
+
+    if [[ $format_efi == 1 ]]
     then
-        echo -e "Invalid partition, try again \n"
-        continue
+        mkfs.fat -F32 $efi
+        fatal_error $? "formatting the partition"
+
+        fatlabel $efi "EFI"
+        fatal_error $? "assigning a label to the EFI partition"
     fi
 
     mount $efi /mnt/boot
+    fatal_error $? "mounting the partition"
     
     break
 done
@@ -72,30 +137,31 @@ do
     read tSw
 
     case $tSw in
-        [Yy]* ) echo
+        [Yy] )  echo
                 echo -e "Write path of SWAP: \c"
                 read swap
 
-                mkswap $swap
-
-                if (($? == 1))
-                then
-                    echo
-                    echo -e "Invalid partition, try again \n"
-                    continue
+                if [ -e $swap ]
+                    then
+                        echo -e "Invalid partition, try again \n"
+                        continue
                 fi
 
-                swapon $swap
+                mkswap $swap
+                fatal_error $? "formatting the partition"
+
+                swapon $swap -L "SWAP"
+                fatal_error $? "mounting the partition"
 
                 break;;
         
-        [Nn]* ) echo
+        [Nn] )  echo
                 echo "No swap partition will be used"
                 break;;
 
-        * ) echo
-            echo "Invalid option, try again"
-            continue;;
+        * )     echo
+                echo "Invalid option, try again"
+                continue;;
     esac
 done
 
@@ -132,7 +198,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 arch-chroot /mnt /bin/bash -e <<EOF
 
-    echo "Entered to chroot"
+    echo -e "Entered to chroot \n"
 
     # Set Locale and Language
     sed -i "s/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/" /etc/locale.gen
@@ -140,7 +206,7 @@ arch-chroot /mnt /bin/bash -e <<EOF
     echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 
     # Clock and Time Zone
-    ln -sf /usr/share/zoneinfo/America/Bogota /etc/localtime
+    ln -sf /usr/share/zoneinfo/$tz /etc/localtime
     hwclock -w
 
     # Hostname and hosts
@@ -166,7 +232,7 @@ arch-chroot /mnt /bin/bash -e <<EOF
     pacman -Syu --noconfirm --needed
 
     # Install Fundamentals
-    pacman -S neovim networkmanager wireless_tools refind efibootmgr os-prober --noconfirm --needed
+    pacman -S neovim networkmanager wireless_tools bluez bluez-utils blueman refind efibootmgr os-prober --noconfirm --needed
 
     # Enable Services
     systemctl enable NetworkManager
@@ -176,7 +242,7 @@ arch-chroot /mnt /bin/bash -e <<EOF
     refind-install --usedefault "$efi" --alldrivers
     mkrlconf
 
-    echo '"Boot with minimal options"   "ro root=$main"' > /boot/refind_linux.conf
+    echo '"Boot with minimal options" "ro root=$root"' > /boot/refind_linux.conf
 
 EOF
 
@@ -184,6 +250,7 @@ echo "root:$rPass" | arch-chroot /mnt chpasswd
 echo "$user:$uPass" | arch-chroot /mnt chpasswd
 
 umount -R /mnt
+fatal_error $? "unmounting the partitions"
 
 echo
 echo "Mz's Arch Installer - Process Succeeded"

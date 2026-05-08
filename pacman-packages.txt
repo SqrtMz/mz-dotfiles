@@ -1,5 +1,6 @@
 7zip
 aircrack-ng
+amd-ucode
 android-tools
 arch-install-scripts
 archlinux-xdg-menu
@@ -53,10 +54,10 @@ imagemagick
 inetutils
 inkscape
 input-remapper-bin
-intellij-idea-ultimate-edition
 java-batik
 jdk17-openjdk
 jdk8-openjdk
+jetbrains-toolbox
 kdenlive
 kdsoap-ws-discovery-client
 kitty
@@ -122,7 +123,6 @@ qt6-webengine
 qt6ct-kde
 realtime-privileges
 refind
-rider
 rocm-hip-sdk
 rocm-opencl-sdk
 rofi
