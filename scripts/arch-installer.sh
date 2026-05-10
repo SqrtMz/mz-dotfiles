@@ -191,7 +191,7 @@ do
     esac
 done
 
-pacstrap -i /mnt base base-devel linux-firmware $kernel $kernel-headers mkinitcpio fastfetch curl wget git --noconfirm --needed
+pacstrap -K /mnt base base-devel linux-firmware $kernel $kernel-headers mkinitcpio fastfetch curl wget git --noconfirm --needed
 
 # Fstab file generation and chroot
 genfstab -U /mnt >> /mnt/etc/fstab
