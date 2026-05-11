@@ -21,6 +21,7 @@ chromium
 clinfo
 cliphist
 cmake
+cmatrix
 curl
 discord
 docker

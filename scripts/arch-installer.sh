@@ -42,6 +42,8 @@ read uPass
 echo -e "Timezone (if don't know, stop the script and use "timedatectl list-timezones") [Continent/City]: \c"
 read tz
 
+ls /sys/firmware/efi/efivars > &/dev/null
+
 # Partitions formatting and mounting
 while true
 do
