@@ -49,6 +49,7 @@ gst-plugin-pipewire
 gthumb
 hashcat
 hyprland
+hyprpaper
 hyprpolkitagent
 hytale-launcher-bin
 imagemagick
@@ -77,12 +78,14 @@ linux-zen
 linux-zen-headers
 looking-glass
 lzop
+meson
 mkinitcpio
 mono
 mono-msbuild
 mono-msbuild-sdkresolver
 mtools
 ncdu
+neovim
 network-manager-applet
 networkmanager
 nmap

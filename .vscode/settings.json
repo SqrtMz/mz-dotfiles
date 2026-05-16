@@ -1,0 +1,19 @@
+{
+    "nix.serverPath": "nixd",
+    "nix.formatterPath": "alejandra",
+    "nix.enableLanguageServer": true,
+    "nix.serverSettings": {
+    
+        "nixd": {
+            "options": {
+                "home_manager": {
+                    "expr": "(builtins.getFlake \"/home/mz/mz-dotfiles\").homeConfigurations.mz.options"
+                },
+            },
+        },
+    },
+
+	"Lua.workspace.library": [
+		"/usr/share/hypr/stubs"
+	],
+}

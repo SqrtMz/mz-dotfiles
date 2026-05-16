@@ -2,7 +2,7 @@
 
 {
     wayland.windowManager.hyprland = {
-   	    enable = true;
+   	    enable = false;
         package = null;
        
         xwayland.enable = true;
@@ -54,7 +54,6 @@
                 active_opacity = 1.0;
                 inactive_opacity = 1.0;
 
-
                 shadow = {
                     enabled = true;
                     range = 4;
@@ -95,7 +94,7 @@
                 "$mainMod, E, exec, $fileManager"
                 "$mainMod, W, exec, $menu"
                 "$mainMod, P, pseudo"
-                "$mainMod, J, togglesplit"
+                "$mainMod, J, layoutmsg, togglesplit"
                 "$mainMod, F, fullscreen,"
                 "$mainMod SHIFT, F, togglefloating"
 
@@ -171,23 +170,20 @@
                 "$mainMod, mouse:272, movewindow"
                 "$mainMod, mouse:273, resizewindow"
             ];
+
+            animations = [
+                "enabled = true"
+                "bezier = myBezier, 0.05, 0.9, 0.1, 1.05"
+                "animation = windows, 1, 7, myBezier"
+                "animation = windowsOut, 1, 7, default, popin 80%"
+                "animation = border, 1, 10, default"
+                "animation = borderangle, 1, 8, default"
+                "animation = fade, 1, 7, default"
+                "animation = workspaces, 1, 6, default"
+            ];
         };
 
         extraConfig = ''
-            #####################
-            ### LOOK AND FEEL ###
-            #####################
-
-            animations {
-                enabled = true
-                bezier = myBezier, 0.05, 0.9, 0.1, 1.05
-                animation = windows, 1, 7, myBezier
-                animation = windowsOut, 1, 7, default, popin 80%
-                animation = border, 1, 10, default
-                animation = borderangle, 1, 8, default
-                animation = fade, 1, 7, default
-                animation = workspaces, 1, 6, default
-            }
 
             ##############################
             ### WINDOWS AND WORKSPACES ###

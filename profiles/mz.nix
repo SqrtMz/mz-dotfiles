@@ -34,8 +34,9 @@
 		(config.lib.nixGL.wrap pkgs.blender)
 		(config.lib.nixGL.wrap pkgs.google-chrome)
 		cubiomes-viewer
-		hyprsome
 		(config.lib.nixGL.wrap pkgs.mcaselector)
+        nixd
+        nixfmt
 		opentabletdriver
         parabolic
         (config.lib.nixGL.wrap pkgs-stable.upscaler)
@@ -60,25 +61,6 @@
                     uiColor = "#369B99";
                     allowMultipleGuiInstances = true;
                 };
-            };
-        };
-
-        hyprpaper = {
-            enable = true;
-            package = pkgs-stable.hyprpaper;
-
-            settings = {
-                splash = true;
-
-                preload = [
-                    "~/Pictures/Images & Videos/BG/TH6.png"
-                    "~/Pictures/Images & Videos/BG/THE.jpg"
-                ];
-
-                wallpaper = [
-                    "DP-1, ~/Pictures/Images & Videos/BG/THE.jpg"
-                    "DP-2, ~/Pictures/Images & Videos/BG/TH6.png"
-                ];
             };
         };
     };
