@@ -23,8 +23,8 @@
             ];
 
             source = [
-                "~/mz-dotfiles/modules/hyprland/monitors.conf"
-                "~/mz-dotfiles/modules/hyprland/workspaces.conf"
+                "~/mz-dotfiles/modules/hyprland/monitors.lua"
+                "~/mz-dotfiles/modules/hyprland/workspaces.lua"
             ];
 
             env = [

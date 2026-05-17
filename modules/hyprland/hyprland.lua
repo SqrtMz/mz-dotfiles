@@ -9,7 +9,6 @@ local menu = "rofi -show drun"
 local terminal = "kitty"
 
 require("monitors")
-require("workspaces")
 
 hl.on("hyprland.start",
 	function()
@@ -88,6 +87,15 @@ hl.config({
 	},
 })
 
+hl.curve("pan", {type = "bezier", points = {{0.05, 0.9}, {0.1, 1.05}}})
+
+hl.animation({leaf = "windows", 	enabled = true, speed = 7, 	bezier = "pan"})
+hl.animation({leaf = "windowsOut", 	enabled = true, speed = 7, 	bezier = "pan", style = "popin 80%"})
+hl.animation({leaf = "border", 		enabled = true, speed = 10, bezier = "pan"})
+hl.animation({leaf = "borderangle", enabled = true, speed = 8, 	bezier = "pan"})
+hl.animation({leaf = "fade", 		enabled = true, speed = 7, 	bezier = "pan"})
+hl.animation({leaf = "workspaces", 	enabled = true, speed = 6, 	bezier = "pan"})
+
 local run = hl.dsp.exec_cmd
 
 hl.bind("SUPER + Q", 			run(terminal))
@@ -99,6 +107,12 @@ hl.bind("SUPER + P", 			hl.dsp.window.pseudo())
 hl.bind("SUPER + J", 			hl.dsp.layout("togglesplit"))
 hl.bind("SUPER + F", 			hl.dsp.window.fullscreen({action = "toggle"}))
 hl.bind("SUPER + SHIFT + F", 	hl.dsp.window.float({action = "toggle"}))
+
+for i = 1, 10 do
+    local key = i % 10 -- 10 maps to key 0
+    hl.bind("SUPER + " .. key,             hl.dsp.focus({ workspace = i}))
+    hl.bind("SUPER + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
+end
 
 hl.bind("Print", 			run("flameshot gui | wl-copy"))
 hl.bind("SHIFT + Print", 	run("grim -g \"$(slurp)\" - | satty -f -"))
