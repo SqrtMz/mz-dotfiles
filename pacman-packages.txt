@@ -45,6 +45,7 @@ goverlay
 gparted
 gperf
 grim
+grub
 gst-plugin-pipewire
 gthumb
 hashcat
@@ -55,7 +56,6 @@ hytale-launcher-bin
 imagemagick
 inetutils
 inkscape
-input-remapper-bin
 java-batik
 jdk17-openjdk
 jdk8-openjdk
@@ -117,6 +117,7 @@ pipewire-pulse
 pipewire-roc
 playerctl
 pngcrush
+pnpm
 pocl
 postgresql
 prismlauncher
@@ -126,7 +127,6 @@ qt5ct-kde
 qt6-webengine
 qt6ct-kde
 realtime-privileges
-refind
 rocm-hip-sdk
 rocm-opencl-sdk
 rofi
