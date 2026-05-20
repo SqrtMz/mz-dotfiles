@@ -160,6 +160,28 @@ hl.window_rule({
 })
 
 hl.window_rule({
+
+	name = "steam-settings",
+	match = {
+		class = "steam",
+		title = "Steam Settings",
+	},
+
+	float = true,
+})
+
+hl.window_rule({
+	name = "steam-friend-list",
+
+	match = {
+		class = "steam",
+		title = "Friends List",
+	},
+
+	float = true,
+})
+
+hl.window_rule({
 	name = "ark",
 
 	match = {
