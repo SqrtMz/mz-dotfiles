@@ -21,5 +21,13 @@
 			"mz-delete-unused" = "pacman -Qtdq | xargs sudo pacman -Rns --noconfirm";
 			"ff" = "fastfetch";
 		};
+
+		envExtra = ''
+			export QT_QPA_PLATFORMTHEME="qt6ct"
+			export ELECTRON_OZONE_PLATFORM_HINT="auto"
+			export MANGOHUD="1"
+			export ROCM_PATH="/opt/rocm"
+			export HSA_OVERRIDE_GFX_VERSION="10.3.0"
+		'';
     };
 }

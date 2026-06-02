@@ -1,6 +1,6 @@
 {
     "nix.serverPath": "nixd",
-    "nix.formatterPath": "alejandra",
+    "nix.formatterPath": "nixfmt",
     "nix.enableLanguageServer": true,
     "nix.serverSettings": {
     

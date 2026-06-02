@@ -9,6 +9,7 @@ local menu = "rofi -show drun"
 local terminal = "kitty"
 
 require("monitors")
+require("workspaces")
 
 hl.on("hyprland.start",
 	function()
@@ -89,12 +90,12 @@ hl.config({
 
 hl.curve("pan", {type = "bezier", points = {{0.05, 0.9}, {0.1, 1.05}}})
 
-hl.animation({leaf = "windows", 	enabled = true, speed = 7, 	bezier = "pan"})
-hl.animation({leaf = "windowsOut", 	enabled = true, speed = 7, 	bezier = "pan", style = "popin 80%"})
-hl.animation({leaf = "border", 		enabled = true, speed = 10, bezier = "pan"})
-hl.animation({leaf = "borderangle", enabled = true, speed = 8, 	bezier = "pan"})
-hl.animation({leaf = "fade", 		enabled = true, speed = 7, 	bezier = "pan"})
-hl.animation({leaf = "workspaces", 	enabled = true, speed = 6, 	bezier = "pan"})
+hl.animation({ leaf = "windows", 		enabled = true, speed = 7, 	bezier = "pan" })
+hl.animation({ leaf = "windowsOut", 	enabled = true, speed = 7, 	bezier = "pan", style = "popin 80%" })
+hl.animation({ leaf = "border", 		enabled = true, speed = 10, bezier = "pan" })
+hl.animation({ leaf = "borderangle", 	enabled = true, speed = 8, 	bezier = "pan" })
+hl.animation({ leaf = "fade", 			enabled = true, speed = 7, 	bezier = "pan" })
+hl.animation({ leaf = "workspaces", 	enabled = true, speed = 6, 	bezier = "pan" })
 
 local run = hl.dsp.exec_cmd
 
@@ -105,48 +106,36 @@ hl.bind("SUPER + E", 			run(file_manager))
 hl.bind("SUPER + W", 			run(menu))
 hl.bind("SUPER + P", 			hl.dsp.window.pseudo())
 hl.bind("SUPER + J", 			hl.dsp.layout("togglesplit"))
-hl.bind("SUPER + F", 			hl.dsp.window.fullscreen({action = "toggle"}))
-hl.bind("SUPER + SHIFT + F", 	hl.dsp.window.float({action = "toggle"}))
-
-for i = 1, 10 do
-    local key = i % 10 -- 10 maps to key 0
-    hl.bind("SUPER + " .. key,             hl.dsp.focus({ workspace = i}))
-    hl.bind("SUPER + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
-end
+hl.bind("SUPER + F", 			hl.dsp.window.fullscreen({ action = "toggle" }))
+hl.bind("SUPER + SHIFT + F", 	hl.dsp.window.float({ action = "toggle" }))
 
 hl.bind("Print", 			run("flameshot gui | wl-copy"))
 hl.bind("SHIFT + Print", 	run("grim -g \"$(slurp)\" - | satty -f -"))
 
-hl.bind("SUPER + left", 	hl.dsp.focus({direction = "left"}))
-hl.bind("SUPER + right", 	hl.dsp.focus({direction = "right"}))
-hl.bind("SUPER + up", 		hl.dsp.focus({direction = "up"}))
-hl.bind("SUPER + down", 	hl.dsp.focus({direction = "down"}))
-
-hl.bind("ALT + Tab", 			hl.dsp.focus({workspace = "e+1"}))
-hl.bind("SHIFT + ALT + Tab", 	hl.dsp.focus({workspace = "e-1"}))
-
-hl.bind("SUPER + mouse_down", 	hl.dsp.focus({workspace = "e+1"}))
-hl.bind("SUPER + mouse_up", 	hl.dsp.focus({workspace = "e-1"}))
+hl.bind("SUPER + left", 	hl.dsp.focus({ direction = "left" 	}))
+hl.bind("SUPER + right", 	hl.dsp.focus({ direction = "right" 	}))
+hl.bind("SUPER + up", 		hl.dsp.focus({ direction = "up" 	}))
+hl.bind("SUPER + down", 	hl.dsp.focus({ direction = "down" 	}))
 
 hl.bind("SUPER + S", 			hl.dsp.workspace.toggle_special("magic"))
 hl.bind("SUPER + SHIFT + S", 	hl.dsp.window.move({workspace = "special:magic"}))
 
 hl.bind("SUPER + V" , run("cliphist list | rofi -dmenu | cliphist decode | wl-copy"))
 
-hl.bind("XF86AudioRaiseVolume", 	run("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), 	{locked = true, repeating = true})
-hl.bind("XF86AudioLowerVolume", 	run("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"), 		{locked = true, repeating = true})
-hl.bind("XF86AudioMute", 			run("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), 		{locked = true, repeating = true})
-hl.bind("XF86AudioMicMute", 		run("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"), 	{locked = true, repeating = true})
-hl.bind("XF86MonBrightnessUp", 		run("brightnessctl s 5%+"), 							{locked = true, repeating = true})
-hl.bind("XF86MonBrightnessDown", 	run("brightnessctl s 5%-"), 							{locked = true, repeating = true})
+hl.bind("XF86AudioRaiseVolume", 	run("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), 	{ locked = true, repeating = true })
+hl.bind("XF86AudioLowerVolume", 	run("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"), 		{ locked = true, repeating = true })
+hl.bind("XF86AudioMute", 			run("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), 		{ locked = true, repeating = true })
+hl.bind("XF86AudioMicMute", 		run("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"), 	{ locked = true, repeating = true })
+hl.bind("XF86MonBrightnessUp", 		run("brightnessctl s 5%+"), 							{ locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", 	run("brightnessctl s 5%-"), 							{ locked = true, repeating = true })
 
-hl.bind("XF86AudioNext", 			run("playerctl next", 		{locked = true}))
-hl.bind("XF86AudioPause", 			run("playerctl play-pause", {locked = true}))
-hl.bind("XF86AudioPlay", 			run("playerctl play-pause", {locked = true}))
-hl.bind("XF86AudioPrev", 			run("playerctl previous", 	{locked = true}))
+hl.bind("XF86AudioNext", 			run("playerctl next"), 			{ locked = true })
+hl.bind("XF86AudioPause", 			run("playerctl play-pause"), 	{ locked = true })
+hl.bind("XF86AudioPlay", 			run("playerctl play-pause"), 	{ locked = true })
+hl.bind("XF86AudioPrev", 			run("playerctl previous"), 		{ locked = true })
 
-hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), 		{mouse = true})
-hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), 	{mouse = true})
+hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), 		{ mouse = true })
+hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), 	{ mouse = true })
 
 hl.window_rule({
 	name = "network-manager-connection-editor",
@@ -223,8 +212,8 @@ hl.window_rule({
 	},
 
 	float = true,
-	size = {1024, 576},
-	move = {"monitor_w*0.5", "monitor_h*0.5"},
+	size = { 1024, 576 },
+	move = { "monitor_w*0.5", "monitor_h*0.5" },
 })
 
 hl.window_rule({
@@ -261,8 +250,21 @@ hl.window_rule({
 })
 
 hl.window_rule({
+	name = "flameshot-save-screenshot",
+
+	match = {
+		title = "Save screenshot",
+		class = "^$",
+	},
+
+	float = true,
+	size = { 1024, 576 },
+	move = { "monitor_w*0.5", "monitor_h*0.5" },
+})
+
+hl.window_rule({
 	name = "supress-maximize-events",
-	match = {class = ".*"},
+	match = { class = ".*" },
 	suppress_event = "maximize",
 })
 

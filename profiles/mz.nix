@@ -1,4 +1,4 @@
-{config, lib, pkgs, pkgs-stable, pkgs-prior-stable, inputs, ...}:
+{config, lib, pkgs, pkgs-stable, inputs, ...}:
 
 {
     home.username = "mz";
@@ -16,7 +16,6 @@
     };
 
     imports = [
-        ../modules/firefox/firefox.nix
         ../modules/hyprland/hyprland.nix
         ../modules/kitty/kitty.nix
         ../modules/neovim/neovim.nix
@@ -44,26 +43,6 @@
         corefonts
         google-fonts
     ];
-
-    services = {
-        cliphist.enable = true;
-        cliphist.package = pkgs.emptyDirectory;
-
-        flameshot = {
-            enable = true;
-            package = pkgs.flameshot.override {
-                enableWlrSupport = true;
-            };
-
-            settings = {  
-                General = {
-                    disabledTrayIcon = true;
-                    uiColor = "#369B99";
-                    allowMultipleGuiInstances = true;
-                };
-            };
-        };
-    };
 
     xdg = {
         enable = true;

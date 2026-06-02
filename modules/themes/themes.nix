@@ -48,13 +48,8 @@
 			hyprland.enable = false;
 			rofi.enable = false;
 			waybar.enable = false;
-			kitty.enable = false;
+			kitty.enable = true;
 			qt.enable = false;
-
-			firefox = {
-				profileNames = ["Mz"];
-				fonts.enable = false;
-			};
 		};
 	};
 }

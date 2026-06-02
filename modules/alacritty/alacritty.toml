@@ -1,0 +1,43 @@
+[colors.bright]
+black = "#89b4fa"
+blue = "#89b4fa"
+cyan = "#94e2d5"
+green = "#a6e3a1"
+magenta = "#cba6f7"
+red = "#f38ba8"
+white = "#b4befe"
+yellow = "#f9e2af"
+
+[colors.cursor]
+cursor = "#ffffff"
+text = "#1e1e2e"
+
+[colors.normal]
+black = "#1e1e2e"
+blue = "#89b4fa"
+cyan = "#94e2d5"
+green = "#a6e3a1"
+magenta = "#cba6f7"
+red = "#f38ba8"
+white = "#ffffff"
+yellow = "#f9e2af"
+
+[colors.primary]
+background = "#1e1e2e"
+bright_foreground = "#b4befe"
+foreground = "#ffffff"
+
+[colors.selection]
+background = "#313244"
+text = "#ffffff"
+
+[font]
+size = 10
+
+normal 		= { family = "NotoSansM Nerd Font Mono", style = "Regular" }
+bold 		= { family = "NotoSansM Nerd Font Mono", style = "Bold" }
+italic 		= { family = "NotoSansM Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "NotoSansM Nerd Font Mono", style = "Bold Italic" }
+
+[window]
+opacity = 1

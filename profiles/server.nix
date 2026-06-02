@@ -4,12 +4,19 @@
 	home.username = "debian";
 	home.homeDirectory = "/home/debian";
 
-	nixGL.packages = inputs.nixgl.packages;
-	nixGL.defaultWrapper = "mesa";
-	nixGL.installScripts = ["mesa"];
-	nixGL.vulkan.enable = true;
+    targets.genericLinux = {
+        enable = true;
+
+        nixGL = {
+            packages = inputs.nixgl.packages;
+            defaultWrapper = "mesa";
+            installScripts = ["mesa"];
+            vulkan.enable = true;
+        };
+    };
 
 	imports = [
+		../modules/zsh/zsh.nix
 		../modules/neovim/neovim.nix
 	];
 
