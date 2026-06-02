@@ -17,12 +17,6 @@ hl.on("hyprland.start",
 	end
 )
 
-hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
-hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
-hl.env("MANGOHUD", "1")
-hl.env("ROCM_PATH", "/opt/rocm")
-hl.env("HSA_OVERRIDE_GFX_VERSION", "10.3.0")
-
 hl.config({
 	general = {
 		gaps_in = 5;
