@@ -236,7 +236,7 @@ hl.window_rule({
 	name = "flameshot",
 
 	match = {
-		class = "^$",
+		class = "flameshot",
 		title = "flameshot",
 	},
 

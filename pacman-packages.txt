@@ -35,7 +35,7 @@ evsieve
 evtest
 fastfetch
 firefox
-flameshot
+flameshot-git
 freerdp
 fuse2
 fzf
