@@ -17,8 +17,6 @@
 
     imports = [
         ../modules/hyprland/hyprland.nix
-        ../modules/kitty/kitty.nix
-        ../modules/neovim/neovim.nix
         ../modules/rofi/rofi.nix
         ../modules/themes/themes.nix
         ../modules/satty/satty.nix

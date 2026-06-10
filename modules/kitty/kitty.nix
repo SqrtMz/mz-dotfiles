@@ -2,7 +2,7 @@
 
 {
     programs.kitty = {
-        enable = false;
+        enable = true;
         package = pkgs.emptyDirectory;
         
         shellIntegration = {
