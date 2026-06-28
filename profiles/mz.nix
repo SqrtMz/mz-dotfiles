@@ -1,59 +1,56 @@
 {config, lib, pkgs, pkgs-stable, inputs, ...}:
 
 {
-    home.username = "mz";
-    home.homeDirectory = "/home/mz";
+	home.username = "mz";
+	home.homeDirectory = "/home/mz";
 
-    targets.genericLinux = {
-        enable = true;
+	targets.genericLinux = {
+		enable = true;
 
-        nixGL = {
-            packages = inputs.nixgl.packages;
-            defaultWrapper = "mesa";
-            installScripts = ["mesa"];
-            vulkan.enable = true;
-        };
-    };
+		nixGL = {
+			packages = inputs.nixgl.packages;
+			defaultWrapper = "mesa";
+			installScripts = ["mesa"];
+			vulkan.enable = true;
+		};
+	};
 
-    imports = [
-        ../modules/hyprland/hyprland.nix
-        ../modules/rofi/rofi.nix
-        ../modules/themes/themes.nix
-        ../modules/satty/satty.nix
-        ../modules/waybar/waybar.nix
-        ../modules/wlogout/wlogout.nix
-        ../modules/zsh/zsh.nix
-    ];
+	imports = [
+		../modules/rofi/rofi.nix
+		../modules/themes/themes.nix
+		../modules/satty/satty.nix
+		../modules/waybar/waybar.nix
+		../modules/wlogout/wlogout.nix
+		../modules/zsh/zsh.nix
+	];
 
-    nixpkgs.config.allowUnfree = true;
+	nixpkgs.config.allowUnfree = true;
 
-    home.packages = with pkgs; [
+	home.packages = with pkgs; [
 		(config.lib.nixGL.wrap pkgs.blender)
 		(config.lib.nixGL.wrap pkgs.google-chrome)
 		cubiomes-viewer
 		(config.lib.nixGL.wrap pkgs.mcaselector)
-        nixd
-        nixfmt
+		nixd
+		nixfmt
 		opentabletdriver
-        parabolic
-        (config.lib.nixGL.wrap pkgs-stable.upscaler)
+		parabolic
+		(config.lib.nixGL.wrap pkgs-stable.upscaler)
 
-        corefonts
-        google-fonts
-    ];
+		corefonts
+		google-fonts
+	];
 
-    xdg = {
-        enable = true;
+	xdg = {
+		enable = true;
 
-        userDirs = {
-            enable = true;
-            createDirectories = true;
-        };
+		userDirs = {
+			enable = true;
+			createDirectories = true;
+		};
+	};
 
-        portal.config.common.default = [ "hyprland" ];
-    };
-
-    # Let Home Manager install and manage itself.
-    programs.home-manager.enable = true;
-    home.stateVersion = "26.05";
+	# Let Home Manager install and manage itself.
+	programs.home-manager.enable = true;
+	home.stateVersion = "26.05";
 }

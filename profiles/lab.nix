@@ -39,8 +39,6 @@
             enable = true;
             createDirectories = true;
         };
-
-        portal.config.common.default = [ "hyprland" ];
     };
     
     # Let Home Manager install and manage itself.

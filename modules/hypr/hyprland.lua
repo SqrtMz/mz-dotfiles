@@ -247,8 +247,8 @@ hl.window_rule({
 	name = "flameshot-save-screenshot",
 
 	match = {
+		class = "flameshot",
 		title = "Save screenshot",
-		class = "^$",
 	},
 
 	float = true,

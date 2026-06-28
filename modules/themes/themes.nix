@@ -46,10 +46,10 @@
 		targets = {
 			gtk.enable = true;
 			hyprland.enable = false;
-			rofi.enable = false;
 			waybar.enable = false;
 			kitty.enable = true;
 			qt.enable = false;
+			rofi.enable = false;
 		};
 	};
 }
