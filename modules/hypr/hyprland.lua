@@ -93,15 +93,15 @@ hl.animation({ leaf = "workspaces", 	enabled = true, speed = 6, 	bezier = "pan" 
 
 local run = hl.dsp.exec_cmd
 
-hl.bind("SUPER + Q", 			run(terminal))
-hl.bind("SUPER + Escape", 		hl.dsp.window.close())
-hl.bind("SUPER + M", 			run("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-hl.bind("SUPER + E", 			run(file_manager))
-hl.bind("SUPER + W", 			run(menu))
-hl.bind("SUPER + P", 			hl.dsp.window.pseudo())
-hl.bind("SUPER + J", 			hl.dsp.layout("togglesplit"))
-hl.bind("SUPER + F", 			hl.dsp.window.fullscreen({ action = "toggle" }))
-hl.bind("SUPER + SHIFT + F", 	hl.dsp.window.float({ action = "toggle" }))
+hl.bind("SUPER + Q", 				run(terminal))
+hl.bind("SUPER + Escape", 			hl.dsp.window.close())
+hl.bind("SUPER + CTRL + ALT + M", 	run("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind("SUPER + E", 				run(file_manager))
+hl.bind("SUPER + W", 				run(menu))
+hl.bind("SUPER + P", 				hl.dsp.window.pseudo())
+hl.bind("SUPER + J", 				hl.dsp.layout("togglesplit"))
+hl.bind("SUPER + F", 				hl.dsp.window.fullscreen({ action = "toggle" }))
+hl.bind("SUPER + SHIFT + F", 		hl.dsp.window.float({ action = "toggle" }))
 
 hl.bind("Print", 			run("flameshot gui | wl-copy"))
 hl.bind("SHIFT + Print", 	run("grim -g \"$(slurp)\" - | satty -f -"))
