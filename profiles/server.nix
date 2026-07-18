@@ -15,6 +15,15 @@
         };
     };
 
+	nix = {
+		gc = {
+			automatic = true;
+			options = "--delete-older-than 1d";
+		};
+	};
+
+	nixpkgs.config.allowUnfree = true;
+
 	imports = [
 		../modules/zsh/zsh.nix
 		../modules/neovim/neovim.nix
@@ -24,7 +33,7 @@
 		btop
 		dig
 		fastfetch
-		pyenv
+		uv
 	];
 
 	# Let Home Manager install and manage itself.

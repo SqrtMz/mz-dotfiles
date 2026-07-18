@@ -15,6 +15,15 @@
         };
     };
 
+	nix = {
+		gc = {
+			automatic = true;
+			options = "--delete-older-than 1d";
+		};
+	};
+
+    nixpkgs.config.allowUnfree = true;
+
     imports = [
         ../modules/sway/sway.nix
         ../modules/neovim/neovim.nix
@@ -24,8 +33,6 @@
         ../modules/wlogout/wlogout.nix
         ../modules/zsh/zsh.nix
     ];
-
-    nixpkgs.config.allowUnfree = true;
 
     home.packages = with pkgs; [
         corefonts

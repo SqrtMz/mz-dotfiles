@@ -2,6 +2,7 @@
 
 {
     home.pointerCursor = {
+		enable = true;
         name = "Bibata-Original-Classic";
         size = 20;
         package = pkgs.bibata-cursors;

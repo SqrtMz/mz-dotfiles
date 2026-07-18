@@ -5,6 +5,9 @@ android-tools
 arch-install-scripts
 archlinux-xdg-menu
 ark
+aspnet-runtime
+aspnet-targeting-pack
+autoconf-archive
 base
 base-devel
 bc
@@ -24,6 +27,7 @@ cmake
 cmatrix
 curl
 discord
+dnsmasq
 docker
 docker-compose
 dolphin
@@ -240,7 +244,6 @@ waybar
 wev
 wget
 wireless_tools
-wireshark-qt
 wl-clipboard
 wxwidgets-gtk3
 xdg-desktop-portal
