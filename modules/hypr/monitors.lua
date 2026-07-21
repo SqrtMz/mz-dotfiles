@@ -19,7 +19,7 @@ hl.monitor({
 hl.monitor({
 	output = "desc:LG Electronics LG FULL HD 104NTLE9C472",
 	disabled = false,
-	mode = "1920x1080@75",
+	mode = "1920x1080@60",
 	position = "0x0",
 	scale = 1,
 	vrr = 1,
