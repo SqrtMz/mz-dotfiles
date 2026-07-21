@@ -30,6 +30,7 @@
 			export HSA_OVERRIDE_GFX_VERSION="10.3.0"
 			export ZSH_CUSTOM="$HOME/mz-dotfiles/modules/zsh"
 			export VCPKG_ROOT="$HOME/.local/share/vcpkg"
+			export SSH="kitty +kitten ssh"
 		'';
     };
 }
