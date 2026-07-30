@@ -235,6 +235,7 @@ unzip
 uv
 vcpkg
 vdpauinfo
+ventoy-bin
 virt-manager
 visual-studio-code-bin
 vlc

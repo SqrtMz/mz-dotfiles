@@ -1,5 +1,5 @@
 {
-  "version": "2.0.131",
+  "version": "2.0.135",
   "settings": {
     "blur": 0,
     "brightness": 100,
@@ -20,7 +20,7 @@
     "cinemamode": false,
     "cinemamodewideplayer": false,
     "controlbar": {
-      "active": false,
+      "active": true,
       "autohide": false,
       "centered": true,
       "position": "absolute"
@@ -40,7 +40,7 @@
     "controlspeedmousebutton": false,
     "controlvolume": false,
     "controlvolumemousebutton": false,
-    "convertshorts": true,
+    "convertshorts": false,
     "customcolors": {
       "--main-color": "#00adee",
       "--main-background": "#111111",
@@ -53,15 +53,39 @@
     "customcssrules": "",
     "customscript": "",
     "customtheme": false,
-    "darktheme": false,
+    "darktheme": true,
     "date": 1733884648002,
     "defaultvolume": false,
     "disableautoplay": true,
     "executescript": false,
     "expanddescription": false,
     "filter": "none",
+    "griditemsperrow": {
+      "channel": {
+        "shorts": {
+          "apply": false,
+          "count": 5
+        },
+        "videos": {
+          "apply": false,
+          "count": 4
+        }
+      },
+      "posts": {
+        "apply": false,
+        "count": 4
+      },
+      "shorts": {
+        "apply": false,
+        "count": 8
+      },
+      "videos": {
+        "apply": false,
+        "count": 4
+      }
+    },
     "hidecardsendscreens": false,
-    "hidechat": true,
+    "hidechat": false,
     "hidecomments": false,
     "hiderelated": false,
     "hideshorts": false,
@@ -69,7 +93,6 @@
     "ignorepopupplayer": true,
     "localecode": "en_US",
     "localedir": "ltr",
-    "message": false,
     "miniplayer": true,
     "miniplayerposition": "_bottom-right",
     "miniplayersize": "_400x225",
