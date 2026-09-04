@@ -37,6 +37,7 @@
 		(config.lib.nixGL.wrap pkgs.blender)
 		(config.lib.nixGL.wrap pkgs.google-chrome)
 		cubiomes-viewer
+		(config.lib.nixGL.wrap pkgs.stremio-linux-shell)
 		(config.lib.nixGL.wrap pkgs.mcaselector)
 		nixd
 		nixfmt

@@ -12,6 +12,7 @@ base
 base-devel
 bc
 biber
+bind
 blueman
 bluez
 bluez-utils
@@ -37,6 +38,7 @@ dotnet-sdk
 edk2-ovmf
 efibootmgr
 evtest
+exfatprogs
 fastfetch
 firefox
 flameshot
@@ -64,6 +66,7 @@ hyprpolkitagent
 imagemagick
 inetutils
 inkscape
+jdk-openjdk
 jetbrains-toolbox
 kdenlive
 kdsoap-ws-discovery-client
@@ -132,12 +135,11 @@ qemu-desktop
 qt5ct-kde
 qt6-webengine
 qt6ct-kde
-r
+qtcreator
 realtime-privileges
 rocm-hip-sdk
 rocm-opencl-sdk
 rofi
-rstudio-desktop-bin
 satty
 schedtool
 sddm
