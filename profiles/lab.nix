@@ -1,19 +1,19 @@
 {config, lib, pkgs, inputs, ...}:
 
 {
-    home.username = "mz";
-    home.homeDirectory = "/home/mz";
+	home.username = "mz";
+	home.homeDirectory = "/home/mz";
 
-    targets.genericLinux = {
-        enable = true;
+	targets.genericLinux = {
+		enable = true;
 
-        nixGL = {
-            packages = inputs.nixgl.packages;
-            defaultWrapper = "mesa";
-            installScripts = ["mesa"];
-            vulkan.enable = true;
-        };
-    };
+		nixGL = {
+			packages = inputs.nixgl.packages;
+			defaultWrapper = "mesa";
+			installScripts = ["mesa"];
+			vulkan.enable = true;
+		};
+	};
 
 	nix = {
 		gc = {
@@ -22,33 +22,31 @@
 		};
 	};
 
-    nixpkgs.config.allowUnfree = true;
+	nixpkgs.config.allowUnfree = true;
 
-    imports = [
-        ../modules/sway/sway.nix
-        ../modules/neovim/neovim.nix
-        ../modules/rofi/rofi.nix
-        ../modules/themes/themes.nix
-        ../modules/waybar/waybar.nix
-        ../modules/wlogout/wlogout.nix
-        ../modules/zsh/zsh.nix
-    ];
+	imports = [
+		../modules/rofi/rofi.nix
+		../modules/themes/themes.nix
+		../modules/waybar/waybar.nix
+		../modules/wlogout/wlogout.nix
+		../modules/zsh/zsh.nix
+	];
 
-    home.packages = with pkgs; [
-        corefonts
-        google-fonts
-    ];
+	home.packages = with pkgs; [
+		corefonts
+		google-fonts
+	];
 
-    xdg = {
-        enable = true;
+	xdg = {
+		enable = true;
 
-        userDirs = {
-            enable = true;
-            createDirectories = true;
-        };
-    };
-    
-    # Let Home Manager install and manage itself.
-    programs.home-manager.enable = true;
-    home.stateVersion = "25.05";
+		userDirs = {
+			enable = true;
+			createDirectories = true;
+		};
+	};
+	
+	# Let Home Manager install and manage itself.
+	programs.home-manager.enable = true;
+	home.stateVersion = "25.05";
 }
