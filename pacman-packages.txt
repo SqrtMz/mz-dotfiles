@@ -60,6 +60,7 @@ grub
 gst-plugin-pipewire
 gthumb
 hashcat
+help2man
 hyprland
 hyprpaper
 hyprpolkitagent
@@ -118,6 +119,7 @@ pacman-contrib
 paru
 paru-debug
 pavucontrol
+php
 pipewire
 pipewire-alsa
 pipewire-audio
@@ -135,7 +137,6 @@ qemu-desktop
 qt5ct-kde
 qt6-webengine
 qt6ct-kde
-qtcreator
 realtime-privileges
 rocm-hip-sdk
 rocm-opencl-sdk
