@@ -47,6 +47,15 @@
 				];
 			};
 
+			mzerver = home-manager.lib.homeManagerConfiguration {
+				inherit pkgs;
+				extraSpecialArgs = {inherit inputs pkgs-stable;};
+				modules = [
+					./profiles/mzerver.nix
+					stylix.homeModules.stylix
+				];
+			};
+
 			lab = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
 				extraSpecialArgs = {inherit inputs pkgs-stable;};
