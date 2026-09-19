@@ -138,6 +138,7 @@ qt5ct-kde
 qt6-webengine
 qt6ct-kde
 realtime-privileges
+reflector
 rocm-hip-sdk
 rocm-opencl-sdk
 rofi
@@ -232,6 +233,7 @@ ttf-ubuntu-mono-nerd
 ttf-ubuntu-nerd
 ttf-victor-mono-nerd
 ttf-zed-mono-nerd
+ufw
 unityhub
 unrar
 unzip
