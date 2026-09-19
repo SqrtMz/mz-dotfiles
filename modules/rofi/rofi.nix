@@ -7,7 +7,6 @@
         theme = "Arc-Dark";
 
         settings = {
-            location = "center";
             show-icons = true;
             sidebar-mode = true;
         };
