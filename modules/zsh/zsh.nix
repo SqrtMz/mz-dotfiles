@@ -28,8 +28,8 @@
 			export MANGOHUD="1"
 			export ROCM_PATH="/opt/rocm"
 			export HSA_OVERRIDE_GFX_VERSION="10.3.0"
-			export ZSH_CUSTOM="$HOME/mz-dotfiles/modules/zsh"
-			export VCPKG_ROOT="$HOME/.local/share/vcpkg"
+			export ZSH_CUSTOM="/home/$USER/mz-dotfiles/modules/zsh"
+			export VCPKG_ROOT="/home/$USER/.local/share/vcpkg"
 			export SSH="kitty +kitten ssh"
 		'';
     };
