@@ -94,6 +94,7 @@ mono
 mono-msbuild
 mono-msbuild-sdkresolver
 mtools
+nasm
 ncdu
 neovim
 network-manager-applet
@@ -135,6 +136,7 @@ prismlauncher
 qbittorrent
 qemu-desktop
 qt5ct-kde
+qt6-charts
 qt6-webengine
 qt6ct-kde
 realtime-privileges
@@ -152,6 +154,7 @@ squashfs-tools
 steam
 swtpm
 syncthing
+tailscale
 telegram-desktop
 texlive-basic
 texlive-bibtexextra
@@ -245,8 +248,10 @@ virt-manager
 visual-studio-code-bin
 vlc
 vlc-plugins-all
+vulkan-headers
 vulkan-radeon
 vulkan-tools
+vulkan-utility-libraries
 waybar
 wev
 wget

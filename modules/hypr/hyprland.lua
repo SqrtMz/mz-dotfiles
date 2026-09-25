@@ -206,8 +206,8 @@ hl.window_rule({
 	},
 
 	float = true,
-	size = { 1024, 576 },
-	move = { "monitor_w*0.5", "monitor_h*0.5" },
+	size = { 1280, 720 },
+	move = { "monitor_w/4", "monitor_h/4" },
 })
 
 hl.window_rule({
@@ -252,8 +252,8 @@ hl.window_rule({
 	},
 
 	float = true,
-	size = { 1024, 576 },
-	move = { "monitor_w*0.5", "monitor_h*0.5" },
+	size = { 1280, 720 },
+	move = { "monitor_w/4", "monitor_h/4" },
 })
 
 hl.window_rule({

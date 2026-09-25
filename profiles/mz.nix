@@ -48,14 +48,7 @@
 		google-fonts
 	];
 
-	xdg = {
-		enable = true;
-
-		userDirs = {
-			enable = true;
-			createDirectories = true;
-		};
-	};
+	xdg.enable = true;
 
 	# Let Home Manager install and manage itself.
 	programs.home-manager.enable = true;
