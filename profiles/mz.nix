@@ -15,13 +15,6 @@
 		};
 	};
 
-	nix = {
-		gc = {
-			automatic = true;
-			options = "--delete-older-than 1d";
-		};
-	};
-
 	nixpkgs.config.allowUnfree = true;
 
 	imports = [
@@ -48,7 +41,14 @@
 		google-fonts
 	];
 
-	xdg.enable = true;
+	xdg = {
+		enable = true;
+
+		userDirs = {
+			enable = true;
+			createDirectories = true;
+		};
+	};
 
 	# Let Home Manager install and manage itself.
 	programs.home-manager.enable = true;

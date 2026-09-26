@@ -15,13 +15,6 @@
         };
     };
 
-	nix = {
-		gc = {
-			automatic = true;
-			options = "--delete-older-than 1d";
-		};
-	};
-
 	nixpkgs.config.allowUnfree = true;
 
 	imports = [
