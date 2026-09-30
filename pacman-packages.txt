@@ -52,7 +52,6 @@ gimp
 git
 git-lfs
 gnome-keyring
-goverlay
 gparted
 gperf
 grim
@@ -62,7 +61,6 @@ gthumb
 hashcat
 help2man
 hyprland
-hyprpaper
 hyprpolkitagent
 imagemagick
 inetutils
@@ -88,6 +86,7 @@ linux-zen
 linux-zen-headers
 looking-glass
 lzop
+mangohud
 meson
 mkinitcpio
 mono

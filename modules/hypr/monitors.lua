@@ -5,12 +5,13 @@ hl.monitor({
 	scale = 1,
 	vrr = 1,
 	cm = "srgb",
+	disabled = true
 })
 
 hl.monitor({
 	output = "desc:Shenzhen KTC Technology Group H25T7         000000000000",
 	mode = "1920x1080@180",
-	position = "2560x0",
+	position = "0x0",
 	scale = 1,
 	vrr = 1,
 	cm = "srgb",
@@ -25,6 +26,7 @@ hl.monitor({
 	vrr = 1,
 	cm = "srgb",
 	mirror = "DP-1",
+	disabled = true
 })
 
 hl.monitor({

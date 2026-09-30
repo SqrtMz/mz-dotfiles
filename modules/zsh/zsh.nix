@@ -19,6 +19,7 @@
 			"mz-switch" = "~/mz-dotfiles/scripts/mz-switch.sh";
 			"mz-news" = "cd ~/mz-dotfiles && home-manager news --flake .#mz && cd";
 			"mz-delete-unused" = "pacman -Qtdq | xargs sudo pacman -Rns --noconfirm";
+			"browser-peripherals" = "while true; do sudo chmod a+rw /dev/hidraw*; done";
 			"ff" = "fastfetch";
 		};
 

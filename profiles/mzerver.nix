@@ -4,17 +4,6 @@
 	home.username = "mz";
 	home.homeDirectory = "/home/mz";
 
-	targets.genericLinux = {
-		enable = true;
-
-		nixGL = {
-			packages = inputs.nixgl.packages;
-			defaultWrapper = "mesa";
-			installScripts = ["mesa"];
-			vulkan.enable = true;
-		};
-	};
-
 	nixpkgs.config.allowUnfree = true;
 
 	imports = [

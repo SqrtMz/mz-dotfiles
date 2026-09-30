@@ -4,17 +4,6 @@
 	home.username = "debian";
 	home.homeDirectory = "/home/debian";
 
-    targets.genericLinux = {
-        enable = true;
-
-        nixGL = {
-            packages = inputs.nixgl.packages;
-            defaultWrapper = "mesa";
-            installScripts = ["mesa"];
-            vulkan.enable = true;
-        };
-    };
-
 	nixpkgs.config.allowUnfree = true;
 
 	imports = [
