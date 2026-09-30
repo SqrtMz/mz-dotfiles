@@ -7,20 +7,10 @@
 	nixpkgs.config.allowUnfree = true;
 
 	imports = [
-		../modules/rofi/rofi.nix
-		../modules/themes/themes.nix
-		../modules/satty/satty.nix
-		../modules/waybar/waybar.nix
-		../modules/wlogout/wlogout.nix
 		../modules/zsh/zsh.nix
 	];
 
 	home.packages = with pkgs; [
-		cubiomes-viewer
-		(config.lib.nixGL.wrap pkgs.mcaselector)
-
-		corefonts
-		google-fonts
 	];
 
 	xdg = {
