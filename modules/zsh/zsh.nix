@@ -36,11 +36,18 @@
 		'';
 
 		initContent = ''
-			fastfetch
+			if [[ $TERM == "xterm-kitty" ]]
+			then
+				fastfetch
+			fi
 		'';
 
 		loginExtra = ''
-			start-hyprland
+			is_tty1=$(tty)
+			if [[ $is_tty1 == "/dev/tty1" ]]
+			then
+				start-hyprland > /dev/null
+			fi
 		'';
     };
 }
