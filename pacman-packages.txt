@@ -70,6 +70,7 @@ jetbrains-toolbox
 kdenlive
 kdsoap-ws-discovery-client
 keepassxc
+kio-fuse
 kitty
 krita
 kwallet
@@ -103,6 +104,7 @@ ntfs-3g
 nvtop
 obs-studio
 okular
+opencode
 otf-aurulent-nerd
 otf-codenewroman-nerd
 otf-comicshanns-nerd
@@ -145,7 +147,6 @@ rocm-opencl-sdk
 rofi
 satty
 schedtool
-sddm
 signon-kwallet-extension
 slurp
 smartmontools
@@ -255,6 +256,7 @@ waybar
 wev
 wget
 wireless_tools
+wireshark-qt
 wl-clipboard
 wxwidgets-gtk3
 xdg-desktop-portal

@@ -19,7 +19,7 @@
 			"mz-switch" = "~/mz-dotfiles/scripts/mz-switch.sh";
 			"mz-news" = "cd ~/mz-dotfiles && home-manager news --flake .#mz && cd";
 			"mz-delete-unused" = "pacman -Qtdq | xargs sudo pacman -Rns --noconfirm";
-			"browser-peripherals" = "while true; do sudo chmod a+rw /dev/hidraw*; done";
+			"mz-browser-peripherals" = "while true; do sudo chmod a+rw /dev/hidraw*; done";
 			"ff" = "fastfetch";
 		};
 
@@ -32,6 +32,11 @@
 			export ZSH_CUSTOM="/home/$USER/mz-dotfiles/modules/zsh"
 			export VCPKG_ROOT="/home/$USER/.local/share/vcpkg"
 			export SSH="kitty +kitten ssh"
+			export EDITOR=nvim
+		'';
+
+		loginExtra = ''
+			start-hyprland
 		'';
     };
 }
