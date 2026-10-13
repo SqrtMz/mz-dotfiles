@@ -8,7 +8,6 @@
 
 	imports = [
 		../modules/zsh/zsh.nix
-		../modules/neovim/neovim.nix
 	];
 
 	home.packages = with pkgs; [

@@ -1,0 +1,9 @@
+configuration {
+	show-icons: true;
+	sidebar-mode: true;
+	parse-known-hosts: false;
+
+	click-to-exit: true;
+    kb-cancel: "Escape,MousePrimary,MouseSecondary";
+}
+@theme "black-glass"

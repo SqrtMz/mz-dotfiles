@@ -1,0 +1,82 @@
+configuration {
+    modi: "drun,run,window,ssh";
+    show-icons: true;
+    display-drun: " Apps";
+    display-run: " Run";
+    display-window: " Windows";
+    display-ssh: " SSH";
+    drun-display-format: "{name}";
+    matching: "fuzzy";
+    sort: true;
+}
+
+* {
+    font: "JetBrainsMono Nerd Font 12";
+    bg: #090a0cb3;
+    bg-soft: #090a0cbb;
+    bg-selected: #ffffff20;
+    fg: #ffffff;
+    fg-muted: #c4c4c4;
+    border-colour: #ffffff2b;
+    separator: #ffffff1c;
+    urgent: #ff8585;
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    width: 42%; location: center; anchor: center; fullscreen: false;
+    border: 1px; border-radius: 12px; border-color: @border-colour;
+    background-color: @bg; padding: 20px;
+}
+
+mainbox { spacing: 14px; background-color: transparent; children: [ inputbar, mode-switcher, message, listview ]; }
+
+inputbar {
+    spacing: 10px; padding: 12px 14px; border: 1px; border-radius: 8px;
+    border-color: @separator; background-color: @bg-soft; children: [ prompt, entry ];
+}
+
+prompt { padding: 0 2px; text-color: @fg-muted; background-color: transparent; }
+
+entry {
+    placeholder: "Search…"; placeholder-color: #c4c4c499;
+    text-color: @fg; background-color: transparent;
+}
+
+mode-switcher { enabled: true; spacing: 6px; background-color: transparent; }
+
+button {
+    padding: 7px 11px; border: 1px; border-radius: 7px; border-color: transparent;
+    background-color: #ffffff08; text-color: @fg-muted;
+}
+
+button selected { border-color: @border-colour; background-color: #ffffff14; text-color: @fg; }
+
+message { padding: 0 4px; background-color: transparent; text-color: @fg-muted; }
+
+textbox { background-color: transparent; text-color: inherit; }
+
+listview {
+    columns: 1; lines: 8; cycle: true; dynamic: true; scrollbar: false;
+    layout: vertical; spacing: 4px; padding: 2px 0; background-color: transparent;
+}
+
+element {
+    spacing: 12px; padding: 9px 11px; border: 1px; border-radius: 7px;
+    border-color: transparent; background-color: transparent; text-color: @fg;
+}
+
+element normal.normal { background-color: transparent; text-color: @fg; }
+
+element normal.urgent { background-color: #351a1acc; text-color: @urgent; }
+
+element selected.normal { background-color: @bg-selected; border-color: #ffffff24; text-color: #ffffff; }
+
+element selected.urgent { background-color: #4a2222ee; border-color: #ff858566; text-color: #ffffff; }
+
+element-icon { size: 28px; background-color: transparent; }
+
+element-text { expand: true; vertical-align: 0.5; background-color: transparent; text-color: inherit; }
+
+scrollbar { handle-width: 3px; border: 0; handle-color: #ffffff55; background-color: transparent; }

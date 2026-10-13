@@ -35,6 +35,10 @@
 			export EDITOR=nvim
 		'';
 
+		initContent = ''
+			fastfetch
+		'';
+
 		loginExtra = ''
 			start-hyprland
 		'';

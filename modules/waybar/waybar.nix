@@ -18,8 +18,8 @@
                 modules-right = ["pulseaudio" "battery" "group/hardware" "clock" "tray"];
 
                 "custom/appmenuicon" = {
-                    format = "󰞄";
-                    on-click = "wlogout";
+                    format = "󰄛";
+                    on-click = "/home/mz/mz-dotfiles/modules/rofi/power-menu.sh";
                     on-click-right = "rofi -show drun";
                     tooltip = false;
                 };
@@ -62,26 +62,26 @@
                 };
 
                 "custom/system" = {
-                    format = "";
+                    format = "";
                     tooltip = false;
                 };
 
                 "disk" = {
                     interval = 30;
-                    format = "D {percentage_used}% ";
+                    format = " {percentage_used}% ";
                     path = "/";
                     on-click = "kitty -e btop";
 					on-click-right = "kitty -e nvtop";
                 };
 
                 "cpu" = {
-                    format = "/ C {usage}% ";
+                    format = "|  {usage}% ";
                     on-click = "kitty -e btop";
 					on-click-right = "kitty -e nvtop";
                 };
 
                 "memory" = {
-                    format = "/ M {}%  ";
+                    format = "|  {}%  ";
                     on-click = "kitty -e btop";
 					on-click-right = "kitty -e nvtop";
                 };

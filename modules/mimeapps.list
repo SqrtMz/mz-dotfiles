@@ -2,6 +2,7 @@
 application/java-archive=org.kde.ark.desktop;
 application/octet-stream=code.desktop;blender.desktop;
 application/pdf=org.kde.okular.desktop;
+application/schema+json=com.microsoft.VSCode.desktop;
 application/vnd.tcpdump.pcap=org.wireshark.Wireshark.desktop;com.microsoft.VSCode.desktop;
 application/x-extension-htm=firefox.desktop;
 application/x-extension-html=firefox.desktop;
@@ -39,6 +40,7 @@ x-scheme-handler/tonsite=org.telegram.desktop.desktop;
 application/java-archive=org.kde.ark.desktop;
 application/octet-stream=code.desktop;
 application/pdf=org.kde.okular.desktop;
+application/schema+json=com.microsoft.VSCode.desktop;
 application/vnd.tcpdump.pcap=org.wireshark.Wireshark.desktop;
 application/x-extension-htm=firefox.desktop
 application/x-extension-html=firefox.desktop

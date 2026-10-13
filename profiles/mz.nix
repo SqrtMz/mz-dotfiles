@@ -18,11 +18,9 @@
 	nixpkgs.config.allowUnfree = true;
 
 	imports = [
-		../modules/rofi/rofi.nix
 		../modules/themes/themes.nix
 		../modules/satty/satty.nix
 		../modules/waybar/waybar.nix
-		../modules/wlogout/wlogout.nix
 		../modules/zsh/zsh.nix
 	];
 

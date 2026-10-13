@@ -1,0 +1,100 @@
+{
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+	"display": {
+		"separator": "  ",
+		"color": {
+			"keys": "#ffffff"
+		},
+		"key": {
+			"width": 14
+		}
+	},
+	"logo": {
+		"type": "kitty-icat",
+		"width": 35,
+		"source": "~/mz-dotfiles/modules/fastfetch/logos/*.gif",
+		"padding": {
+			"top": 2,
+			"left": 2
+		}
+	},
+	"modules": [
+		{
+			"type": "custom",
+			"key": "                     Mz - Error 404 Not Found",
+			"keyColor": "white"
+		},
+		{
+			"type": "custom",
+			"format": "\u001b[90m────────────────────────────────────────────────────────────────\u001b[0m"
+		},
+		{
+			"type": "os",
+			"key": " 󰣇 OS",
+			"keyColor": "blue",
+			"format": "{pretty-name}"
+		},
+		{
+			"type": "kernel",
+			"key": " 󰌽 Kernel",
+			"keyColor": "magenta"
+		},
+		{
+			"type": "packages",
+			"key": " 󰏖 Packages",
+			"keyColor": "yellow"
+		},
+		{
+			"type": "shell",
+			"key": "  Shell",
+			"keyColor": "green"
+		},
+		{
+			"type": "wm",
+			"key": "  WM",
+			"keyColor": "cyan"
+		},
+		{
+			"type": "cpu",
+			"key": "  CPU",
+			"keyColor": "red"
+		},
+		{
+			"type": "gpu",
+			"key": " 󰢮 GPU",
+			"keyColor": "magenta"
+		},
+		{
+			"type": "display",
+			"key": " 󰍹 Screen",
+			"format": "{width}x{height}  @ {refresh-rate}Hz"
+		},
+		{
+			"type": "memory",
+			"key": "  Ram",
+			"format": "{used}   / {total}  [{percentage}]",
+			"keyColor": "blue"
+		},
+		{
+			"type": "disk",
+			"key": " 󰋊 Disk",
+			"format": "{size-used} / {size-total} [{size-percentage}]",
+			"keyColor": "#94F0AD"
+		},
+		{
+			"type": "uptime",
+			"key": " 󰔚 Uptime",
+			"keyColor": "cyan"
+		},
+		"break",
+		{
+			"type": "colors",
+			"symbol": "star",
+			"paddingLeft": 24
+		},
+		{
+			"type": "custom",
+			"format": "\u001b[90m────────────────────────────────────────────────────────────────\u001b[0m"
+		}
+	]
+}

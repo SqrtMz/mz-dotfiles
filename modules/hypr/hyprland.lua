@@ -131,6 +131,19 @@ hl.bind("XF86AudioPrev", 			run("playerctl previous"), 		{ locked = true })
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), 		{ mouse = true })
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), 	{ mouse = true })
 
+hl.layer_rule({
+	match = { namespace = "waybar" },
+	blur = true,
+	blur_popups = true,
+	ignore_alpha = 0.3,
+})
+
+hl.layer_rule({
+	match = { namespace = "rofi" },
+	blur = true,
+	ignore_alpha = 0.3,
+})
+
 hl.window_rule({
 	name = "network-manager-connection-editor",
 

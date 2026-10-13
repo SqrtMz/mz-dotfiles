@@ -1,0 +1,145 @@
+* {
+    font: "JetBrainsMono Nerd Font 12";
+    bg: #090a0cb3;
+    bg-soft: #090a0cbb;
+    bg-hover: #ffffff20;
+    fg: #ffffff;
+    fg-muted: #c4c4c4;
+    border-colour: #ffffff2b;
+    separator: #ffffff1c;
+    danger: #ff8585;
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    location: northwest;
+    anchor: northwest;
+    x-offset: 5px;
+    y-offset: 5px;
+    width: 250px;
+    height: 175px;
+    fullscreen: false;
+    border: 2px;
+    border-radius: 11px;
+    border-color: @border-colour;
+    background-color: @bg;
+    padding: 12px;
+}
+
+mainbox {
+    enabled: true;
+    spacing: 8px;
+    background-color: transparent;
+    children: [ inputbar, message, listview ];
+}
+
+inputbar {
+    enabled: false;
+    padding: 0;
+    background-color: transparent;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    enabled: true;
+    text-color: @fg-muted;
+    background-color: transparent;
+}
+
+entry {
+    enabled: true;
+    text-color: @fg;
+    background-color: transparent;
+}
+
+message {
+    enabled: false;
+    padding: 4px 6px;
+    background-color: transparent;
+    text-color: @fg-muted;
+}
+
+textbox {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+listview {
+    enabled: true;
+    columns: 1;
+    lines: 6;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    spacing: 4px;
+    padding: 0;
+    background-color: transparent;
+}
+
+element {
+    enabled: true;
+    orientation: horizontal;
+    spacing: 12px;
+    padding: 11px 12px;
+    border: 1px;
+    border-radius: 7px;
+    border-color: transparent;
+    background-color: transparent;
+    text-color: @fg;
+    cursor: pointer;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element normal.urgent {
+    background-color: #351a1acc;
+    text-color: @danger;
+}
+
+element normal.active {
+    background-color: #ffffff08;
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @bg-hover;
+    border-color: #ffffff24;
+    text-color: #ffffff;
+}
+
+element selected.urgent {
+    background-color: #4a2222ee;
+    border-color: #ff858566;
+    text-color: #ffffff;
+}
+
+element selected.active {
+    background-color: @bg-hover;
+    border-color: #ffffff24;
+    text-color: #ffffff;
+}
+
+element-icon {
+    size: 22px;
+    background-color: transparent;
+    cursor: inherit;
+}
+
+element-text {
+    expand: true;
+    vertical-align: 0.5;
+    background-color: transparent;
+    text-color: inherit;
+}
+
+scrollbar {
+    handle-width: 3px;
+    border: 0;
+    handle-color: #ffffff55;
+    background-color: transparent;
+}
