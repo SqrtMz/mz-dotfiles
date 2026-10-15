@@ -1,10 +1,9 @@
 configuration {
-    modi: "drun,run,window,ssh";
+    modi: "drun,ssh,run";
     show-icons: true;
     display-drun: " Apps";
-    display-run: " Run";
-    display-window: " Windows";
     display-ssh: " SSH";
+    display-run: " Run";
     drun-display-format: "{name}";
     matching: "fuzzy";
     sort: true;
