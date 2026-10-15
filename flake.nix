@@ -6,8 +6,8 @@
 		home-manager.url = "github:nix-community/home-manager/master";
 		home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-		nixpkgs-stable.url = "nixpkgs/nixos-25.05";
-		home-manager-stable.url = "github:nix-community/home-manager/release-25.05";
+		nixpkgs-stable.url = "nixpkgs/nixos-26.05";
+		home-manager-stable.url = "github:nix-community/home-manager/release-26.05";
 		home-manager-stable.inputs.nixpkgs.follows = "nixpkgs-stable";
 
 		nixgl = {

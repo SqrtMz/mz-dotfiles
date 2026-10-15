@@ -32,7 +32,6 @@
 		nixd
 		nixfmt
 		opentabletdriver
-		parabolic
 		(config.lib.nixGL.wrap pkgs.upscaler)
 
 		corefonts

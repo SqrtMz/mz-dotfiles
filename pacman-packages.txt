@@ -16,7 +16,6 @@ bind
 blueman
 bluez
 bluez-utils
-brasero
 bridge-utils
 brightnessctl
 btop
@@ -42,12 +41,9 @@ exfatprogs
 fastfetch
 firefox
 flameshot
-freerdp
 fuse2
 fzf
 gamemode
-gamescope
-gcc-fortran
 gimp
 git
 git-lfs
@@ -58,7 +54,6 @@ grim
 grub
 gst-plugin-pipewire
 gthumb
-hashcat
 help2man
 hyprland
 hyprpolkitagent
@@ -86,7 +81,6 @@ linux-firmware
 linux-zen
 linux-zen-headers
 looking-glass
-lzop
 mangohud
 meson
 mkinitcpio
@@ -179,7 +173,6 @@ texlive-pstricks
 texlive-publishers
 texlive-xetex
 texstudio
-tk
 traceroute
 ttf-0xproto-nerd
 ttf-3270-nerd
@@ -237,7 +230,6 @@ ttf-ubuntu-nerd
 ttf-victor-mono-nerd
 ttf-zed-mono-nerd
 ufw
-unityhub
 unrar
 unzip
 uv
