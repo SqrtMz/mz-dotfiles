@@ -44,6 +44,7 @@ flameshot
 fuse2
 fzf
 gamemode
+ghidra
 gimp
 git
 git-lfs
@@ -58,6 +59,7 @@ help2man
 hyprland
 hyprpolkitagent
 imagemagick
+img2pdf
 inetutils
 inkscape
 jdk-openjdk
@@ -94,11 +96,13 @@ neovim
 network-manager-applet
 networkmanager
 nmap
+npm
 ntfs-3g
 nvtop
 obs-studio
 okular
 opencode
+optipng
 otf-aurulent-nerd
 otf-codenewroman-nerd
 otf-comicshanns-nerd
@@ -124,7 +128,6 @@ pipewire-pulse
 pipewire-roc
 playerctl
 pngcrush
-pnpm
 pocl
 postgresql
 prismlauncher
@@ -139,6 +142,7 @@ reflector
 rocm-hip-sdk
 rocm-opencl-sdk
 rofi
+rust
 satty
 schedtool
 signon-kwallet-extension
@@ -245,6 +249,7 @@ vulkan-radeon
 vulkan-tools
 vulkan-utility-libraries
 waybar
+webkit2gtk-4.1
 wev
 wget
 wireless_tools

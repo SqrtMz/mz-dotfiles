@@ -18,7 +18,7 @@ window {
     x-offset: 5px;
     y-offset: 5px;
     width: 250px;
-    height: 175px;
+    height: 225px;
     fullscreen: false;
     border: 2px;
     border-radius: 11px;

@@ -1,4 +1,4 @@
-{config, lib, pkgs, pkgs-stable, inputs, ...}:
+{config, lib, pkgs, pkgs-unstable, inputs, ...}:
 
 {
 	home.username = "mz";

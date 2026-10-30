@@ -32,7 +32,7 @@ hl.monitor({
 	vrr = 1,
 	cm = "srgb",
 	mirror = "DP-1",
-	disabled = true,
+	disabled = false,
 })
 
 hl.monitor({
